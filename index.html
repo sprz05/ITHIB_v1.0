@@ -44,12 +44,6 @@
     container.appendChild(newInput);
   }
 
-  $('#go').click(function(){
-var id=$('#easy').val();
-var url="https://sprz05.github.io/to-do-list-today/?";
- var new_url=  url+id;
-    window.open(new_url);
-});
 
 
 });</script>
@@ -59,8 +53,14 @@ var url="https://sprz05.github.io/to-do-list-today/?";
 
 
   <h1></h1>
-  <button><a href="homeworkschedule.html"</a>Enter</button>
+  <button id = "enter"><a href="homeworkschedule.html"</a>Enter</button>
 
+<script>$('#enter').click(function(){
+var id=$('#easy').val();
+var url="https://sprz05.github.io/to-do-list-today/?";
+var new_url=  url+id;
+  window.open(new_url);
+});</script>
 
 
 </form>
