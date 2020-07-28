@@ -26,7 +26,7 @@
   </style>
 
 <h4>How many easy assignments do you have to do?</h4>
-  <input id="easy">
+  <input type="number"id="easy" value=""/>
 
   <button id="buttonE" class="button3">Create Me</button>
 
@@ -44,50 +44,17 @@
     container.appendChild(newInput);
   }
 
-
-});</script>
-
-<h4>How many medium assignments do you have to do?</h4>
-<input id="medium">
-
-<button id="buttonM" class="button3">Create Me</button>
-
-<h4>What medium homework do you have to do?</h4>
-
-<div id="containerM"></div>
-
-<script>document.getElementById('buttonM').addEventListener('click', function() {
-
-let input = document.getElementById('medium').value;
-let container = document.getElementById('containerM');
-container.innerHTML = "";
-for (let i = 0; i < input; i++) {
-  let newInput = document.createElement('input');
-  container.appendChild(newInput);
-}
+  $('#go').click(function(){
+var id=$('#easy').val();
+var url="https://sprz05.github.io/to-do-list-today/?";
+ var new_url=  url+id;
+    window.open(new_url);
+});
 
 
 });</script>
 
 
-<h4>How many hard assignments do you have to do?</h4>
-<input id="hard">
-<button id="buttonH" class="button3">Create Me</button>
-<h4>What medium homework do you have to do?</h4>
-<div id="containerH"></div>
-
-<script>document.getElementById('buttonH').addEventListener('click', function() {
-
-let input = document.getElementById('hard').value;
-let container = document.getElementById('containerH');
-container.innerHTML = "";
-for (let i = 0; i < input; i++) {
-  let newInput = document.createElement('input');
-  container.appendChild(newInput);
-}
-
-
-});</script>
 
 
 
