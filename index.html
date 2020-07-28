@@ -25,12 +25,74 @@
   }
   </style>
 
-<p>How much easy assignments do you have?</p>
-<input type="number" min="0">
-<p>How much medium assignments do you have?</p>
-<input type="number" min="0">
-<p>How much hard assignments do you have?</p>
-<input type="number" min="0">
+<h4>How many easy assignments do you have to do?</h4>
+  <input id="easy">
+
+  <button id="buttonE" class="button3">Create Me</button>
+
+  <h4>What easy homework do you have to do?</h4>
+
+  <div id="containerE"></div>
+
+<script>document.getElementById('buttonE').addEventListener('click', function() {
+
+  let input = document.getElementById('easy').value;
+  let container = document.getElementById('containerE');
+  container.innerHTML = "";
+  for (let i = 0; i < input; i++) {
+    let newInput = document.createElement('input');
+    container.appendChild(newInput);
+  }
+
+
+});</script>
+
+<h4>How many medium assignments do you have to do?</h4>
+<input id="medium">
+
+<button id="buttonM" class="button3">Create Me</button>
+
+<h4>What medium homework do you have to do?</h4>
+
+<div id="containerM"></div>
+
+<script>document.getElementById('buttonM').addEventListener('click', function() {
+
+let input = document.getElementById('medium').value;
+let container = document.getElementById('containerM');
+container.innerHTML = "";
+for (let i = 0; i < input; i++) {
+  let newInput = document.createElement('input');
+  container.appendChild(newInput);
+}
+
+
+});</script>
+
+
+<h4>How many hard assignments do you have to do?</h4>
+<input id="hard">
+<button id="buttonH" class="button3">Create Me</button>
+<h4>What medium homework do you have to do?</h4>
+<div id="containerH"></div>
+
+<script>document.getElementById('buttonH').addEventListener('click', function() {
+
+let input = document.getElementById('hard').value;
+let container = document.getElementById('containerH');
+container.innerHTML = "";
+for (let i = 0; i < input; i++) {
+  let newInput = document.createElement('input');
+  container.appendChild(newInput);
+}
+
+
+});</script>
+
+
+
+  <h1></h1>
+  <button><a href="homeworkschedule.html"</a>Enter</button>
 
 
 
