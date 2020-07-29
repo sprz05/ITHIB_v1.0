@@ -25,6 +25,14 @@
   }
   </style>
 
+  <script>
+  function myFunction(){
+    documentgetElementById("easyDiv").style.display="none";
+    documentgetElementByID("mediumDiv").style.display="block"
+  }
+  </script>
+
+<div id="easyDiv">
 <h4>How many easy assignments do you have to do?</h4>
   <input type="number"id="easy" value=""/>
 
@@ -47,20 +55,39 @@
 
 
 });</script>
+</div>
+
+
+<div id="mediumDiv">
+  <h4>How many medium assignments do you have to do?</h4>
+    <input type="number"id="easy" value=""/>
+
+    <button id="buttonM" class="button3">Create Me</button>
+
+    <h4>What easy homework do you have to do?</h4>
+
+    <div id="containerM"></div>
+
+  <script>document.getElementById('buttonM').addEventListener('click', function() {
+
+    let input = document.getElementById('medium').value;
+    let container = document.getElementById('containerM');
+    container.innerHTML = "";
+    for (let i = 0; i < input; i++) {
+      let newInput = document.createElement('input');
+      container.appendChild(newInput);
+    }
 
 
 
+  });</script>
+</div>
 
 
   <h1></h1>
-  <button type= "button" id = "enter">Enter</button>
+  <button on click= type= "button" id = "enter">Enter</button>
 
-<script>$('#enter').click(function(){
-var id=$('#easy').val();
-var url="https://sprz05.github.io/to-do-list-today/?";
-var new_url=  url+id;
-  window.open(new_url);
-});</script>
+
 
 
 </form>
