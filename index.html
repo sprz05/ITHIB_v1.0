@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-<body>
 <head>
+
   <style>
-  .button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-
-
-  .button3 {border-radius: 8px;}
-
-
-  body {
-      font-family: 'Helvetica';font-size: 22px;
-  }
+    body {
+        font-family: 'Helvetica';font-size: 22px;
+    }
   </style>
 
   <script>
-  function myFunction(){
+   function myFunction(){
     documentgetElementById("easyDiv").style.display="none";
-    documentgetElementByID("mediumDiv").style.display="block"
+    documentgetElementByID("mediumDiv").style.display="block";
   }
   </script>
 
+</head>
+
+<body>
 <div id="easyDiv">
+
 <h4>How many easy assignments do you have to do?</h4>
-  <input type="number"id="easy" value=""/>
+  <input type="number"id="easy"/>
 
-  <button id="buttonE" class="button3">Create Me</button>
+  <button onclick="myFunction1()" id="buttonE" class="button3">Done</button>
 
-  <h4>What easy homework do you have to do?</h4>
+
+
+  <h4 id=typeE style="display:none;">What easy homework do you have to do?</h4>
+
+  <script>
+  function myFunction1() {
+  	document.getElementById("typeE").style.display="block";
+  }
+  </script>
 
   <div id="containerE"></div>
 
@@ -58,13 +53,20 @@
 </div>
 
 
-<div id="mediumDiv">
+<div id="mediumDiv" style="display:none;">
   <h4>How many medium assignments do you have to do?</h4>
-    <input type="number"id="easy" value=""/>
+    <input type="number"id="medium" value=""/>
 
-    <button id="buttonM" class="button3">Create Me</button>
+    <button onclick="myFunction2()"id="buttonM" class="button3">Done</button>
 
-    <h4>What easy homework do you have to do?</h4>
+
+    <h4 id=typeM style="display:none;">What medium homework do you have to do (eg. Do 2 math problems)?</h4>
+
+    <script>
+    function myFunction2() {
+    	document.getElementById("typeM").style.display="block";
+    }
+    </script>
 
     <div id="containerM"></div>
 
@@ -81,15 +83,19 @@
 
 
   });</script>
+
 </div>
 
+  <button onclick="myFunction()">Enter</button>
 
-  <h1></h1>
-  <button on click= type= "button" id = "enter">Enter</button>
+  <head>
+<title></title>
+<script>
+function myFunction() {
+	document.getElementById("easyDiv").style.display="none";
+	document.getElementById("mediumDiv").style.display="block";
+}
+</script>
 
 
-
-
-</form>
-</body>
 </html>
