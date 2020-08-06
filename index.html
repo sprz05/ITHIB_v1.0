@@ -3,99 +3,274 @@
 <head>
 
   <style>
-    body {
-        font-family: 'Helvetica';font-size: 22px;
-    }
+
+  body{
+    font-family: 'Helvetica';font-size: 22px;
+    text-align: center;
+    background: #ffff;
+  font-weight: 100;
+}
+
+
   </style>
 
-  <script>
-   function myFunction(){
-    documentgetElementById("easyDiv").style.display="none";
-    documentgetElementByID("mediumDiv").style.display="block";
-  }
-  </script>
+
 
 </head>
 
 <body>
-<div id="easyDiv">
-
-<h4>How many easy assignments do you have to do?</h4>
-  <input type="number"id="easy"/>
-
-  <button onclick="myFunction1()" id="buttonE" class="button3">Done</button>
 
 
+<div id="1Div">
 
-  <h4 id=typeE style="display:none;">What easy homework do you have to do?</h4>
+<h4>What are you going to work on?</h4>
 
-  <script>
-  function myFunction1() {
-  	document.getElementById("typeE").style.display="block";
-  }
-  </script>
+  <input type="text"id="name1"/>
 
-  <div id="containerE"></div>
-
-<script>document.getElementById('buttonE').addEventListener('click', function() {
-
-  let input = document.getElementById('easy').value;
-  let container = document.getElementById('containerE');
-  container.innerHTML = "";
-  for (let i = 0; i < input; i++) {
-    let newInput = document.createElement('input');
-    container.appendChild(newInput);
-  }
+  <button onclick="myFunction1()" id="button0" class="button3">Enter</button>
 
 
-
-});</script>
 </div>
 
 
-<div id="mediumDiv" style="display:none;">
-  <h4>How many medium assignments do you have to do?</h4>
-    <input type="number"id="medium" value=""/>
-
-    <button onclick="myFunction2()"id="buttonM" class="button3">Done</button>
-
-
-    <h4 id=typeM style="display:none;">What medium homework do you have to do (eg. Do 2 math problems)?</h4>
-
-    <script>
-    function myFunction2() {
-    	document.getElementById("typeM").style.display="block";
-    }
-    </script>
-
-    <div id="containerM"></div>
-
-  <script>document.getElementById('buttonM').addEventListener('click', function() {
-
-    let input = document.getElementById('medium').value;
-    let container = document.getElementById('containerM');
-    container.innerHTML = "";
-    for (let i = 0; i < input; i++) {
-      let newInput = document.createElement('input');
-      container.appendChild(newInput);
-    }
-
-
-
-  });</script>
+<div id="2Div" style="display:none;">
+        <h4 id=typeE>How much time do you think you need in minutes?</h4>
+        <button onclick="myFunction2()" id="button1" class="button3">10 minutes</button>
+        <button onclick="myFunction3()" id="button2" class="button3">20 minutes</button>
 
 </div>
 
-  <button onclick="myFunction()">Enter</button>
-
-  <head>
-<title></title>
 <script>
-function myFunction() {
-	document.getElementById("easyDiv").style.display="none";
-	document.getElementById("mediumDiv").style.display="block";
+  function myFunction1(){
+    document.getElementById("1Div").style.display="none";
+    document.getElementById("2Div").style.display="block";
 }
 </script>
 
+<script>
+  function myFunction2(){
+    document.getElementById("2Div").style.display="none";
+    document.getElementById("timer10").style.display="block";
+    document.getElementById("done10").style.display="block";
+  }
+</script>
+
+<script>
+  function myFunction3(){
+    document.getElementById("2Div").style.display="none";
+    document.getElementById("timer20").style.display="block";
+  }
+</script>
+
+
+<script>
+    function done0Function(){
+      document.getElementById("timer10").style.display="none";
+      document.getElementById("doneDiv").style.display="block";
+    }
+</script>
+
+
+<script>
+    function done1Function(){
+      document.getElementById("doneDiv").style.display="none";
+      document.getElementById("1Div").style.display="block";
+    }
+</script>
+
+<script>
+    function done2Function(){
+      document.getElementById("doneDiv").style.display="none";
+      document.getElementById("workDiv").style.display="block";
+    }
+</script>
+
+
+
+<script>
+    function done3Function(){
+      document.getElementById("timer20").style.display="none";
+      document.getElementById("doneDiv20").style.display="block";
+    }
+</script>
+
+
+<script>
+    function done4Function(){
+      document.getElementById("doneDiv20").style.display="none";
+      document.getElementById("1Div").style.display="block";
+    }
+</script>
+
+<script>
+    function done5Function(){
+      document.getElementById("doneDiv20").style.display="none";
+      document.getElementById("workDiv20").style.display="block";
+    }
+</script>
+
+
+<div id="timer10" style="display:none">
+
+<script>
+	function startTimer10(duration10, display10) {
+    var timer10 = duration10, minutes10, seconds10;
+    setInterval(function () {
+        minutes10 = parseInt(timer10 / 60, 10);
+        seconds10 = parseInt(timer10 % 60, 10);
+
+        minutes10 = minutes10 < 10 ? "0" + minutes10 : minutes10;
+        seconds10 = seconds10 < 10 ? "0" + seconds10 : seconds10;
+
+        display10.textContent = minutes10 + ":" + seconds10;
+
+        if (--timer10 < 0) {
+            timer10 = duration10;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var tenMinutes = 60 * 10,
+        display10 = document.querySelector('#time10');
+    startTimer10(tenMinutes, display10);
+};
+</script>
+
+ <body>
+
+    <center><div><span id="time10">10:00</span></div></center>
+
+</body>
+
+<button style="display:none" id="done10" onclick="done0Function()">
+ done
+</button>
+
+</div>
+
+
+
+<div id="doneDiv" style="display:none">
+
+    <button id="notFtoday" onclick="done2Function(); workOn();">
+      I'm done for today
+    </button>
+
+    <button id="doneFtoday" onclick="done1Function()">
+      I want to work on another assignment
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="timer20" style="display:none">
+    <script>
+	function startTimer20(duration20, display20) {
+    var timer20 = duration20, minutes20, seconds20;
+    setInterval(function () {
+        minutes20 = parseInt(timer20 / 60, 10);
+        seconds20 = parseInt(timer20 % 60, 10);
+
+        minutes20 = minutes20 < 10 ? "0" + minutes20 : minutes20;
+        seconds20 = seconds20 < 10 ? "0" + seconds20 : seconds20;
+
+        display20.textContent = minutes20 + ":" + seconds20;
+
+        if (--timer20 < 0) {
+            timer20 = duration20;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var twentyMinutes = 60 * 20,
+        display20 = document.querySelector('#time20');
+    startTimer20(twentyMinutes, display20);
+};
+</script>
+
+ <body>
+
+    <center><div><span id="time20">20:00</span></div></center>
+
+</body>
+
+<button id="done20" onclick="done3Function()">
+ done
+</button>
+
+</div>
+
+
+
+<div id="doneDiv20" style="display:none">
+
+    <button id="notToday20" onclick="done5Function(); workOn1();">
+      I'm done for today
+    </button>
+
+    <button id="doneToday20" onclick="done4Function()">
+      I want to work on another assignment
+    </button>
+
+</div>
+
+
+
+
+<div id="workDiv10" style="display:none">
+
+    <h1>
+      What you worked on today:
+    </h1>
+
+     <span id="result10"></span>
+
+     </div>
+
+
+
+<div id="workDiv20" style="display:none">
+
+    <h1>
+      What you worked on today:
+    </h1>
+
+     <span id="result20"></span>
+
+     <h1>
+      Great Job!
+    </h1>
+
+
+</div>
+
+<script>
+	function workOn() {
+            document.getElementById("result10").innerHTML = document.getElementById('name1').value;
+          }
+</script>
+
+<script>
+	function workOn() {
+            document.getElementById("result20").innerHTML = document.getElementById('name1').value;
+          }
+</script>
+
+
+
+
+
+
+</body>
 
 </html>
