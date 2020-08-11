@@ -21,27 +21,6 @@
 <body>
 
 
-  <div id="1Div">
-    <h4>What are you going to work on today?</h4>
-
-    <input type="text" id="name1" />
-
-    <button onclick="myFunction1()" id="button0" class="button3">Enter</button>
-  </div>
-  <div id="2Div" style="display:none;">
-    <h4 id=typeE>How long can you concentrate on homework for?</h4>
-    <button onclick="start10()" id="button1" class="button3">10 minutes</button>
-    <button onclick="start20()" id="button2" class="button3">20 minutes</button>
-  </div>
-
-  <center>
-    <div><span id="timerDuration"></span></div>
-  </center>
-  </body>
-
-  <div id="stop" style="display:none">
-      <h4>Wow! you've done a lot today! How about you call it a day?</h4>
-  </div>
 
 
   <script>
@@ -85,17 +64,58 @@
   display20 = document.querySelector('#timerDuration');
   startTimer(twentyMinutes, display20);
   }
+  //30 minutes
+  function start30() {
+  document.getElementById("2Div").style.display = "none";
+  var thirtyMinutes = 60 * 30,
+  display20 = document.querySelector('#timerDuration');
+  startTimer(thirstyMinutes, display20);
+
+  //40 minutes
+  function start40() {
+  document.getElementById("2Div").style.display = "none";
+  var fortyMinutes = 60 * 40,
+  display40 = document.querySelector('#timerDuration');
+  startTimer(twentyMinutes, display40);
+  }
+  }
+
+
   </script>
+
+  <div id="1Div">
+    <h4>What are you going to work on today?</h4>
+
+    <input type="text" id="name1" />
+
+    <button onclick="myFunction1()" id="button0" class="button3">Enter</button>
+  </div>
+
+  <div id="2Div" style="display:none;">
+    <h4 id=typeE>How long can you concentrate on homework for?</h4>
+    <button onclick="start10()" id="start10" class="button3">10 minutes</button>
+    <button onclick="start20()" id="start20" class="button3">20 minutes</button>
+    <button onclick="start30()" id="start30" class="button3">30 minutes</button>
+    <button onclick="start40()" id="start40" class="button3">40 minutes</button>
+  </div>
+
+  <center>
+    <div><span id="timerDuration"></span></div>
+  </center>
+  </body>
+
+  <div id="stop" style="display:none">
+      <h4>Wow! you've done a lot today! How about you call it a day?</h4>
+  </div>
 
   <div id="doneDiv" style="display:none">
 
-      <button id="doneToday" onclick="done5Function(); workOn();">I'm done for today  </button>
 
       <button onclick="showBreakTimers"> I'm not done with this assignment, I need more time! </button>
 
-      <button id="notDoneToday" onclick="done4Function()">
-        I want to work on another assignment
-      </button>
+      <button id="notDoneToday" onclick="done4Function()">I'm going to work on another assignment  </button>
+
+      <button id="doneToday" onclick="done5Function(); workOn();">I'm done with homework for today</button>
 
   </div>
 
@@ -125,8 +145,8 @@
     }
   </script>
 
-  <div id="breakTimers">
-    <h4 id=typeE>How much time do you think you need in minutes?</h4>
+  <div id="breakTimers" style="display:none">
+    <h4 id=typeE>How how long do you want your break to be?</h4>
     <button onclick="start5Break()" id="5" class="button3">5 minutes</button>
     <button onclick="start10Break()" id="10" class="button3">10 minutes</button>
     <button onclick="start15Break()" id="15" class="button3">15 minutes</button>
@@ -138,7 +158,7 @@
     var fiveMinutes = 60 * 5,
     display5 = document.querySelector('#timerDuration');
     startTimer(tenMinutes, display5);
-    if
+
     }
 
     function start10() {
@@ -146,7 +166,7 @@
     var tenMinuteBreak = 60 * 10,
     displayBreak10 = document.querySelector('#timerDuration');
     startTimer(tenMinutes, displayBreak10);
-    if
+
     }
 
     function start15() {
@@ -154,22 +174,22 @@
     var fifteenMinuteBreak = 60 * 15,
     displayBreak15 = document.querySelector('#timerDuration');
     startTimer(tenMinutes, displayBreak15);
-    if
+
     }
 
     function start20() {
     document.getElementById("2Div").style.display = "none";
     var twentyMinuteBreak = 60 * 20,
     displayBreak20 = document.querySelector('#timerDuration');
-    startTimer(displayBreak20, display5);
-    if
+    startTimer(displayBreak20, displayBreak20);
+
     }
 </script>
 
   </div>
 
 
-    <div id="input1">
+    <div id="input1" style="display:none">
       <input type="text"id="name1"/>
 
       <button onclick="myFunction1(); input2Function();" id="button0" class="button3">Enter</button>
@@ -535,7 +555,7 @@ function input21Function(){
 
 
      <h1>
-      Great Job! 
+      Great Job!
     </h1>
 
 
