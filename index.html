@@ -21,9 +21,153 @@
 <body>
 
 
-<div id="1Div">
+  <div id="1Div">
+    <h4>What are you going to work on today?</h4>
 
-<h4>What are you going to work on?</h4>
+    <input type="text" id="name1" />
+
+    <button onclick="myFunction1()" id="button0" class="button3">Enter</button>
+  </div>
+  <div id="2Div" style="display:none;">
+    <h4 id=typeE>How long can you concentrate on homework for?</h4>
+    <button onclick="start10()" id="button1" class="button3">10 minutes</button>
+    <button onclick="start20()" id="button2" class="button3">20 minutes</button>
+  </div>
+
+  <center>
+    <div><span id="timerDuration"></span></div>
+  </center>
+  </body>
+
+  <div id="stop" style="display:none">
+      <h4>Wow! you've done a lot today! How about you call it a day?</h4>
+  </div>
+
+
+  <script>
+  function startTimer(duration, display) {
+  var timer = duration,
+    minutes, seconds;
+  setInterval(function() {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = minutes + ":" + seconds;
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+  if(seconds < 1){
+    document.getElementById("doneDiv").style.visibilty="visible";
+  }
+  }
+
+  //1
+  function myFunction1() {
+  document.getElementById("1Div").style.display = "none";
+  document.getElementById("2Div").style.display = "block";
+  }
+
+  //10 Minutes
+  function start10() {
+  document.getElementById("2Div").style.display = "none";
+  var tenMinutes = 60 * 10,
+  display10 = document.querySelector('#timerDuration');
+  startTimer(tenMinutes, display10);
+  if
+  }
+
+  //20 minutes
+  function start20() {
+  document.getElementById("2Div").style.display = "none";
+  var twentyMinutes = 60 * 20,
+  display20 = document.querySelector('#timerDuration');
+  startTimer(twentyMinutes, display20);
+  }
+  </script>
+
+  <div id="doneDiv" style="display:none">
+
+      <button id="doneToday" onclick="done5Function(); workOn();">I'm done for today  </button>
+
+      <button onclick="showBreakTimers"> I'm not done with this assignment, I need more time! </button>
+
+      <button id="notDoneToday" onclick="done4Function()">
+        I want to work on another assignment
+      </button>
+
+  </div>
+
+
+  <script id="breakTimersScript">
+  function showBreakTimers(){
+      document.getElementById("doneDiv").style.display = "none";
+      document.getElementById("breakTimers").style.display = "block";
+    }
+
+    function startTimer(duration, display) {
+    var timer = duration,
+      minutes, seconds;
+    setInterval(function() {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+      display.textContent = minutes + ":" + seconds;
+      if (--timer < 0) {
+        timer = duration;
+      }
+    }, 1000);
+    if(seconds < 1){
+      document.getElementById("doneDiv").style.visibilty="visible";
+    }
+    }
+  </script>
+
+  <div id="breakTimers">
+    <h4 id=typeE>How much time do you think you need in minutes?</h4>
+    <button onclick="start5Break()" id="5" class="button3">5 minutes</button>
+    <button onclick="start10Break()" id="10" class="button3">10 minutes</button>
+    <button onclick="start15Break()" id="15" class="button3">15 minutes</button>
+    <button onclick="start15Break()" id="20" class="button3">20 minutes</button>
+
+  <script>
+    function start5() {
+    document.getElementById("2Div").style.display = "none";
+    var fiveMinutes = 60 * 5,
+    display5 = document.querySelector('#timerDuration');
+    startTimer(tenMinutes, display5);
+    if
+    }
+
+    function start10() {
+    document.getElementById("2Div").style.display = "none";
+    var tenMinuteBreak = 60 * 10,
+    displayBreak10 = document.querySelector('#timerDuration');
+    startTimer(tenMinutes, displayBreak10);
+    if
+    }
+
+    function start15() {
+    document.getElementById("2Div").style.display = "none";
+    var fifteenMinuteBreak = 60 * 15,
+    displayBreak15 = document.querySelector('#timerDuration');
+    startTimer(tenMinutes, displayBreak15);
+    if
+    }
+
+    function start20() {
+    document.getElementById("2Div").style.display = "none";
+    var twentyMinuteBreak = 60 * 20,
+    displayBreak20 = document.querySelector('#timerDuration');
+    startTimer(displayBreak20, display5);
+    if
+    }
+</script>
+
+  </div>
+
 
     <div id="input1">
       <input type="text"id="name1"/>
@@ -146,7 +290,7 @@
     </div>
 
 
-</div>
+
 
 <script>
 function input2Function(){
@@ -288,23 +432,7 @@ function input21Function(){
 }
 </script>
 
-<div id="stop" style="display:none">
-    <h4>Wow! you've done a lot today! How about you call it a day?</h4>
-</div>
 
-<div id="2Div" style="display:none;">
-        <h4 id=typeE>How much time do you think you need in minutes?</h4>
-        <button onclick="myFunction2()" id="button1" class="button3">10 minutes</button>
-        <button onclick="myFunction3()" id="button2" class="button3">20 minutes</button>
-
-</div>
-
-<script>
-  function myFunction1(){
-    document.getElementById("1Div").style.display="none";
-    document.getElementById("2Div").style.display="block";
-}
-</script>
 
 
 <script>
@@ -373,119 +501,7 @@ function input21Function(){
 </script>
 
 
-<div id="timer10" style="display:none">
 
-<script>
-	function startTimer10(duration10, display10) {
-    var timer10 = duration10, minutes10, seconds10;
-    setInterval(function () {
-        minutes10 = parseInt(timer10 / 60, 10);
-        seconds10 = parseInt(timer10 % 60, 10);
-
-        minutes10 = minutes10 < 10 ? "0" + minutes10 : minutes10;
-        seconds10 = seconds10 < 10 ? "0" + seconds10 : seconds10;
-
-        display10.textContent = minutes10 + ":" + seconds10;
-
-        if (--timer10 < 0) {
-            timer10 = duration10;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var tenMinutes = 60 * 10,
-        display10 = document.querySelector('#time10');
-    startTimer10(tenMinutes, display10);
-};
-</script>
-
- <body>
-
-    <center><div><span id="time10">10:00</span></div></center>
-
-</body>
-
-<button style="display:none" id="done10" onclick="done0Function()">
- done
-</button>
-
-</div>
-
-
-
-<div id="doneDiv" style="display:none">
-
-    <button id="notFtoday" onclick="done2Function(); workOn();">
-      I'm done for today
-    </button>
-
-    <button id="doneFtoday" onclick="done1Function();">
-      I want to work on another assignment
-    </button>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<div id="timer20" style="display:none">
-    <script>
-	function startTimer20(duration20, display20) {
-    var timer20 = duration20, minutes20, seconds20;
-    setInterval(function () {
-        minutes20 = parseInt(timer20 / 60, 10);
-        seconds20 = parseInt(timer20 % 60, 10);
-
-        minutes20 = minutes20 < 10 ? "0" + minutes20 : minutes20;
-        seconds20 = seconds20 < 10 ? "0" + seconds20 : seconds20;
-
-        display20.textContent = minutes20 + ":" + seconds20;
-
-        if (--timer20 < 0) {
-            timer20 = duration20;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var twentyMinutes = 60 * 20,
-        display20 = document.querySelector('#time20');
-    startTimer20(twentyMinutes, display20);
-};
-</script>
-
- <body>
-
-    <center><div><span id="time20">20:00</span></div></center>
-
-</body>
-
-<button id="done20" onclick="done3Function()">
- done
-</button>
-
-</div>
-
-
-
-<div id="doneDiv" style="display:none">
-
-    <button id="notToday20" onclick="done5Function(); workOn();">
-      I'm done for today
-    </button>
-
-    <button id="doneToday20" onclick="done4Function()">
-      I want to work on another assignment
-    </button>
-
-</div>
 
 
 
@@ -519,7 +535,7 @@ window.onload = function () {
 
 
      <h1>
-      Great Job!
+      Great Job! 
     </h1>
 
 
