@@ -1,524 +1,637 @@
 <!DOCTYPE html>
 <html>
-<head>
 
-  <style>
+  <head>
 
-  body{
-    font-family: 'Helvetica';font-size: 22px;
-    text-align: center;
-    background: #ffff;
-  font-weight: 100;
+    <style>
+
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 
-  </style>
+.button3 {border-radius: 8px;}
+
+      body {
+        font-family: 'Helvetica';
+        font-size: 22px;
+        text-align: center;
+        background: #ffff;
+        font-weight: 100;
+      }
+
+    </style>
+
+  </head>
 
 
 
-</head>
 
-<body>
+  <div id="1Div">
+    <h4>What are you going to work on (Two math problems)?</h4>
+
+    <div id="input1">
+    <input type="text" id="name1" />
+
+      <button onclick="myFunction1(); input2Function();" id="button" class="button button3">Enter</button>
+    </div>
+
+    <div id="input2" style="display:none">
+      <input type="text" id="name2" />
+
+      <button onclick="myFunction1(); input3Function();" id="button0A" class="button button3">Enter</button>
+    </div>
+
+    <div id="input3" style="display:none">
+      <input type="text" id="name3" />
+
+      <button onclick="myFunction1(); input4Function();" id="button0B" class="button button3">Enter</button>
+    </div>
+
+    <div id="input4" style="display:none">
+      <input type="text" id="name4" />
+
+      <button onclick="myFunction1(); input5Function();" id="button0C" class="button button3">Enter</button>
+    </div>
+
+    <div id="input5" style="display:none">
+      <input type="text" id="name5" />
+
+      <button onclick="myFunction1(); input6Function();" id="button0CA" class="button button3">Enter</button>
+    </div>
+
+    <div id="input6" style="display:none">
+      <input type="text" id="name6" />
+
+      <button onclick="myFunction1(); input7Function();" id="button0D" class="button button3">Enter</button>
+    </div>
+
+    <div id="input7" style="display:none">
+      <input type="text" id="name7" />
+
+      <button onclick="myFunction1(); input8Function();" id="button0E" class="button button3">Enter</button>
+    </div>
+
+    <div id="input8" style="display:none">
+      <input type="text" id="name8" />
+
+      <button onclick="myFunction1(); input9Function();" id="button0F" class="button button3">Enter</button>
+    </div>
+
+    <div id="input9" style="display:none">
+      <input type="text" id="name9" />
+
+      <button onclick="myFunction1(); input10Function();" id="button0G" class="button button3">Enter</button>
+    </div>
+
+    <div id="input10" style="display:none">
+      <input type="text" id="name10" />
+
+      <button onclick="myFunction1(); input11Function();" id="button0H" class="button button3">Enter</button>
+    </div>
+
+    <div id="input11" style="display:none">
+      <input type="text" id="name11" />
+
+      <button onclick="myFunction1(); input12Function();" id="button0I" class="button button3">Enter</button>
+    </div>
+
+    <div id="input12" style="display:none">
+      <input type="text" id="name12" />
+
+      <button onclick="myFunction1(); input13Function();" id="button0J" class="button button3">Enter</button>
+    </div>
+
+    <div id="input13" style="display:none">
+      <input type="text" id="name13" />
+
+      <button onclick="myFunction1(); input14Function();" id="button0K" class="button button3">Enter</button>
+    </div>
+
+    <div id="input14" style="display:none">
+      <input type="text" id="name14" />
+
+      <button onclick="myFunction1(); input15Function();" id="button0L" class="button button3">Enter</button>
+    </div>
+
+    <div id="input15" style="display:none">
+      <input type="text" id="name15" />
+
+      <button onclick="myFunction1(); input16Function();" id="button0M" class="button button3">Enter</button>
+    </div>
+
+    <div id="input16" style="display:none">
+      <input type="text" id="name16" />
+
+      <button onclick="myFunction1(); input17Function();" id="button0N" class="button button3">Enter</button>
+    </div>
+
+    <div id="input17" style="display:none">
+      <input type="text" id="name17" />
+
+      <button onclick="myFunction1(); input18Function();" id="button0O" class="button button3">Enter</button>
+    </div>
+
+    <div id="input18" style="display:none">
+      <input type="text" id="name18" />
+
+      <button onclick="myFunction1(); input19Function();" id="button0P" class="button button3">Enter</button>
+    </div>
+
+    <div id="input19" style="display:none">
+      <input type="text" id="name19" />
+
+      <button onclick="myFunction1(); input20Function();" id="button0Q" class="button button3">Enter</button>
+    </div>
+
+    <div id="input20" style="display:none">
+      <input type="text" id="name20" />
+
+      <button onclick="myFunction1(); input21Function();" id="button0R" class="button button3">Enter</button>
+    </div>
+
+
+    <script>
+      //1
+      function myFunction1() {
+        document.getElementById("1Div").style.display = "none";
+        document.getElementById("2Div").style.display = "block";
+      }
+
+    </script>
+
+
+  </div>
 
 
 
 
   <script>
   function startTimer(duration, display) {
-  var timer = duration,
-    minutes, seconds;
-  setInterval(function() {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    display.textContent = minutes + ":" + seconds;
-    if (--timer < 0) {
-      timer = duration;
-    }
-  }, 1000);
-  if(seconds < 1){
-    document.getElementById("doneDiv").style.visibilty="visible";
-  }
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+
+          if (--timer < 0) {
+              timer = duration;
+          }
+      }, 1000);
   }
 
-  //1
-  function myFunction1() {
-  document.getElementById("1Div").style.display = "none";
-  document.getElementById("2Div").style.display = "block";
-  }
-
-  //10 Minutes
   function start10() {
-  document.getElementById("2Div").style.display = "none";
-  var tenMinutes = 60 * 10,
-  display10 = document.querySelector('#timerDuration');
-  startTimer(tenMinutes, display10);
-  if
-  }
+      var tenMinutes = 60 * 10,
+          display10 = document.querySelector('#time10');
+      startTimer(tenMinutes, display10);
+  };
 
-  //20 minutes
+  function start15() {
+      var fifteenMinutes = 60 * 15,
+          display15 = document.querySelector('#time15');
+      startTimer(fifteenMinutes, display15);
+  };
+
   function start20() {
-  document.getElementById("2Div").style.display = "none";
-  var twentyMinutes = 60 * 20,
-  display20 = document.querySelector('#timerDuration');
-  startTimer(twentyMinutes, display20);
-  }
-  //30 minutes
-  function start30() {
-  document.getElementById("2Div").style.display = "none";
-  var thirtyMinutes = 60 * 30,
-  display20 = document.querySelector('#timerDuration');
-  startTimer(thirstyMinutes, display20);
+      var twentyMinutes = 60 * 20,
+          display20 = document.querySelector('#time20');
+      startTimer(twentyMinutes, display20);
+  };
 
-  //40 minutes
+  function start30() {
+      var thirtyMinutes = 60 * 30,
+          display30 = document.querySelector('#time30');
+      startTimer(thirtyMinutes, display30);
+  };
+
   function start40() {
-  document.getElementById("2Div").style.display = "none";
-  var fortyMinutes = 60 * 40,
-  display40 = document.querySelector('#timerDuration');
-  startTimer(twentyMinutes, display40);
-  }
-  }
+      var fortyMinutes = 60 * 40,
+          display40 = document.querySelector('#time40');
+      startTimer(fortyMinutes, display40);
+  };
 
 
   </script>
 
-  <div id="1Div">
-    <h4>What are you going to work on today?</h4>
+    <div id="2Div" style="display:none">
 
-    <input type="text" id="name1" />
+      <script>
+        function show10Timer(){
+          document.getElementById("2Div").style.display = "none";
+          document.getElementById("timer10").style.display = "block";
+        }
+      </script>
+      <button class="button button3" onclick="show10Timer(); start10();">10 minutes</button>
 
-    <button onclick="myFunction1()" id="button0" class="button3">Enter</button>
-  </div>
+      <script>
+        function show15Timer(){
+          document.getElementById("2Div").style.display = "none";
+          document.getElementById("timer15").style.display = "block";
+        }
+      </script>
+      <button class="button button3" onclick="show15Timer(); start15();">15 minutes</button>
 
-  <div id="2Div" style="display:none;">
-    <h4 id=typeE>How long can you concentrate on homework for?</h4>
-    <button onclick="start10()" id="start10" class="button3">10 minutes</button>
-    <button onclick="start20()" id="start20" class="button3">20 minutes</button>
-    <button onclick="start30()" id="start30" class="button3">30 minutes</button>
-    <button onclick="start40()" id="start40" class="button3">40 minutes</button>
-  </div>
+      <script>
+        function show20Timer(){
+          document.getElementById("2Div").style.display = "none";
+          document.getElementById("timer20").style.display = "block";
+        }
+      </script>
+      <button class="button button3" onclick="show20Timer(); start20();">20 minutes</button>
 
-  <center>
-    <div><span id="timerDuration"></span></div>
-  </center>
-  </body>
+      <script>
+        function show30Timer(){
+          document.getElementById("2Div").style.display = "none";
+          document.getElementById("timer30").style.display = "block";
+        }
+      </script>
+      <button class="button button3" onclick="show30Timer(); start30();">30 minutes</button>
 
-  <div id="stop" style="display:none">
-      <h4>Wow! you've done a lot today! How about you call it a day?</h4>
-  </div>
+      <script>
+        function show40Timer(){
+          document.getElementById("2Div").style.display = "none";
+          document.getElementById("timer40").style.display = "block";
+        }
+      </script>
+
+
+
+
+
+
+      <button class="button button3" onclick="show40Timer(); start40();">40 minutes</button>
+    </div>
+
+
+      <div id=timer10 style ="display:none">
+        <span id="time10">10:00</span>
+        <button onclick="showDoneDiv10()">done</button>
+
+      </div>
+
+
+      <div id=timer15 style ="display:none">
+        <span id="time15">15:00</span>
+        <button onclick="showDoneDiv15()">done</button>
+
+      </div>
+
+      <div id=timer20 style="display:none">
+        <span id="time20">20:00</span>
+        <button onclick="showDoneDiv20()">done</button>
+
+      </div>
+
+      <div id=timer30 style="display:none">
+        <span id="time30">30:00</span>
+        <button onclick="showDoneDiv30()">done</button>
+
+      </div>
+
+
+      <div id=timer40 style="display:none">
+        <span id="time40">40:00</span>
+        <button onclick="showDoneDiv40()">done</button>
+
+      </div>
+
+
+
+
+
+
+<div style="display:none" id="breakTimers">
+
+  <h4 id=typeE >How long of a break do you need?</h4>
+    <button onclick="start5Break()">5 minutes</button>
+    <button onclick="start10Break()">10 minutes</button>
+    <button onclick="start15Break()">15 minutes</button>
+    <button onclick="start20Break()">20 minutes</button>
+  <script>
+      //go back to 1Div (homepage)
+      function goBackDiv1() {
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("1Div").style.display = "block";
+      }
+
+    </script>
+    <button onclick="goBackDiv1()">
+      ⬅ go back
+    </button>
+
+
+
+</div>
+
+
+
+
+
 
   <div id="doneDiv" style="display:none">
 
+    <script>
+      function showBreakTimers(){
+        document.getElementById("doneDiv").style.display = "none";
+        document.getElementById("breakTimers").style.display = "block";
+      }
+    </script>
 
-      <button onclick="showBreakTimers"> I'm not done with this assignment, I need more time! </button>
+    <button onclick="showBreakTimers()"> I'm not done with this assignment, I need more time! </button>
 
-      <button id="notDoneToday" onclick="done4Function()">I'm going to work on another assignment  </button>
 
-      <button id="doneToday" onclick="done5Function(); workOn();">I'm done with homework for today</button>
+    <script>
+      function showBreakTimersAnotherAssignment(){
+        document.getElementById("doneDiv").style.display = "none";
+        document.getElementById("breakTimers2").style.display = "block";
+      }
+    </script>
+    <button id="notDoneToday" onclick="showbreakTimersAnotherAssignment()">I'm going to work on another assignment </button>
+
+    <button id="doneToday" onclick="done5Function(); workOn();">I'm done with homework for today</button>
+
+    <button>⬅ go back</button>
 
   </div>
 
-
-  <script id="breakTimersScript">
-  function showBreakTimers(){
-      document.getElementById("doneDiv").style.display = "none";
-      document.getElementById("breakTimers").style.display = "block";
-    }
-
-    function startTimer(duration, display) {
-    var timer = duration,
-      minutes, seconds;
-    setInterval(function() {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-      display.textContent = minutes + ":" + seconds;
-      if (--timer < 0) {
-        timer = duration;
-      }
-    }, 1000);
-    if(seconds < 1){
-      document.getElementById("doneDiv").style.visibilty="visible";
-    }
-    }
-  </script>
 
   <div id="breakTimers" style="display:none">
-    <h4 id=typeE>How how long do you want your break to be?</h4>
-    <button onclick="start5Break()" id="5" class="button3">5 minutes</button>
-    <button onclick="start10Break()" id="10" class="button3">10 minutes</button>
-    <button onclick="start15Break()" id="15" class="button3">15 minutes</button>
-    <button onclick="start15Break()" id="20" class="button3">20 minutes</button>
 
-  <script>
-    function start5() {
-    document.getElementById("2Div").style.display = "none";
-    var fiveMinutes = 60 * 5,
-    display5 = document.querySelector('#timerDuration');
-    startTimer(tenMinutes, display5);
+    <button class="button button3"onclick="#">5 minutes💧</button>
+    <button class="button button3" onclick="start15()">15 minutes🌊</button>
+    <button class="button button3" onclick="#">25 minutes🌞</button>
 
-    }
 
-    function start10() {
-    document.getElementById("2Div").style.display = "none";
-    var tenMinuteBreak = 60 * 10,
-    displayBreak10 = document.querySelector('#timerDuration');
-    startTimer(tenMinutes, displayBreak10);
+  </div>
 
-    }
+  <div id="breakTimers2" style="display:none">
 
-    function start15() {
-    document.getElementById("2Div").style.display = "none";
-    var fifteenMinuteBreak = 60 * 15,
-    displayBreak15 = document.querySelector('#timerDuration');
-    startTimer(tenMinutes, displayBreak15);
+    <button class="button button3">5 minutes💧</button>
+    <button class="button button3">15 minutes🌊</button>
+    <button class="button button3">25 minutes🌞</button>
 
-    }
-
-    function start20() {
-    document.getElementById("2Div").style.display = "none";
-    var twentyMinuteBreak = 60 * 20,
-    displayBreak20 = document.querySelector('#timerDuration');
-    startTimer(displayBreak20, displayBreak20);
-
-    }
-</script>
+    <button onlick = "#">go back</button>
 
   </div>
 
 
-    <div id="input1" style="display:none">
-      <input type="text"id="name1"/>
 
-      <button onclick="myFunction1(); input2Function();" id="button0" class="button3">Enter</button>
-    </div>
 
-    <div id="input2" style="display:none">
-        <input type="text"id="name2"/>
 
-        <button onclick="myFunction1(); input3Function();" id="button0A" class="button3">Enter</button>
-    </div>
 
-    <div id="input3" style="display:none">
-        <input type="text"id="name3"/>
 
-        <button onclick="myFunction1(); input4Function();" id="button0B" class="button3">Enter</button>
-    </div>
 
-    <div id="input4" style="display:none">
-        <input type="text"id="name4"/>
 
-        <button onclick="myFunction1(); input5Function();" id="button0C" class="button3">Enter</button>
-    </div>
 
-    <div id="input5" style="display:none">
-        <input type="text"id="name5"/>
 
-        <button onclick="myFunction1(); input6Function();" id="button0C" class="button3">Enter</button>
-    </div>
-
-    <div id="input6" style="display:none">
-        <input type="text"id="name6"/>
-
-        <button onclick="myFunction1(); input7Function();" id="button0D" class="button3">Enter</button>
-    </div>
-
-    <div id="input7" style="display:none">
-        <input type="text"id="name7"/>
-
-        <button onclick="myFunction1(); input8Function();" id="button0E" class="button3">Enter</button>
-    </div>
-
-    <div id="input8" style="display:none">
-        <input type="text"id="name8"/>
-
-        <button onclick="myFunction1(); input9Function();" id="button0F" class="button3">Enter</button>
-    </div>
-
-    <div id="input9" style="display:none">
-        <input type="text"id="name9"/>
-
-        <button onclick="myFunction1(); input10Function();" id="button0G" class="button3">Enter</button>
-    </div>
-
-    <div id="input10" style="display:none">
-        <input type="text"id="name10"/>
-
-        <button onclick="myFunction1(); input11Function();" id="button0H" class="button3">Enter</button>
-    </div>
-
-    <div id="input11" style="display:none">
-        <input type="text"id="name11"/>
-
-        <button onclick="myFunction1(); input12Function();" id="button0I" class="button3">Enter</button>
-    </div>
-
-    <div id="input12" style="display:none">
-        <input type="text"id="name12"/>
-
-        <button onclick="myFunction1(); input13Function();" id="button0J" class="button3">Enter</button>
-    </div>
-
-    <div id="input13" style="display:none">
-        <input type="text"id="name13"/>
-
-        <button onclick="myFunction1(); input14Function();" id="button0K" class="button3">Enter</button>
-    </div>
-
-    <div id="input14" style="display:none">
-        <input type="text"id="name14"/>
-
-        <button onclick="myFunction1(); input15Function();" id="button0L" class="button3">Enter</button>
-    </div>
-
-    <div id="input15" style="display:none">
-        <input type="text"id="name15"/>
-
-        <button onclick="myFunction1(); input16Function();" id="button0M" class="button3">Enter</button>
-    </div>
-
-    <div id="input16" style="display:none">
-        <input type="text"id="name16"/>
-
-        <button onclick="myFunction1(); input17Function();" id="button0N" class="button3">Enter</button>
-    </div>
-
-    <div id="input17" style="display:none">
-        <input type="text"id="name17"/>
-
-        <button onclick="myFunction1(); input18Function();" id="button0O" class="button3">Enter</button>
-    </div>
-
-    <div id="input18" style="display:none">
-        <input type="text"id="name18"/>
-
-        <button onclick="myFunction1(); input19Function();" id="button0P" class="button3">Enter</button>
-    </div>
-
-    <div id="input19" style="display:none">
-        <input type="text"id="name19"/>
-
-        <button onclick="myFunction1(); input20Function();" id="button0Q" class="button3">Enter</button>
-    </div>
-
-    <div id="input20" style="display:none">
-        <input type="text"id="name20"/>
-
-        <button onclick="myFunction1(); input21Function();" id="button0R" class="button3">Enter</button>
-    </div>
-
-
-
-
-<script>
-function input2Function(){
-    document.getElementById("input1").style.display="none";
-    document.getElementById("input2").style.display="block";
-}
-</script>
-
-<script>
-function input3Function(){
-    document.getElementById("input2").style.display="none";
-    document.getElementById("input3").style.display="block";
-}
-</script>
-
-<script>
-function input4Function(){
-    document.getElementById("input3").style.display="none";
-    document.getElementById("input4").style.display="block";
-}
-</script>
-
-<script>
-function input5Function(){
-    document.getElementById("input4").style.display="none";
-    document.getElementById("input5").style.display="block";
-}
-</script>
-
-<script>
-function input6Function(){
-    document.getElementById("input5").style.display="none";
-    document.getElementById("input6").style.display="block";
-}
-</script>
-
-<script>
-function input7Function(){
-    document.getElementById("input6").style.display="none";
-    document.getElementById("input7").style.display="block";
-}
-</script>
-
-<script>
-function input8Function(){
-    document.getElementById("input7").style.display="none";
-    document.getElementById("input8").style.display="block";
-}
-</script>
-
-<script>
-function input9Function(){
-    document.getElementById("input8").style.display="none";
-    document.getElementById("input9").style.display="block";
-}
-</script>
-
-<script>
-function input10Function(){
-    document.getElementById("input9").style.display="none";
-    document.getElementById("input10").style.display="block";
-}
-</script>
-
-<script>
-function input11Function(){
-    document.getElementById("input11").style.display="none";
-    document.getElementById("input12").style.display="block";
-}
-</script>
-
-<script>
-function input12Function(){
-    document.getElementById("input12").style.display="none";
-    document.getElementById("input13").style.display="block";
-}
-</script>
-
-<script>
-function input13Function(){
-    document.getElementById("input13").style.display="none";
-    document.getElementById("input14").style.display="block";
-}
-</script>
-
-<script>
-function input14Function(){
-    document.getElementById("input14").style.display="none";
-    document.getElementById("input15").style.display="block";
-}
-</script>
-
-<script>
-function input15Function(){
-    document.getElementById("input15").style.display="none";
-    document.getElementById("input16").style.display="block";
-}
-</script>
-
-<script>
-function input16Function(){
-    document.getElementById("input16").style.display="none";
-    document.getElementById("input17").style.display="block";
-}
-</script>
-
-<script>
-function input17Function(){
-    document.getElementById("input17").style.display="none";
-    document.getElementById("input18").style.display="block";
-}
-</script>
-
-<script>
-function input18Function(){
-    document.getElementById("input18").style.display="none";
-    document.getElementById("input19").style.display="block";
-}
-</script>
-
-<script>
-function input19Function(){
-    document.getElementById("input19").style.display="none";
-    document.getElementById("input20").style.display="block";
-}
-</script>
-
-<script>
-function input20Function(){
-    document.getElementById("input20").style.display="none";
-    document.getElementById("input21").style.display="block";
-}
-</script>
-
-<script>
-function input21Function(){
-    document.getElementById("input21").style.display="none";
-    document.getElementById("stop").style.display="block";
-}
-</script>
-
-
-
-
-<script>
-  function myFunction2(){
-    document.getElementById("2Div").style.display="none";
-    document.getElementById("timer10").style.display="block";
-    document.getElementById("done10").style.display="block";
-  }
-</script>
-
-<script>
-  function myFunction3(){
-    document.getElementById("2Div").style.display="none";
-    document.getElementById("timer20").style.display="block";
-  }
-</script>
-
-
-
-
-
-<script>
-    function done0Function(){
-      document.getElementById("timer10").style.display="none";
-      document.getElementById("doneDiv").style.display="block";
+  <script>
+    function input2Function() {
+      document.getElementById("input1").style.display = "none";
+      document.getElementById("input2").style.display = "block";
     }
-</script>
 
+  </script>
 
-<script>
-    function done1Function(){
-      document.getElementById("doneDiv").style.display="none";
-      document.getElementById("1Div").style.display="block";
+  <script>
+    function input3Function() {
+      document.getElementById("input2").style.display = "none";
+      document.getElementById("input3").style.display = "block";
     }
-</script>
 
-<script>
-    function done2Function(){
-      document.getElementById("doneDiv").style.display="none";
-      document.getElementById("workDiv").style.display="block";
+  </script>
+
+  <script>
+    function input4Function() {
+      document.getElementById("input3").style.display = "none";
+      document.getElementById("input4").style.display = "block";
     }
-</script>
 
+  </script>
 
-
-<script>
-    function done3Function(){
-      document.getElementById("timer20").style.display="none";
-      document.getElementById("doneDiv").style.display="block";
+  <script>
+    function input5Function() {
+      document.getElementById("input4").style.display = "none";
+      document.getElementById("input5").style.display = "block";
     }
-</script>
 
+  </script>
 
-<script>
-    function done4Function(){
-      document.getElementById("doneDiv").style.display="none";
-      document.getElementById("1Div").style.display="block";
+  <script>
+    function input6Function() {
+      document.getElementById("input5").style.display = "none";
+      document.getElementById("input6").style.display = "block";
     }
-</script>
 
-<script>
-    function done5Function(){
-      document.getElementById("doneDiv").style.display="none";
-      document.getElementById("workDiv").style.display="block";
+  </script>
+
+  <script>
+    function input7Function() {
+      document.getElementById("input6").style.display = "none";
+      document.getElementById("input7").style.display = "block";
     }
-</script>
+
+  </script>
+
+  <script>
+    function input8Function() {
+      document.getElementById("input7").style.display = "none";
+      document.getElementById("input8").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input9Function() {
+      document.getElementById("input8").style.display = "none";
+      document.getElementById("input9").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input10Function() {
+      document.getElementById("input9").style.display = "none";
+      document.getElementById("input10").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input11Function() {
+      document.getElementById("input11").style.display = "none";
+      document.getElementById("input12").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input12Function() {
+      document.getElementById("input12").style.display = "none";
+      document.getElementById("input13").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input13Function() {
+      document.getElementById("input13").style.display = "none";
+      document.getElementById("input14").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input14Function() {
+      document.getElementById("input14").style.display = "none";
+      document.getElementById("input15").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input15Function() {
+      document.getElementById("input15").style.display = "none";
+      document.getElementById("input16").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input16Function() {
+      document.getElementById("input16").style.display = "none";
+      document.getElementById("input17").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input17Function() {
+      document.getElementById("input17").style.display = "none";
+      document.getElementById("input18").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input18Function() {
+      document.getElementById("input18").style.display = "none";
+      document.getElementById("input19").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input19Function() {
+      document.getElementById("input19").style.display = "none";
+      document.getElementById("input20").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input20Function() {
+      document.getElementById("input20").style.display = "none";
+      document.getElementById("input21").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input21Function() {
+      document.getElementById("input21").style.display = "none";
+      document.getElementById("stop").style.display = "block";
+    }
+
+  </script>
+
+
+
+
+  <script>
+    function myFunction2() {
+      document.getElementById("2Div").style.display = "none";
+      document.getElementById("timer10").style.display = "block";
+      document.getElementById("done10").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function myFunction3() {
+      document.getElementById("2Div").style.display = "none";
+      document.getElementById("timer20").style.display = "block";
+    }
+
+  </script>
+
+
+
+
+
+  <script>
+    function done0Function() {
+      document.getElementById("timer10").style.display = "none";
+      document.getElementById("doneDiv").style.display = "block";
+    }
+
+  </script>
+
+
+  <script>
+    function done1Function() {
+      document.getElementById("doneDiv").style.display = "none";
+      document.getElementById("1Div").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function done2Function() {
+      document.getElementById("doneDiv").style.display = "none";
+      document.getElementById("workDiv").style.display = "block";
+    }
+
+  </script>
+
+
+
+  <script>
+    function done3Function() {
+      document.getElementById("timer20").style.display = "none";
+      document.getElementById("doneDiv").style.display = "block";
+    }
+
+  </script>
+
+
+  <script>
+    function done4Function() {
+      document.getElementById("doneDiv").style.display = "none";
+      document.getElementById("1Div").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function done5Function() {
+      document.getElementById("doneDiv").style.display = "none";
+      document.getElementById("workDiv").style.display = "block";
+    }
+
+  </script>
 
 
 
@@ -526,73 +639,74 @@ function input21Function(){
 
 
 
-<div id="workDiv" style="display:none">
+  <div id="workDiv" style="display:none">
 
     <h1>
       What you worked on today:
     </h1>
 
-     <p><span id="result1"></span></p>
-     <p><span id="result2"></span></p>
-     <p><span id="result3"></span></p>
-     <p><span id="result4"></span></p>
-     <p><span id="result5"></span></p>
-     <p><span id="result6"></span></p>
-     <p><span id="result7"></span></p>
-     <p><span id="result8"></span></p>
-     <p><span id="result9"></span></p>
-     <p><span id="result10"></span></p>
-     <p><span id="result11"></span></p>
-     <p><span id="result12"></span></p>
-     <p><span id="result13"></span></p>
-     <p><span id="result14"></span></p>
-     <p><span id="result15"></span></p>
-     <p><span id="result16"></span></p>
-     <p><span id="result17"></span></p>
-     <p><span id="result18"></span></p>
-     <p><span id="result19"></span></p>
-     <p><span id="result20"></span></p>
+    <p><span id="result1"></span></p>
+    <p><span id="result2"></span></p>
+    <p><span id="result3"></span></p>
+    <p><span id="result4"></span></p>
+    <p><span id="result5"></span></p>
+    <p><span id="result6"></span></p>
+    <p><span id="result7"></span></p>
+    <p><span id="result8"></span></p>
+    <p><span id="result9"></span></p>
+    <p><span id="result10"></span></p>
+    <p><span id="result11"></span></p>
+    <p><span id="result12"></span></p>
+    <p><span id="result13"></span></p>
+    <p><span id="result14"></span></p>
+    <p><span id="result15"></span></p>
+    <p><span id="result16"></span></p>
+    <p><span id="result17"></span></p>
+    <p><span id="result18"></span></p>
+    <p><span id="result19"></span></p>
+    <p><span id="result20"></span></p>
 
 
-     <h1>
+    <h1>
       Great Job!
     </h1>
 
 
-</div>
+  </div>
 
-<script>
-	function workOn() {
-            document.getElementById("result1").innerHTML = document.getElementById('name1').value;
-            document.getElementById("result2").innerHTML = document.getElementById('name2').value;
-            document.getElementById("result3").innerHTML = document.getElementById('name3').value;
-            document.getElementById("result4").innerHTML = document.getElementById('name4').value;
-            document.getElementById("result5").innerHTML = document.getElementById('name5').value;
-            document.getElementById("result6").innerHTML = document.getElementById('name6').value;
-            document.getElementById("result7").innerHTML = document.getElementById('name7').value;
-            document.getElementById("result8").innerHTML = document.getElementById('name8').value;
-            document.getElementById("result9").innerHTML = document.getElementById('name9').value;
-            document.getElementById("result10").innerHTML = document.getElementById('name10').value;
-            document.getElementById("result11").innerHTML = document.getElementById('name11').value;
-            document.getElementById("result12").innerHTML = document.getElementById('name12').value;
-            document.getElementById("result13").innerHTML = document.getElementById('name13').value;
-            document.getElementById("result14").innerHTML = document.getElementById('name14').value;
-            document.getElementById("result15").innerHTML = document.getElementById('name15').value;
-            document.getElementById("result16").innerHTML = document.getElementById('name16').value;
-            document.getElementById("result17").innerHTML = document.getElementById('name17').value;
-            document.getElementById("result18").innerHTML = document.getElementById('name18').value;
-            document.getElementById("result19").innerHTML = document.getElementById('name19').value;
-            document.getElementById("result20").innerHTML = document.getElementById('name20').value;
-          }
-</script>
+  <script>
+    function workOn() {
+      document.getElementById("result1").innerHTML = document.getElementById('name1').value;
+      document.getElementById("result2").innerHTML = document.getElementById('name2').value;
+      document.getElementById("result3").innerHTML = document.getElementById('name3').value;
+      document.getElementById("result4").innerHTML = document.getElementById('name4').value;
+      document.getElementById("result5").innerHTML = document.getElementById('name5').value;
+      document.getElementById("result6").innerHTML = document.getElementById('name6').value;
+      document.getElementById("result7").innerHTML = document.getElementById('name7').value;
+      document.getElementById("result8").innerHTML = document.getElementById('name8').value;
+      document.getElementById("result9").innerHTML = document.getElementById('name9').value;
+      document.getElementById("result10").innerHTML = document.getElementById('name10').value;
+      document.getElementById("result11").innerHTML = document.getElementById('name11').value;
+      document.getElementById("result12").innerHTML = document.getElementById('name12').value;
+      document.getElementById("result13").innerHTML = document.getElementById('name13').value;
+      document.getElementById("result14").innerHTML = document.getElementById('name14').value;
+      document.getElementById("result15").innerHTML = document.getElementById('name15').value;
+      document.getElementById("result16").innerHTML = document.getElementById('name16').value;
+      document.getElementById("result17").innerHTML = document.getElementById('name17').value;
+      document.getElementById("result18").innerHTML = document.getElementById('name18').value;
+      document.getElementById("result19").innerHTML = document.getElementById('name19').value;
+      document.getElementById("result20").innerHTML = document.getElementById('name20').value;
+    }
 
-
-
+  </script>
 
 
 
 
 
-</body>
+
+
+
+
 
 </html>
