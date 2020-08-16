@@ -6,7 +6,7 @@
     <style>
 
     .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #3366ff; /* Green */
   border: none;
   color: white;
   padding: 20px;
@@ -24,7 +24,7 @@
       body {
         font-family: 'Helvetica';
         font-size: 22px;
-        color: #4CAF50;
+        color: #3366ff;
         text-align: center;
         background: #eeffe6;
         font-weight: 100;
@@ -419,6 +419,10 @@
   <h1><center>🧘</center></h1>
   <div id=breakTimersDiv>
   <p>Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
+  <button class = "button button3" class="button button3" onclick="show5Timer(); start5Timer(); showNotDoneBtn();">5 minute break</button>
+  <button class = "button button3" class="button button3" onclick="show15Timer(); start15(); showNotDoneBtn();">15 minute break</button>
+  <button class = "button button3" class="button button3" onclick="show25Timer(); start25(); showNotDoneBtn();">25 minute break</button>
+  </div>
 
   <script>
     function show5Timer(){
@@ -447,10 +451,6 @@
   </script>
 
 
-     <button class = "button button3" class="button button3" onclick="show5Timer(); start5Timer(); showNotDoneBtn();">5 minute break</button>
-     <button class = "button button3" class="button button3" onclick="show15Timer(); start15(); showNotDoneBtn();">15 minute break</button>
-     <button class = "button button3" class="button button3" onclick="show25Timer(); start25(); showNotDoneBtn();">25 minute break</button>
-</div>
 
 <div id="NextBreakTimersDiv" style="display:none">
   <p>When the timer ends click next!</p>
