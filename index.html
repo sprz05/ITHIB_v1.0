@@ -2,11 +2,12 @@
 <html>
 
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
 
     <style>
 
     .button {
-  background-color: #3366ff; /* Green */
+  background-color: #1d347bff; /* Green */
   border: none;
   color: white;
   padding: 20px;
@@ -22,11 +23,11 @@
 .button3 {border-radius: 8px;}
 
       body {
-        font-family: 'Helvetica';
+        font-family: 'Audiowide';
         font-size: 22px;
-        color: #3366ff;
+        color: #ffffffff;
         text-align: center;
-        background: #eeffe6;
+        background: #0c0c2fff;
         font-weight: 100;
         padding-top: 50px;
          padding-right: 80px;
@@ -42,15 +43,18 @@
 
 
   <div id="1Div">
-    <h1><center>✍️</center></h1>
     <h1><center>What are you going to work on (e.g. 2 math problems)?</center></h1>
 
     <h1></h1>
 
     <div id="input1">
-  <center><input type="text" id="name1" /></center>
+  <center>
+    <input type="text" id="name1" />  <button class = "button button3" onclick="myFunction1(); input2Function();" id="button" class="button button3"><center>Enter</center></button>
 
-       <button class = "button button3" onclick="myFunction1(); input2Function();" id="button" class="button button3"><center>Enter</center></button>
+</center>
+
+       <img src="https://i.ibb.co/hsN6RvJ/ITHB-IMAGE-Div1-6.jpg" alt="ITHB-IMAGE-Div1-6" border="0">
+
     </div>
 
     <div id="input2" style="display:none">
@@ -255,10 +259,9 @@
   </script>
 
     <div id="2Div" style="display:none">
-    <h1><center>⏰</center></h1>
     <h1><center>For how long can you concentrate on homework?</center></h1>
     <p>If you don't know, click 20 minutes. I'll ask you this question again so you can readjust the time if you need to.</p>
-
+  <img src="https://i.ibb.co/bPMv5HY/ITHB-IMAGE-Div1-7.jpg" alt="ITHB-IMAGE-Div1-7" border="0">
 
       <script>
         function show5Timer(){
@@ -305,7 +308,6 @@
         }
       </script>
       <button class = "button button3" class="button button3" onclick="show40Timer(); start40();">40 minutes</button>
-
 
 
 
@@ -360,36 +362,39 @@
 
       <div id=timer5 style ="display:none">
       <h1><span id="time5">5:00</span></h1>
-      <p>click next when the timer ends</p>
+      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer10 style ="display:none">
       <h1><span id="time10">10:00</span></h1>
       <p>click next when the timer ends</p>
       <button  class="button button3" onclick="showDoneDiv10()">next</button>
-
+      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
 
       <div id=timer15 style ="display:none">
       <h1><span id="time15">15:00</span></h1>
+      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer20 style="display:none">
         <h1><span id="time20">20:00</span></h1>
         <p>click next when the timer ends</p>
         <button  class="button button3" onclick="showDoneDiv20()">next</button>
-
+        <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer25 style="display:none">
         <h1><span id="time25">25:00</span></h1>
+        <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer30 style="display:none">
       <h1><span id="time30">30:00</span></h1>
       <p>click next when the timer ends</p>
       <button  class="button button3" onclick="showDoneDiv30()">next</button>
+      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
 
@@ -397,6 +402,7 @@
       <h1><span id="time40">40:00</span></h1>
       <p>click next when the timer ends</p>
       <button  class="button button3" onclick="showDoneDiv40()">next</button>
+      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id="breakNextBtns">
@@ -418,10 +424,17 @@
   <h1 id=typeE><center>Break Time</center></h1>
   <h1><center>🧘</center></h1>
   <div id=breakTimersDiv>
+
+    <script>
+    function showNextBreakTimers(){
+      document.getElementById("breakTimersDiv").style.display = "none";
+      document.getElementById("NextBreakTimersDiv").style.display = "block";
+    }
+    </script>
   <p>Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
-  <button class = "button button3" class="button button3" onclick="show5Timer(); start5Timer(); showNotDoneBtn();">5 minute break</button>
-  <button class = "button button3" class="button button3" onclick="show15Timer(); start15(); showNotDoneBtn();">15 minute break</button>
-  <button class = "button button3" class="button button3" onclick="show25Timer(); start25(); showNotDoneBtn();">25 minute break</button>
+  <button class = "button button3" class="button button3" onclick="show5Timer(); start5Timer(); showNextBreakTimers()">5 minute break</button>
+  <button class = "button button3" class="button button3" onclick="show15Timer(); start15(); showNextBreakTimers()">15 minute break</button>
+  <button class = "button button3" class="button button3" onclick="show25Timer(); start25();  showNextBreakTimers()">25 minute break</button>
   </div>
 
   <script>
@@ -437,10 +450,7 @@
       document.getElementById("breakTimersDiv").style.display = "none";
       document.getElementById("timer25").style.display = "block";
     }
-    function showNextBreakTimers(){
-      document.getElementById("breakTimersDiv").style.display = "none";
-      document.getElementById("NextBreakTimersDiv").style.display = "block";
-    }
+
     function showDiv2(){
       document.getElementById("timer5").style.display = "none";
       document.getElementById("timer15").style.display = "none";
@@ -485,6 +495,7 @@
            <button class = "button button3" onclick="showBreakTimersAnotherAssignment();"> I want to work on another assignment! </button>
            <button class = "button button3" onclick="workOn(); showWorkOn10() "> I'm done with my homework for today!</button>
 
+<img src="https://i.ibb.co/bPMv5HY/ITHB-IMAGE-Div1-7.jpg" alt="ITHB-IMAGE-Div1-7" border="0">
         </div>
 
 
@@ -795,6 +806,7 @@
       Great Job!
     </h1>
 <h1></h1>
+<img src="https://i.ibb.co/ZNfdBkY/ITHB-IMAGE-Div1-10.jpg" alt="ITHB-IMAGE-Div1-10" border="0">
 <p>Don't have something to do now? We can help!</p>
 <button class="button button3">click me</button>
 
