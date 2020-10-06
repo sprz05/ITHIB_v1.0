@@ -212,6 +212,8 @@
               timer = duration;
           }
       }, 1000);
+
+    }
   }
 
 
@@ -266,7 +268,7 @@
         	<p id="inputTxt">Input the time in minutes and click start.</p>
           <p id="nextText" style="display:none;">Click next if you finish your assignment or when the timer ends.</p>
     	    <div id="inputArea"></div>
-    		<h1 id="time">0:00</h1>
+    		<h1 style = "color:white; font-size: 80px;" id="time">0:00</h1>
           <center><button id="nextBtn" style="display:none;" class="btn btn-primary" onclick="showDoneDiv(); showInputArea();">Next</button></center>
 
 
@@ -452,38 +454,30 @@ window.onload=function(){
 
       <div id=timer5 style ="display:none">
       <h1><span id="time5">5:00</span></h1>
-      <button class="btn btn-primary" style="color:white;" onclick="showDoneDiv10();">next</button>
-      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer10 style ="display:none">
       <h1><span id="time10">10:00</span></h1>
       <p>click next when the timer ends</p>
-      <button class="btn btn-primary" style="color:white;" onclick="showDoneDiv10();">next</button>
-      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
 
       <div id=timer15 style ="display:none">
       <h1 style="font-size:90px;"><span id="time15">15:00</span></h1>
-      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer20 style="display:none">
         <h1><span id="time20">20:00</span></h1>
         <p>click next when the timer ends</p>
-        <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer25 style="display:none">
         <h1><span id="time25">25:00</span></h1>
-        <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
       <div id=timer30 style="display:none">
       <h1><span id="time30">30:00</span></h1>
       <p>click next when the timer ends</p>
-      <img src="https://i.ibb.co/smLjd1K/ITHB-IMAGE-Div1-9.jpg" alt="ITHB-IMAGE-Div1-9" border="0">
       </div>
 
 
@@ -593,8 +587,8 @@ window.onload=function(){
 
 
   <div id="breakTimers2" style="display:none">
-  <h1>But first...</h1>
-  <p>Let's take a brain break. Before you work on you next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens! Instead go outside, get a glass of water, have a relay race with your sibling, etc.</p>
+  <h1 style="font-size: 200px">🧠</h1>
+  <p>But first, Let's take a brain break. Before you work on you next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens! Instead go outside, get a glass of water, have a relay race with your sibling, etc.</p>
     <script>
       function show5Timer(){
         document.getElementById("breakTimers2").style.display = "none";
