@@ -39,7 +39,7 @@
 
     <div id="input1">
   <center>
-    <h1><center>What are you going to work on (e.g. 2 math problems)?</center></h1>
+    <h1><center>What are you going to work on first (e.g. 2 math problems)?</center></h1>
 
     <input class="context" type="text" id="name1"/>
     <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input2Function(); resetTimer();" id="button"><center>Enter</center></button>
@@ -273,13 +273,13 @@ function hideNextBtn(){
     <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? (If you don't know start with 20)</center></h1>
     <h1><center style="display:none" id="workOnNextAssignmentTxt">Time to work on your next Assignment!</center></h1>
     <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
-    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Great! You took a brain break, now continue to work on your assignment!</center></h1>
+    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!</center></h1>
     <h1><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</h1></center>
 
     <div id="masterTimer" class="container group">
 
         <div id="primaryContent" class="group">
-        	<p id="inputTxt">Input the time in minutes you can concetrate on homework for and click start.</p>
+        	<p id="inputTxt">Input the time in minutes you can concetrate on homework for and click start. Readjust it if you need too.</p>
           <p id="nextText" style="display:none;"> Click next if you finish your assignment or when the timer ends.</p>
     	    <div id="inputArea"></div>
     		<h1 style = "color:white; font-size: 80px;" id="time">0:00</h1>
@@ -340,6 +340,8 @@ function startCounter(){
 		alert("Type a valid number please");
 		return;
 	}
+
+
 	mySeconds=myInput*60;
 
 	intervalHandle=setInterval(tick, 1000);
@@ -348,6 +350,14 @@ function startCounter(){
 
 
 }
+
+function showHWBlockTxt(){
+document.getElementById("continueToWorkOnAssignmentTxt").style.display = "none";
+document.getElementById("workOnNextAssignmentTxt").style.display = "none";
+document.getElementById("homeworkTime").style.display = "none";
+document.getElementById("homeworkBlock").style.display = "block";
+}
+
 function showNextContent(){
   document.getElementById("homeworkBlock").style.display="none";
   document.getElementById("workOnNextAssignmentTxt").style.display="none";
@@ -582,54 +592,70 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
       <center><button id="nextAssignment"style="display:none; align:center;" class="btn btn-danger" style="color:white;" onclick="showDiv1A(); hideNextAssignmentBtn(); hideBreakTimers2()">next</button></center>
       </div>
 
+      <script>
+      function showNextBreakTimers(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("div2NextBtn").style.display = "block";
+      }
+      </script>
+
+
+    <script>
+      function show5Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer5").style.display = "block";
+      }
+      function show10Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer10").style.display = "block";
+      }
+      function show15Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer15").style.display = "block";
+      }
+      function show20Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer20").style.display = "block";
+      }
+      function show25Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer25").style.display = "block";
+      }
+      function show30Timer1(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("timer30").style.display = "block";
+      }
+
+
+      function showDiv2(){
+        document.getElementById("timer5").style.display = "none";
+        document.getElementById("timer10").style.display = "none";
+        document.getElementById("timer15").style.display = "none";
+        document.getElementById("timer20").style.display = "none";
+        document.getElementById("timer25").style.display = "none";
+        document.getElementById("timer30").style.display = "none";
+        document.getElementById("div2NextBtn").style.display = "none";
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("2Div").style.display = "block";
+      }
+    </script>
+
 <div style="display:none" id="breakTimers">
 
   <h1>🧠</h1>
   <p>Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
    <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show5Timer1(); start5Timer(); showNextBreakTimers()">5 minute break</button>
+   <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show10Timer1(); start10(); showNextBreakTimers()">10 minute break</button>
    <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show15Timer1(); start15(); showNextBreakTimers()">15 minute break</button>
    <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show20Timer1(); start20(); showNextBreakTimers()">20 minute break</button>
-   <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show25Timer1(); start25Timer(); showNextBreakTimers()">25 minute break</button>
+   <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show25Timer1(); start25(); showNextBreakTimers()">25 minute break</button>
    <button class="btn btn-danger" style="color:white;" class="button button3" onclick="show30Timer1(); start30(); showNextBreakTimers()">30 minute break</button>
-   <button class="btn btn-primary" style="color:white;" class="button button3" onclick="#">Skip</button>
+   <button class="btn btn-primary" style="color:white;" class="button button3" onclick="showDiv2()">Skip</button>
 
 
 </div>
 
      <button class="btn btn-primary" style="display: none; color:white; align:center;" class="btn btn-secondary" onclick="showDiv2()" id="div2NextBtn">next</button>
-
-
-    <script>
-    function showNextBreakTimers(){
-      document.getElementById("breakTimers").style.display = "none";
-      document.getElementById("div2NextBtn").style.display = "block";
-    }
-    </script>
-
-
-  <script>
-    function show5Timer1(){
-      document.getElementById("breakTimers").style.display = "none";
-      document.getElementById("timer5").style.display = "block";
-    }
-    function show15Timer1(){
-      document.getElementById("breakTimers").style.display = "none";
-      document.getElementById("timer15").style.display = "block";
-    }
-    function show25Timer1(){
-      document.getElementById("breakTimers").style.display = "none";
-      document.getElementById("timer25").style.display = "block";
-    }
-
-    function showDiv2(){
-      document.getElementById("timer5").style.display = "none";
-      document.getElementById("div2NextBtn").style.display = "none";
-      document.getElementById("timer15").style.display = "none";
-      document.getElementById("timer25").style.display = "none";
-      document.getElementById("breakTimers").style.display = "none";
-      document.getElementById("2Div").style.display = "block";
-    }
-  </script>
 
 
 
@@ -671,6 +697,8 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
               document.getElementById("homeworkBlock").style.display = "none";
               document.getElementById("homeworkTime").style.display = "none";
             }
+
+
 
           </script>
 
