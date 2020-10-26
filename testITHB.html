@@ -73,7 +73,7 @@ p{
 
       <input type="text" id="name3" />
 
-       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input4Function();" id="button0B" class="button button3">Enter</button>
+       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input4Function(); " id="button0B" class="button button3">Enter</button>
     </div>
 
     <div id="input4" style="display:none">
@@ -879,7 +879,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
            <label for="kinda">kinda</label><br>
            <input type="radio" id="other" name="understanding" value="no">
            <label for="no">no</label><br><br>
-           <button class="btn btn-primary" style="color:white;" onclick="addToUnderstanding Box">Enter</button>
+           <button class="btn btn-primary" style="color:white;" onclick="organizeUnderstanding()">Enter</button>
            <div>
 
             <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();"> I'm not done with this assignment, I need more time!</button>
@@ -950,10 +950,16 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 function hideStop(){
   document.getElementById("stop").style.display = "none";
 }
-//this shows what they worked on:
+//this shows the next input boxes:
+  function showUnderStandingCheck2();{
+    document.getElementById("understandingCheck1").style.display = "none";
+    document.getElementById("underStandingCheck2").style.display = "block";
+}
+
     function input2Function() {
       document.getElementById("input1").style.display = "none";
       document.getElementById("input2").style.display = "block";
+      showUnderStandingCheck2();
     }
 
   </script>
