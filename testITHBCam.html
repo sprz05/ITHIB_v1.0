@@ -23,7 +23,7 @@
 <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="assets\css\background.css">
 <!-- JS Files -->
-<script type="text/javascript" src="testITHBCam.jss">
+<script type="text/javascript" src="testITHBCam.js">
 
 </script>
 <style>
@@ -56,7 +56,47 @@ p{
     <h1><center>What are you going to work on first (e.g. 2 math problems)?</center></h1>
 
     <input class="context" type="text" id="name1"/>
-    <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input2Function();" id="button"><center>Enter</center></button>
+
+    <div id="my_camera"></div>
+
+    	<!-- First, include the Webcam.js JavaScript Library -->
+    	<script type="text/javascript" src="../webcam.min.js"></script>
+
+    	<!-- Configure a few settings and attach camera -->
+    	<script language="JavaScript">
+    		function turnOnCamera(){
+    		Webcam.set({
+    			width: 320,
+    			height: 240,
+    			image_format: 'jpeg',
+    			jpeg_quality: 90
+    		});
+    		Webcam.attach( '#my_camera' );
+       }
+
+       function take_snapshot1() {
+         // take snapshot and get image data
+         Webcam.snap( function(data_uri) {
+           // display results in page
+           document.getElementById('result1N').innerHTML =
+             '<h2>Here is your image:</h2>' +
+             '<img src="'+data_uri+'"/>';
+         } );
+       }
+
+       function turnOffCamera(){
+       		Webcam.reset()
+       	}
+    	</script>
+
+      <button id="camBtn" type="button" name="button" onclick="showPicBtn1(); turnOnCamera();">Use Camera</button>
+
+
+    <form>
+  <input style="display:none;" id="picBtn1" type=button value="Take Picture of First Assignment" onClick="take_snapshot1()">
+</form>
+
+    <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input2Function();  turnOffCamera();" id="button"><center>Enter</center></button>
 </center>
 
        <img src="https://i.ibb.co/hsN6RvJ/ITHB-IMAGE-Div1-6.jpg" alt="ITHB-IMAGE-Div1-6" border="0">
@@ -644,7 +684,7 @@ p{
   <div id="workDiv" style="display:none">
 
       <p>Here's what you hard a time on</p>
-      <p><span id="result1N"></span></p>
+      <div id="result1NPic"><p><span id="result1N"></span></p></div>
       <p><span id="result2N"></span></p>
       <p><span id="result3N"></span></p>
       <p><span id="result4N"></span></p>

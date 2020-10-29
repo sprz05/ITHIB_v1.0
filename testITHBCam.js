@@ -1,3 +1,11 @@
+
+
+
+function showPicBtn1() {
+  document.getElementById("camBtn").style.display = "none";
+  document.getElementById("picBtn1").style.display = "block";
+}
+
 function myFunction1() {
   document.getElementById("1Div").style.display = "none";
   document.getElementById("2Div").style.display = "block";

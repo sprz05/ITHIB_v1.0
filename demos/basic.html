@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>WebcamJS Test Page</title>
+	<style type="text/css">
+		body { font-family: Helvetica, sans-serif; }
+		h2, h3 { margin-top:0; }
+		form { margin-top: 15px; }
+		form > input { margin-right: 15px; }
+		#result1NPic { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+
+		#result2 { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
+	</style>
+</head>
+<body>
+	<div id="result1NPic"></div>
+	<div id="my_camera"></div>
+
+	<!-- First, include the Webcam.js JavaScript Library -->
+	<script type="text/javascript" src="../webcam.min.js"></script>
+
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		function turnOnCamera(){
+		Webcam.set({
+			width: 320,
+			height: 240,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+		Webcam.attach( '#my_camera' );
+   }
+	</script>
+
+	<!-- A button for taking snaps -->
+	<form>
+		<input type=button value="Take Picture of First Assignment" onClick="take_snapshot1()">
+	</form>
+
+
+	<div id="result2">Your 2nd captured image will appear here...</div>
+
+	<!-- A button for taking snaps -->
+	<form>
+		<input type=button value="Take 2nd Snapshot" onClick="take_snapshot2()">
+	</form>
+
+	<!-- Turn Off & On-->
+  <button type="button" name="button" onclick="turnOffCamera();">Enter</button>
+	<button type="button" name="button" onclick="turnOnCamera();">Use Camera</button>
+
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+		function take_snapshot2() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				document.getElementById('result2').innerHTML =
+					'<h2>Here is your image:</h2>' +
+					'<img src="'+data_uri+'"/>';
+			} );
+		}
+	</script>
+
+
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+		function take_snapshot1() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				document.getElementById('result1N').innerHTML =
+					'<h2>Here is your image:</h2>' +
+					'<img src="'+data_uri+'"/>';
+			} );
+		}
+	</script>
+
+	<script type="text/javascript">
+	function turnOffCamera(){
+		Webcam.reset()
+	}
+
+	</script>
+
+</body>
+</html>
