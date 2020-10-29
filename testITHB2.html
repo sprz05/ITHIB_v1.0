@@ -127,9 +127,73 @@ p{
     </div>
 
     <div id="input11" style="display:none">
-      <h1>Great job! You did 10 problems, let's review the problems you had a hard time with before you move on!</h1>
-      <p>Try and see if you can solve the problems you had a hard time & kinda had a hard time with.</p>
-      <button class="btn btn-primary" style="color:white;" class="button button3" onclick="showWorkOn10(); hideStop();">Sounds good!</button>
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name11" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input12Function(); showUnderstandingCheck11();" id="button0I" class="button button3">Enter</button>
+    </div>
+
+    <div id="input12" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name12" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input13Function(); showUnderstandingCheck12();" id="button0J" class="button button3">Enter</button>
+    </div>
+
+    <div id="input13" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name13" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input14Function(); showUnderstandingCheck13();" id="button0K" class="button button3">Enter</button>
+    </div>
+
+    <div id="input14" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name14" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input15Function(); showUnderstandingCheck14();" id="button0L" class="button button3">Enter</button>
+    </div>
+
+    <div id="input15" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name15" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input16Function(); showUnderstandingCheck15();" id="button0M" class="button button3">Enter</button>
+    </div>
+
+    <div id="input16" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name16" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input17Function(); showUnderstandingCheck16();" id="button0N" class="button button3">Enter</button>
+    </div>
+
+    <div id="input17" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name17" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input18Function(); showUnderstandingCheck17();" id="button0O" class="button button3">Enter</button>
+    </div>
+
+    <div id="input18" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name18" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input19Function(); showUnderstandingCheck18();" id="button0P" class="button button3">Enter</button>
+    </div>
+
+    <div id="input19" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name19" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input20Function(); showUnderstandingCheck19();" id="button0Q" class="button button3">Enter</button>
+    </div>
+
+    <div id="input20" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name20" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); showUnderstandingCheck17(); input21Function();" id="button0R" class="button button3">Enter</button>
     </div>
 
 
@@ -1225,7 +1289,10 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
   </div>
 
 
-
+<div id="stop" style="display:none;">
+  <h1>Woah there! You've done a lot of work! Let's call it a day? Or take a long break and come back :D</h1>
+  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
+</div>
 
   <script>
 function hideStop(){
@@ -1313,16 +1380,92 @@ function showUnderStandingCheck3(){
 
   </script>
 
-
   <script>
     function input11Function() {
       document.getElementById("input10").style.display = "none";
       document.getElementById("input11").style.display = "block";
     }
 
-function showStopDiv() {
-  document.getElementById("stop").style.display = "block";
-}
+  </script>
+
+  <script>
+    function input12Function() {
+      document.getElementById("input11").style.display = "none";
+      document.getElementById("input12").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input13Function() {
+      document.getElementById("input12").style.display = "none";
+      document.getElementById("input13").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input14Function() {
+      document.getElementById("input13").style.display = "none";
+      document.getElementById("input14").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input15Function() {
+      document.getElementById("input14").style.display = "none";
+      document.getElementById("input15").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input16Function() {
+      document.getElementById("input15").style.display = "none";
+      document.getElementById("input16").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input17Function() {
+      document.getElementById("input16").style.display = "none";
+      document.getElementById("input17").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input18Function() {
+      document.getElementById("input17").style.display = "none";
+      document.getElementById("input18").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input19Function() {
+      document.getElementById("input18").style.display = "none";
+      document.getElementById("input19").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input20Function() {
+      document.getElementById("input19").style.display = "none";
+      document.getElementById("input20").style.display = "block";
+    }
+
+  </script>
+
+  <script>
+    function input21Function() {
+      document.getElementById("input21").style.display = "none";
+      document.getElementById("stop").style.display = "block";
+    }
+
   </script>
 
 
@@ -1417,6 +1560,18 @@ function showStopDiv() {
       <p><span id="result8N"></span></p>
       <p><span id="result9N"></span></p>
       <p><span id="result10N"></span></p>
+      <p><span id="result11N"></span></p>
+      <p><span id="result12N"></span></p>
+      <p><span id="result13N"></span></p>
+      <p><span id="result14N"></span></p>
+      <p><span id="result15N"></span></p>
+      <p><span id="result16N"></span></p>
+      <p><span id="result17N"></span></p>
+      <p><span id="result18N"></span></p>
+      <p><span id="result19N"></span></p>
+      <p><span id="result20N"></span></p>
+
+
       <p>Here's what you kind of had a hard time on:</p>
       <p><span id="result1K"></span></p>
       <p><span id="result2K"></span></p>
@@ -1428,6 +1583,16 @@ function showStopDiv() {
       <p><span id="result8K"></span></p>
       <p><span id="result9K"></span></p>
       <p><span id="result10K"></span></p>
+      <p><span id="result11K"></span></p>
+      <p><span id="result12K"></span></p>
+      <p><span id="result13K"></span></p>
+      <p><span id="result14K"></span></p>
+      <p><span id="result15K"></span></p>
+      <p><span id="result16K"></span></p>
+      <p><span id="result17K"></span></p>
+      <p><span id="result18K"></span></p>
+      <p><span id="result19K"></span></p>
+      <p><span id="result20K"></span></p>
       <p>Here's what you didn't have a hard time:</p>
       <p><span id="result1Y"></span></p>
       <p><span id="result2Y"></span></p>
@@ -1439,6 +1604,17 @@ function showStopDiv() {
       <p><span id="result8Y"></span></p>
       <p><span id="result9Y"></span></p>
       <p><span id="result10Y"></span></p>
+      <p><span id="result11Y"></span></p>
+      <p><span id="result12Y"></span></p>
+      <p><span id="result13Y"></span></p>
+      <p><span id="result14Y"></span></p>
+      <p><span id="result15Y"></span></p>
+      <p><span id="result16Y"></span></p>
+      <p><span id="result17Y"></span></p>
+      <p><span id="result18Y"></span></p>
+      <p><span id="result19Y"></span></p>
+      <p><span id="result20Y"></span></p>
+
         <h1>
           Great Job!
         </h1>
