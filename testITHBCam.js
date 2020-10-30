@@ -1,9 +1,23 @@
-
-
-
 function showPicBtn1() {
   document.getElementById("camBtn").style.display = "none";
+  document.getElementById("button").style.display = "block";
   document.getElementById("picBtn1").style.display = "block";
+}
+
+function showRetakeBtn1() {
+  document.getElementById("picBtn1").style.display = "none";
+  document.getElementById("retakeBtn1").style.display = "block";
+}
+
+function showPicBtn2() {
+  document.getElementById("camBtn2").style.display = "none";
+  document.getElementById("button0A").style.display = "block";
+  document.getElementById("picBtn2").style.display = "block";
+}
+
+function showRetakeBtn2() {
+  document.getElementById("picBtn2").style.display = "none";
+  document.getElementById("retakeBtn2").style.display = "block";
 }
 
 function myFunction1() {
@@ -446,6 +460,13 @@ function showContinueToWorkOnAssignmentTxt(){
   document.getElementById("homeworkTime").style.display = "none";
 }
 
+function showCam(){
+  document.getElementById("my_camera").style.display = "block";
+}
+
+function hideCam(){
+  document.getElementById("my_camera").style.display = "none";
+}
 
 function showUnderstandingCheck2(){
   document.getElementById("understandingCheck1").style.display = "none";
@@ -490,56 +511,6 @@ function showUnderstandingCheck9(){
 function showUnderstandingCheck10(){
   document.getElementById("understandingCheck9").style.display = "none";
   document.getElementById("understandingCheck10").style.display = "block";
-}
-
-function showUnderstandingCheck11(){
-  document.getElementById("understandingCheck10").style.display = "none";
-  document.getElementById("understandingCheck11").style.display = "block";
-}
-
-function showUnderstandingCheck12(){
-  document.getElementById("understandingCheck11").style.display = "none";
-  document.getElementById("understandingCheck12").style.display = "block";
-}
-
-function showUnderstandingCheck13(){
-  document.getElementById("understandingCheck12").style.display = "none";
-  document.getElementById("understandingCheck13").style.display = "block";
-}
-
-function showUnderstandingCheck14(){
-  document.getElementById("understandingCheck13").style.display = "none";
-  document.getElementById("understandingCheck14").style.display = "block";
-}
-
-function showUnderstandingCheck15(){
-  document.getElementById("understandingCheck14").style.display = "none";
-  document.getElementById("understandingCheck15").style.display = "block";
-}
-
-function showUnderstandingCheck16(){
-  document.getElementById("understandingCheck15").style.display = "none";
-  document.getElementById("understandingCheck16").style.display = "block";
-}
-
-function showUnderstandingCheck17(){
-  document.getElementById("understandingCheck16").style.display = "none";
-  document.getElementById("understandingCheck17").style.display = "block";
-}
-
-function showUnderstandingCheck18(){
-  document.getElementById("understandingCheck17").style.display = "none";
-  document.getElementById("understandingCheck18").style.display = "block";
-}
-
-function showUnderstandingCheck19(){
-  document.getElementById("understandingCheck18").style.display = "none";
-  document.getElementById("understandingCheck19").style.display = "block";
-}
-
-function showUnderstandingCheck20(){
-  document.getElementById("understandingCheck19").style.display = "none";
-  document.getElementById("understandingCheck20").style.display = "block";
 }
 
 function showDoneDivAfterOrganizing(){
@@ -763,24 +734,24 @@ function showStopDiv() {
   function organizeUnderstanding1() {
      var understanding1 = document.querySelector('input[name = "understanding1"]:checked').value;
              if (understanding1 == 'yes' ){
-                document.getElementById("result1Y").innerHTML = document.getElementById('name1').value;
+                document.getElementById("result1Y").innerHTML = document.getElementById('name1').innerHTML;
              } else if (understanding1 == 'kinda' ){
-               document.getElementById("result1K").innerHTML = document.getElementById('name1').value;
+               document.getElementById("result1K").innerHTML = document.getElementById('name1').innerHTML;
              } else if (understanding1 == 'no' ){
-               document.getElementById("result1N").innerHTML = document.getElementById('name1').value;
+               document.getElementById("result1N").innerHTML = document.getElementById('name1').innerHTML;
              } else {
                return;
              }
       }
 
             function organizeUnderstanding2() {
-     var understanding2 = document.querySelector('input[name = "understanding2"]:checked').value;
+     var understanding2 = document.querySelector('input[name = "understanding2"]:checked').innerHTML;
              if (understanding2 == 'yes' ){
-                document.getElementById("result2Y").innerHTML = document.getElementById('name2').value;
+                document.getElementById("result2Y").innerHTML = document.getElementById('name2').innerHTML;
              } else if (understanding2 == 'kinda' ){
-               document.getElementById("result2K").innerHTML = document.getElementById('name2').value;
+               document.getElementById("result2K").innerHTML = document.getElementById('name2').innerHTML;
              } else if (understanding2 == 'no' ){
-               document.getElementById("result2N").innerHTML = document.getElementById('name2').value;
+               document.getElementById("result2N").innerHTML = document.getElementById('name2').innerHTML;
              } else {
                return;
              }
@@ -887,136 +858,6 @@ var understanding10 = document.querySelector('input[name = "understanding10"]:ch
    document.getElementById("result10K").innerHTML = document.getElementById('name10').value;
  } else if (understanding10 == 'no' ){
    document.getElementById("result10N").innerHTML = document.getElementById('name10').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding11() {
-var understanding11 = document.querySelector('input[name = "understanding11"]:checked').value;
- if (understanding11 == 'yes' ){
-    document.getElementById("result11Y").innerHTML = document.getElementById('name11').value;
- } else if (understanding11 == 'kinda' ){
-   document.getElementById("result11K").innerHTML = document.getElementById('name11').value;
- } else if (understanding11 == 'no' ){
-   document.getElementById("result11N").innerHTML = document.getElementById('name11').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding12() {
-var understanding12 = document.querySelector('input[name = "understanding12"]:checked').value;
- if (understanding12 == 'yes' ){
-    document.getElementById("result12Y").innerHTML = document.getElementById('name12').value;
- } else if (understanding12 == 'kinda' ){
-   document.getElementById("result12K").innerHTML = document.getElementById('name12').value;
- } else if (understanding12 == 'no' ){
-   document.getElementById("result12N").innerHTML = document.getElementById('name12').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding13() {
-var understanding13 = document.querySelector('input[name = "understanding13"]:checked').value;
- if (understanding13 == 'yes' ){
-    document.getElementById("result13Y").innerHTML = document.getElementById('name13').value;
- } else if (understanding13 == 'kinda' ){
-   document.getElementById("result13K").innerHTML = document.getElementById('name13').value;
- } else if (understanding13 == 'no' ){
-   document.getElementById("result13N").innerHTML = document.getElementById('name13').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding14() {
-var understanding14 = document.querySelector('input[name = "understanding14"]:checked').value;
- if (understanding14 == 'yes' ){
-    document.getElementById("result14Y").innerHTML = document.getElementById('name14').value;
- } else if (understanding14 == 'kinda' ){
-   document.getElementById("result14K").innerHTML = document.getElementById('name14').value;
- } else if (understanding14 == 'no' ){
-   document.getElementById("result14N").innerHTML = document.getElementById('name14').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding15() {
-var understanding15 = document.querySelector('input[name = "understanding15"]:checked').value;
- if (understanding15 == 'yes' ){
-    document.getElementById("result15Y").innerHTML = document.getElementById('name15').value;
- } else if (understanding15 == 'kinda' ){
-   document.getElementById("result15K").innerHTML = document.getElementById('name15').value;
- } else if (understanding15 == 'no' ){
-   document.getElementById("result15N").innerHTML = document.getElementById('name15').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding16() {
-var understanding16 = document.querySelector('input[name = "understanding16"]:checked').value;
- if (understanding16 == 'yes' ){
-    document.getElementById("result16Y").innerHTML = document.getElementById('name16').value;
- } else if (understanding16 == 'kinda' ){
-   document.getElementById("result16K").innerHTML = document.getElementById('name16').value;
- } else if (understanding16 == 'no' ){
-   document.getElementById("result16N").innerHTML = document.getElementById('name16').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding17() {
-var understanding17 = document.querySelector('input[name = "understanding17"]:checked').value;
- if (understanding17 == 'yes' ){
-    document.getElementById("result17Y").innerHTML = document.getElementById('name17').value;
- } else if (understanding17 == 'kinda' ){
-   document.getElementById("result17K").innerHTML = document.getElementById('name17').value;
- } else if (understanding17 == 'no' ){
-   document.getElementById("result17N").innerHTML = document.getElementById('name17').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding18() {
-var understanding18 = document.querySelector('input[name = "understanding18"]:checked').value;
- if (understanding18 == 'yes' ){
-    document.getElementById("result18Y").innerHTML = document.getElementById('name18').value;
- } else if (understanding18 == 'kinda' ){
-   document.getElementById("result18K").innerHTML = document.getElementById('name18').value;
- } else if (understanding18 == 'no' ){
-   document.getElementById("result18N").innerHTML = document.getElementById('name18').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding19() {
-var understanding19 = document.querySelector('input[name = "understanding19"]:checked').value;
- if (understanding19 == 'yes' ){
-    document.getElementById("result19Y").innerHTML = document.getElementById('name19').value;
- } else if (understanding19 == 'kinda' ){
-   document.getElementById("result19K").innerHTML = document.getElementById('name19').value;
- } else if (understanding19 == 'no' ){
-   document.getElementById("result19N").innerHTML = document.getElementById('name19').value;
- } else {
-   return;
- }
-}
-
-function organizeUnderstanding20() {
-var understanding20 = document.querySelector('input[name = "understanding20"]:checked').value;
- if (understanding20 == 'yes' ){
-    document.getElementById("result20Y").innerHTML = document.getElementById('name20').value;
- } else if (understanding20 == 'kinda' ){
-   document.getElementById("result20K").innerHTML = document.getElementById('name20').value;
- } else if (understanding20 == 'no' ){
-   document.getElementById("result20N").innerHTML = document.getElementById('name20').value;
  } else {
    return;
  }
