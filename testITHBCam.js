@@ -1,30 +1,118 @@
-function showPicBtn1() {
-  document.getElementById("camBtn").style.display = "none";
-  document.getElementById("button").style.display = "block";
-  document.getElementById("picBtn1").style.display = "block";
-}
-
-function showRetakeBtn1() {
-  document.getElementById("picBtn1").style.display = "none";
-  document.getElementById("retakeBtn1").style.display = "block";
-}
-
-function showPicBtn2() {
-  document.getElementById("camBtn2").style.display = "none";
-  document.getElementById("button0A").style.display = "block";
-  document.getElementById("picBtn2").style.display = "block";
-}
-
-function showRetakeBtn2() {
-  document.getElementById("picBtn2").style.display = "none";
-  document.getElementById("retakeBtn2").style.display = "block";
-}
-
 function myFunction1() {
   document.getElementById("1Div").style.display = "none";
   document.getElementById("2Div").style.display = "block";
 }
 
+
+function showPicBtn1() {
+  document.getElementById("camBtn").style.display = "none";
+  document.getElementById("picBtn1").style.display = "block";
+}
+
+function showRetakeBtn1() {
+  document.getElementById("picBtn1").style.display = "none";
+  document.getElementById("button").style.display = "block";
+  document.getElementById("retakeBtn1").style.display = "block";
+}
+
+function showPicBtn2() {
+  document.getElementById("camBtn2").style.display = "none";
+  document.getElementById("picBtn2").style.display = "block";
+}
+
+function showRetakeBtn2() {
+  document.getElementById("picBtn2").style.display = "none";
+  document.getElementById("button0A").style.display = "block";
+  document.getElementById("retakeBtn2").style.display = "block";
+}
+
+function showPicBtn3() {
+  document.getElementById("camBtn3").style.display = "none";
+  document.getElementById("picBtn3").style.display = "block";
+}
+
+function showRetakeBtn3() {
+  document.getElementById("picBtn3").style.display = "none";
+  document.getElementById("button0B").style.display = "block";
+  document.getElementById("retakeBtn3").style.display = "block";
+}
+
+function showPicBtn4() {
+  document.getElementById("camBtn4").style.display = "none";
+  document.getElementById("picBtn4").style.display = "block";
+}
+
+function showRetakeBtn4() {
+  document.getElementById("picBtn4").style.display = "none";
+  document.getElementById("button0C").style.display = "block";
+  document.getElementById("retakeBtn4").style.display = "block";
+}
+
+function showPicBtn5() {
+  document.getElementById("camBtn5").style.display = "none";
+  document.getElementById("picBtn5").style.display = "block";
+}
+
+function showRetakeBtn5() {
+  document.getElementById("picBtn5").style.display = "none";
+  document.getElementById("button0CA").style.display = "block";
+  document.getElementById("retakeBtn5").style.display = "block";
+}
+
+function showPicBtn6() {
+  document.getElementById("camBtn6").style.display = "none";
+  document.getElementById("picBtn6").style.display = "block";
+}
+
+function showRetakeBtn6() {
+  document.getElementById("picBtn6").style.display = "none";
+  document.getElementById("button0D").style.display = "block";
+  document.getElementById("retakeBtn6").style.display = "block";
+}
+
+function showPicBtn7() {
+  document.getElementById("camBtn7").style.display = "none";
+  document.getElementById("picBtn7").style.display = "block";
+}
+
+function showRetakeBtn7() {
+  document.getElementById("picBtn7").style.display = "none";
+  document.getElementById("button0E").style.display = "block";
+  document.getElementById("retakeBtn7").style.display = "block";
+}
+
+function showPicBtn8() {
+  document.getElementById("camBtn8").style.display = "none";
+  document.getElementById("picBtn8").style.display = "block";
+}
+
+function showRetakeBtn8() {
+  document.getElementById("picBtn8").style.display = "none";
+  document.getElementById("button0F").style.display = "block";
+  document.getElementById("retakeBtn8").style.display = "block";
+}
+
+function showPicBtn9() {
+  document.getElementById("camBtn9").style.display = "none";
+  document.getElementById("picBtn9").style.display = "block";
+}
+
+function showRetakeBtn9() {
+  document.getElementById("picBtn9").style.display = "none";
+  document.getElementById("button0G").style.display = "block";
+  document.getElementById("retakeBtn9").style.display = "block";
+}
+
+function showPicBtn10() {
+  document.getElementById("camBtn10").style.display = "none";
+  document.getElementById("picBtn10").style.display = "block";
+}
+
+function showRetakeBtn10() {
+  document.getElementById("picBtn10").style.display = "none";
+  document.getElementById("button0H").style.display = "block";
+  document.getElementById("retakeBtn10").style.display = "block";
+}
 
 let timerId;
 function startTimer(duration, display) {
@@ -645,6 +733,8 @@ function showUnderStandingCheck3(){
 
     function input11Function() {
       document.getElementById("input10").style.display = "none";
+      document.getElementById("nextProbBtn").style.display = "none";
+      document.getElementById("doneBtn").style.display = "block";
       document.getElementById("input11").style.display = "block";
     }
 
@@ -745,7 +835,7 @@ function showStopDiv() {
       }
 
             function organizeUnderstanding2() {
-     var understanding2 = document.querySelector('input[name = "understanding2"]:checked').innerHTML;
+     var understanding2 = document.querySelector('input[name = "understanding2"]:checked').value;
              if (understanding2 == 'yes' ){
                 document.getElementById("result2Y").innerHTML = document.getElementById('name2').innerHTML;
              } else if (understanding2 == 'kinda' ){
@@ -762,11 +852,11 @@ function showStopDiv() {
             function organizeUnderstanding3() {
      var understanding3 = document.querySelector('input[name = "understanding3"]:checked').value;
              if (understanding3 == 'yes' ){
-                document.getElementById("result3Y").innerHTML = document.getElementById('name3').value;
+                document.getElementById("result3Y").innerHTML = document.getElementById('name3').innerHTML;
              } else if (understanding3 == 'kinda' ){
-               document.getElementById("result3K").innerHTML = document.getElementById('name3').value;
+               document.getElementById("result3K").innerHTML = document.getElementById('name3').innerHTML;
              } else if (understanding3 == 'no' ){
-               document.getElementById("result3N").innerHTML = document.getElementById('name3').value;
+               document.getElementById("result3N").innerHTML = document.getElementById('name3').innerHTML;
              } else {
                return;
              }
@@ -775,11 +865,11 @@ function showStopDiv() {
       function organizeUnderstanding4() {
 var understanding4 = document.querySelector('input[name = "understanding4"]:checked').value;
        if (understanding4 == 'yes' ){
-          document.getElementById("result4Y").innerHTML = document.getElementById('name4').value;
+          document.getElementById("result4Y").innerHTML = document.getElementById('name4').innerHTML;
        } else if (understanding4 == 'kinda' ){
-         document.getElementById("result4K").innerHTML = document.getElementById('name4').value;
+         document.getElementById("result4K").innerHTML = document.getElementById('name4').innerHTML;
        } else if (understanding4 == 'no' ){
-         document.getElementById("result4N").innerHTML = document.getElementById('name4').value;
+         document.getElementById("result4N").innerHTML = document.getElementById('name4').innerHTML;
        } else {
          return;
        }
@@ -788,11 +878,11 @@ var understanding4 = document.querySelector('input[name = "understanding4"]:chec
 function organizeUnderstanding5() {
 var understanding5 = document.querySelector('input[name = "understanding5"]:checked').value;
  if (understanding5 == 'yes' ){
-    document.getElementById("result5Y").innerHTML = document.getElementById('name5').value;
+    document.getElementById("result5Y").innerHTML = document.getElementById('name5').innerHTML;
  } else if (understanding5 == 'kinda' ){
-   document.getElementById("result5K").innerHTML = document.getElementById('name5').value;
+   document.getElementById("result5K").innerHTML = document.getElementById('name5').innerHTML;
  } else if (understanding5 == 'no' ){
-   document.getElementById("result5N").innerHTML = document.getElementById('name5').value;
+   document.getElementById("result5N").innerHTML = document.getElementById('name5').innerHTML;
  } else {
    return;
  }
@@ -801,11 +891,11 @@ var understanding5 = document.querySelector('input[name = "understanding5"]:chec
 function organizeUnderstanding6() {
 var understanding6 = document.querySelector('input[name = "understanding6"]:checked').value;
  if (understanding6 == 'yes' ){
-    document.getElementById("result6Y").innerHTML = document.getElementById('name6').value;
+    document.getElementById("result6Y").innerHTML = document.getElementById('name6').innerHTML;
  } else if (understanding6 == 'kinda' ){
-   document.getElementById("result6K").innerHTML = document.getElementById('name6').value;
+   document.getElementById("result6K").innerHTML = document.getElementById('name6').innerHTML;
  } else if (understanding6 == 'no' ){
-   document.getElementById("result6N").innerHTML = document.getElementById('name6').value;
+   document.getElementById("result6N").innerHTML = document.getElementById('name6').innerHTML;
  } else {
    return;
  }
@@ -814,11 +904,11 @@ var understanding6 = document.querySelector('input[name = "understanding6"]:chec
 function organizeUnderstanding7() {
 var understanding7 = document.querySelector('input[name = "understanding7"]:checked').value;
  if (understanding7 == 'yes' ){
-    document.getElementById("result7Y").innerHTML = document.getElementById('name7').value;
+    document.getElementById("result7Y").innerHTML = document.getElementById('name7').innerHTML;
  } else if (understanding7 == 'kinda' ){
-   document.getElementById("result7K").innerHTML = document.getElementById('name7').value;
+   document.getElementById("result7K").innerHTML = document.getElementById('name7').innerHTML;
  } else if (understanding7 == 'no' ){
-   document.getElementById("result7N").innerHTML = document.getElementById('name7').value;
+   document.getElementById("result7N").innerHTML = document.getElementById('name7').innerHTML;
  } else {
    return;
  }
@@ -827,11 +917,11 @@ var understanding7 = document.querySelector('input[name = "understanding7"]:chec
 function organizeUnderstanding8() {
 var understanding8 = document.querySelector('input[name = "understanding8"]:checked').value;
  if (understanding8 == 'yes' ){
-    document.getElementById("result8Y").innerHTML = document.getElementById('name8').value;
+    document.getElementById("result8Y").innerHTML = document.getElementById('name8').innerHTML;
  } else if (understanding8 == 'kinda' ){
-   document.getElementById("result8K").innerHTML = document.getElementById('name8').value;
+   document.getElementById("result8K").innerHTML = document.getElementById('name8').innerHTML;
  } else if (understanding8 == 'no' ){
-   document.getElementById("result8N").innerHTML = document.getElementById('name8').value;
+   document.getElementById("result8N").innerHTML = document.getElementById('name8').innerHTML;
  } else {
    return;
  }
@@ -840,11 +930,11 @@ var understanding8 = document.querySelector('input[name = "understanding8"]:chec
 function organizeUnderstanding9() {
 var understanding9 = document.querySelector('input[name = "understanding9"]:checked').value;
  if (understanding9 == 'yes' ){
-    document.getElementById("result9Y").innerHTML = document.getElementById('name9').value;
+    document.getElementById("result9Y").innerHTML = document.getElementById('name9').innerHTML;
  } else if (understanding9 == 'kinda' ){
-   document.getElementById("result9K").innerHTML = document.getElementById('name9').value;
+   document.getElementById("result9K").innerHTML = document.getElementById('name9').innerHTML;
  } else if (understanding9 == 'no' ){
-   document.getElementById("result9N").innerHTML = document.getElementById('name9').value;
+   document.getElementById("result9N").innerHTML = document.getElementById('name9').innerHTML;
  } else {
    return;
  }
@@ -853,11 +943,11 @@ var understanding9 = document.querySelector('input[name = "understanding9"]:chec
 function organizeUnderstanding10() {
 var understanding10 = document.querySelector('input[name = "understanding10"]:checked').value;
  if (understanding10 == 'yes' ){
-    document.getElementById("result10Y").innerHTML = document.getElementById('name10').value;
+    document.getElementById("result10Y").innerHTML = document.getElementById('name10').innerHTML;
  } else if (understanding10 == 'kinda' ){
-   document.getElementById("result10K").innerHTML = document.getElementById('name10').value;
+   document.getElementById("result10K").innerHTML = document.getElementById('name10').innerHTML;
  } else if (understanding10 == 'no' ){
-   document.getElementById("result10N").innerHTML = document.getElementById('name10').value;
+   document.getElementById("result10N").innerHTML = document.getElementById('name10').innerHTML;
  } else {
    return;
  }

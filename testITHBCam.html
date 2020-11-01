@@ -34,7 +34,17 @@ p{
 form > input { margin-right: 15px; }
 form { margin-top: 15px; }
 #name1 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
-#name2 { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
+#name2 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name3 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name4 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name5 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name6 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name7 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name8 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name9 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+#name10 { float:right; margin:20px; padding:20px; border:1px solid; border-radius: 10px; background:#ccc; }
+
+
 </style>
 
 
@@ -60,12 +70,13 @@ form { margin-top: 15px; }
   <center>
     <h1><center>Take a picture of your first assignment</center></h1>
 
-    <div id="name1"></div>
+    <div id="name1">Problem #1:</div>
 
     <!-- A button for taking snaps -->
 
     <form>
       <input class="btn btn-primary" id="picBtn1" style= "display:none;" type=button value="Snap" onClick="take_snapshot1(); showRetakeBtn1();">
+      <br/>
       <input class="btn btn-danger" style="display:none" id="retakeBtn1" style= "display:none;" type=button value="Retake" onClick="take_snapshot1();">
     </form>
 
@@ -84,13 +95,13 @@ form { margin-top: 15px; }
       }
     </script>
 
+    <br/>
 
     <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input2Function(); turnOffCamera(); hideCam();" id="button"><center>Continue</center></button>
 
     </center>
 
-       <img src="https://i.ibb.co/hsN6RvJ/ITHB-IMAGE-Div1-6.jpg" alt="ITHB-IMAGE-Div1-6" border="0">
-
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQgeDs8O3lBSuvsxIaqXkAmmIqAWy7InslJOv_JCi0Q6V1OCF8Qit71TtNJ0IWobFAhhIn100oZ78C8/pub?w=480&amp;h=360">
     </div>
 
 
@@ -98,10 +109,7 @@ form { margin-top: 15px; }
     <div id="input2" style="display:none">
       <h1><center>Take a picture of your 2nd problem</center></h1>
 
-      <div id="name2"></div>
-
-      <!-- First, include the Webcam.js JavaScript Library -->
-      <script type="text/javascript" src="webcam.min.js"></script>
+      <div id="name2">Problem #2:</div>
 
 
       <!-- A button for taking snaps -->
@@ -132,71 +140,287 @@ form { margin-top: 15px; }
       </center>
     </div>
 
+
+
     <div id="input3" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <h1><center>Take a picture of your 3nd problem</center></h1>
 
-      <input type="text" id="name3" />
+      <div id="name3">Problem #3:</div>
 
-       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input4Function(); showUnderstandingCheck3();" id="button0B" class="button button3">Enter</button>
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn3" style= "display:none;" type=button value="Snap" onClick="take_snapshot3(); showRetakeBtn3();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn3" style= "display:none;" type=button value="Retake" onClick="take_snapshot3();">
+      </form>
+
+      <button id="camBtn3" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn3();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot3() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name3').innerHTML =
+              '<h2>Problem #3:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input4Function(); turnOffCamera(); hideCam();" id="button0B"><center>Continue</center></button>
+
+      </center>
     </div>
 
     <div id="input4" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <h1><center>Take a picture of your 4th problem</center></h1>
 
-      <input type="text" id="name4" />
+      <div id="name4">Problem #4:</div>
 
-       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input5Function(); showUnderstandingCheck4();" id="button0C" class="button button3">Enter</button>
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn4" style= "display:none;" type=button value="Snap" onClick="take_snapshot4(); showRetakeBtn4();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn4" style= "display:none;" type=button value="Retake" onClick="take_snapshot4();">
+      </form>
+
+      <button id="camBtn4" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn4();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot4() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name4').innerHTML =
+              '<h2>Problem #4:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input5Function(); turnOffCamera(); hideCam();" id="button0C"><center>Continue</center></button>
+
+      </center>
     </div>
 
     <div id="input5" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name5" />
+      <h1><center>Take a picture of your 5th problem</center></h1>
 
-       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input6Function(); showUnderstandingCheck5();" id="button0CA" class="button button3">Enter</button>
+      <div id="name5">Problem #15:</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn5" style= "display:none;" type=button value="Snap" onClick="take_snapshot5(); showRetakeBtn5();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn5" style= "display:none;" type=button value="Retake" onClick="take_snapshot5();">
+      </form>
+
+      <button id="camBtn5" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn5();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot5() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name5').innerHTML =
+              '<h2>Problem #5:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input6Function(); turnOffCamera(); hideCam();" id="button0CA"><center>Continue</center></button>
+
+      </center>
     </div>
 
     <div id="input6" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name6" />
+      <h1><center>Take a picture of your 6th problem</center></h1>
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input7Function(); showUnderstandingCheck6();" id="button0D" class="button button3">Enter</button>
-    </div>
+      <div id="name6">Problem #6:</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn6" style= "display:none;" type=button value="Snap" onClick="take_snapshot6(); showRetakeBtn6();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn6" style= "display:none;" type=button value="Retake" onClick="take_snapshot6();">
+      </form>
+
+      <button id="camBtn6" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn6();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot6() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name6').innerHTML =
+              '<h2>Problem #6:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input7Function(); turnOffCamera(); hideCam();" id="button0D"><center>Continue</center></button>
+
+      </center>
+</div>
+
 
     <div id="input7" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name7" />
+      <h1><center>Take a picture of your 7th problem</center></h1>
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input8Function(); showUnderstandingCheck7();" id="button0E" class="button button3">Enter</button>
+      <div id="name7">Problem #7</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn7" style= "display:none;" type=button value="Snap" onClick="take_snapshot7(); showRetakeBtn7();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn7" style= "display:none;" type=button value="Retake" onClick="take_snapshot7();">
+      </form>
+
+      <button id="camBtn7" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn7();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot7() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name7').innerHTML =
+              '<h2>Problem #7:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input8Function(); turnOffCamera(); hideCam();" id="button0E"><center>Continue</center></button>
+
+      </center>
     </div>
 
     <div id="input8" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name8" />
+      <h1><center>Take a picture of your 8th problem</center></h1>
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input9Function(); showUnderstandingCheck8();" id="button0F" class="button button3">Enter</button>
+      <div id="name8">Problem #8:</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn8" style= "display:none;" type=button value="Snap" onClick="take_snapshot8(); showRetakeBtn8();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn8" style= "display:none;" type=button value="Retake" onClick="take_snapshot8();">
+      </form>
+
+      <button id="camBtn8" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn8();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot8() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name8').innerHTML =
+              '<h2>Problem #8:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input9Function(); turnOffCamera(); hideCam();" id="button0F"><center>Continue</center></button>
+
+      </center>
     </div>
 
     <div id="input9" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name9" />
+      <h1><center>Take a picture of your 9th problem</center></h1>
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input10Function(); showUnderstandingCheck9();" id="button0G" class="button button3">Enter</button>
+      <div id="name9">Problem #9::</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn9" style= "display:none;" type=button value="Snap" onClick="take_snapshot9(); showRetakeBtn9();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn9" style= "display:none;" type=button value="Retake" onClick="take_snapshot9();">
+      </form>
+
+      <button id="camBtn9" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn9();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot9() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name9').innerHTML =
+              '<h2>Problem #9:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input10Function(); turnOffCamera(); hideCam();" id="button0G"><center>Continue</center></button>
+
+      </center>
     </div>
+
 
     <div id="input10" style="display:none">
-      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
-      <input type="text" id="name10" />
+      <h1><center>Take a picture of your 10th problem</center></h1>
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input11Function(); showUnderstandingCheck10();" id="button0H" class="button button3">Enter</button>
+      <div id="name10">Problem #10:</div>
+
+
+      <!-- A button for taking snaps -->
+
+      <form>
+        <input class="btn btn-primary" id="picBtn10" style= "display:none;" type=button value="Snap" onClick="take_snapshot10(); showRetakeBtn10();">
+        <input class="btn btn-danger" style="display:none" id="retakeBtn10" style= "display:none;" type=button value="Retake" onClick="take_snapshot10();">
+      </form>
+
+      <button id="camBtn10" type="button" name="button" onclick="showCam(); turnOnCamera(); showPicBtn10();">Take Picture of Assignment</button>
+
+      <!-- Code to handle taking the snapshot and displaying it locally -->
+      <script language="JavaScript">
+        function take_snapshot10() {
+          // take snapshot and get image data
+          Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('name10').innerHTML =
+              '<h2>Problem #10:</h2>' +
+              '<img src="'+data_uri+'"/>';
+          } );
+        }
+      </script>
+
+
+      <button class="btn btn-primary" style="display:none; color:white;" onclick="myFunction1(); input11Function(); turnOffCamera(); hideCam();" id="button0H"><center>Continue</center></button>
+
     </div>
 
+
     <div id="input11" style="display:none">
-      <h1>Great job! You did 10 problems, let's review the problems you had a hard time with before you move on!</h1>
+      <h1>Great job! You did 10 problems, let's review the problems you had a hard time with!</h1>
       <p>Try and see if you can solve the problems you had a hard time & kinda had a hard time with.</p>
       <button class="btn btn-primary" style="color:white;" class="button button3" onclick="showWorkOn10(); hideStop();">Sounds good!</button>
     </div>
-
-
 
   </div>
 
@@ -204,11 +428,11 @@ form { margin-top: 15px; }
 
 
     <div id="2Div" style="display:none">
-    <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? <br/><p style="color:white">If you don't know start with 10 minutes and try to work your way up slowly</center></h1>
-    <h1><center style="display:none" id="workOnNextAssignmentTxt">Time to work on your next Assignment!<p>Choose how long you can concentrate on homework (adjust it if you need to!)</p></center></h1>
+    <h1><center id="homeworkBlock">For how long do you want to work on the problem? <br/></h1>
+    <h1><center style="display:none" id="workOnNextAssignmentTxt">Time to work on your next Problem!<p>Choose how long you want to work on the problem</p></center></h1>
     <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
-    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
-    <h1><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</h1></center>
+    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on the problem!<br/><p style="color: white;">Choose how much more time you want.<p></center></h1>
+    <h1><center style="display:none" id="adjustTime">Choose how long you want to spend on the problem.</h1></center>
 
     <div id="masterTimer" class="container group">
 
@@ -220,9 +444,7 @@ form { margin-top: 15px; }
     <button onclick="showHW35Timer(); start35()" class="btn btn-warning">35 minutes</button>
     <button onclick="showHW40Timer(); start40()" class="btn btn-danger">40 minutes</button>
 
-    <img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
-
-    </div>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQgeDs8O3lBSuvsxIaqXkAmmIqAWy7InslJOv_JCi0Q6V1OCF8Qit71TtNJ0IWobFAhhIn100oZ78C8/pub?w=480&amp;h=360">    </div>
 
 
     </div>
@@ -441,13 +663,19 @@ form { margin-top: 15px; }
 
         <div id="doneDiv" style="display:none">
 
+          <div id="doneDivContent">
+          <h1>Select one:</h1>
+
+            <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">Continue to work on the problem I was working on</button>
+            <button id="nextProbBtn" class="btn btn-info" style="color:white;" onclick="showUnderstandingDiv();">Work on Next problem</button>
+            <button id="doneBtn" class="btn btn-warning" style="display:none; color:white;" onclick="showWorkOn10();">I'm done with 10 problems/button>
 
 
-            <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();"> I'm not done with this assignment, I need more time!</button>
-            <button class="btn btn-info" style="color:white;" onclick="showUnderstandingDiv();"> I want to work on another assignment!</button>
-            <button class="btn btn-success" style="color:white;" onclick="showWorkOn10();">I'm done with my homework for today!</button>
+          </div>
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
+           <img src="https://docs.google.com/drawings/d/e/2PACX-1vQgeDs8O3lBSuvsxIaqXkAmmIqAWy7InslJOv_JCi0Q6V1OCF8Qit71TtNJ0IWobFAhhIn100oZ78C8/pub?w=480&amp;h=360">
+
+
         </div>
 
        <script type="text/javascript">
@@ -689,7 +917,7 @@ form { margin-top: 15px; }
 
   <div id="breakTimers2" style="display:none">
   <h1 style="font-size: 200px">🧠</h1>
-  <p>But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
+  <p>But first, Let's take a brain break. Before you work on your next problem take a brain break so you can focus better. On your break make sure not to look at any screens!</p>
 
       <button class="btn btn-danger" style="color:white;" onclick="show5BreakTimer(); start5Timer1(); showBrainBreakDiv();">take a 5 minute break💧</button>
       <button class="btn btn-danger" style="color:white;" onclick="show10BreakTimer(); start10Break1(); showBrainBreakDiv();">take a 10 minute break☔</button>
@@ -706,18 +934,20 @@ form { margin-top: 15px; }
 <!--What students worked on-->
 
   <div id="workDiv" style="display:none">
-
+    <h1>Great job! You did 10 problems, let's review the problems you had a hard time with!</h1>
+    <p>Try and see if you can solve the problems you had a hard time & kinda had a hard time with.</p>
+    
       <p>Here's what you hard a time on</p>
-      <p><span id="result1N"></span></p>
-      <p><span id="result2N"></span></p>
-      <p><span id="result3N"></span></p>
-      <p><span id="result4N"></span></p>
-      <p><span id="result5N"></span></p>
-      <p><span id="result6N"></span></p>
-      <p><span id="result7N"></span></p>
-      <p><span id="result8N"></span></p>
-      <p><span id="result9N"></span></p>
-      <p><span id="result10N"></span></p>
+      <p><span class="red" id="result1N"></span></p>
+      <p><span class="red" id="result2N"></span></p>
+      <p><span class="red" id="result3N"></span></p>
+      <p><span class="red" id="result4N"></span></p>
+      <p><span class="red" id="result5N"></span></p>
+      <p><span class="red" id="result6N"></span></p>
+      <p><span class="red" id="result7N"></span></p>
+      <p><span class="red" id="result8N"></span></p>
+      <p><span class="red" id="result9N"></span></p>
+      <p><span class="red" id="result10N"></span></p>
       <p>Here's what you kind of had a hard time on:</p>
       <p><span id="result1K"></span></p>
       <p><span id="result2K"></span></p>
