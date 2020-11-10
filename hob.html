@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HOB</title>
+
+
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+      <!--     Fonts and icons     -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+      <!-- Nucleo Icons -->
+      <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- Font Awesome Icons -->
+      <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- CSS Files -->
+      <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="general.css" />
+      <!--JS Files-->
+      <script src="ITHB.js"></script>
+
+
+
+  </head>
+
+  <!--form-->
+  <div id="feedback-main">
+  <a id="popup" class="feedback-button" href='https://forms.gle/Nnv3wonHbBbQMpxu5' data-fc-open='iqdbx' target="_blank">Feedback</a>
+  <script src="_include/js/feedback.js"></script>
+  <!--end of form-->
+
+  <body style="font-family: 'Roboto', sans-serif;">
+
+
+
+<!--Start of Form-->
+
+<center>
+  <div id="easyAssignments">
+
+    <p>How many easy assignments do you have to do today?</p>
+    <input class="pink" min="0" max="10" type="number" id="numEAI" required>
+
+    <p></p>
+
+    <button class="btn btn-primary" onclick="showInputEText(); showInputE();">Enter</button>
+
+
+
+      <p style="display:none;" id="inputEText">List your easy assignments here (then click save)</p>
+
+        <input class="red" style="display:none" type="text" id="easyA1">
+        <input class="yellow" style="display:none" type="text" id="easyA2">
+        <input class="green" style="display:none" type="text" id="easyA3">
+        <input class="blue" style="display:none" type="text" id="easyA4">
+        <input class="purple" style="display:none" type="text" id="easyA5">
+        <input class="lightPink" style="display:none" type="text" id="easyA6">
+        <input class="pinkInput" style="display:none" type="text" id="easyA7">
+        <input class="darkPink" style="display:none" type="text" id="easyA8">
+        <input class="lightPurple" style="display:none" type="text" id="easyA9">
+        <input class="darkPurple" style="display:none" type="text" id="easyA10">
+
+
+      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">Save</button>
+
+
+     <p>
+   or
+   </p>
+
+    <button class="btn btn-secondary" onclick="dontShowInput1E();
+        displayM();">
+       I don't have any easy assignments today
+    </button>
+
+
+
+</div>
+
+
+<div id="mediumAssignments" style="display:none">
+  <p>How many medium assignments do you have to do today?</p>
+  <input class="pink" min="0" max="5" type="number" id="numMAI">
+
+  <p></p>
+
+  <button class="btn btn-primary" onclick="showInputMText(); showInputM();">Enter</button>
+
+
+
+    <p style="display:none" id="inputMText">List your medium assignments here (then click save):</p>
+    <input class="red" style="display:none" type="text" id="mediumA1">
+    <input class="yellow" style="display:none" type="text" id="mediumA2">
+    <input class="green" style="display:none" tsype="text" id="mediumA3">
+    <input class="blue" style="display:none" type="text" id="mediumA4">
+    <input class="purple" style="display:none" type="text" id="mediumA5">
+    <input class="lightPink" style="display:none" type="text" id="mediumA6">
+    <input class="pinkInput" style="display:none" type="text" id="mediumA7">
+    <input class="darkPink" style="display:none" type="text" id="mediumA8">
+    <input class="lightPurple" style="display:none" type="text" id="mediumA9">
+    <input class="darkPurple" style="display:none" type="text" id="mediumA10">
+
+
+    <p> </p>
+
+    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Save</button>
+
+         <p>
+   or
+   </p>
+
+     <button class="btn btn-secondary" onclick="dontShowInput1M();
+        displayH();">
+        I don't have any medium assignments today
+        </button>
+
+</div>
+
+
+<div id="hardAssignments" style="display:none">
+  <p>How many hard assignments do you have to do today?</p>
+  <input class="pink" min="0" max="5" type="number" id="numHAI">
+  <p></p>
+  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); showInputH();">Enter</button>
+
+
+
+  <p id="inputHText" style="display:none">List your hard assignments here (then click save):</p>
+    <input class="red" style="display:none" type="text" id="hardA1">
+    <input class="yellow" style="display:none" type="text" id="hardA2">
+    <input class="green" style="display:none" type="text"id="hardA3">
+    <input class="blue" style="display:none" type="text" id="hardA4">
+    <input class="purple" style="display:none" type="text" id="hardA5">
+    <input class="lightPink" style="display:none" type="text" id="hardA6">
+    <input class="pinkInput" style="display:none" type="text" id="hardA7">
+    <input class="darkPink" style="display:none" type="text" id="hardA8">
+    <input class="lightPurple" style="display:none" type="text" id="hardA9">
+    <input class="darkPurple" style="display:none" type="text" id="hardA10">
+
+    <p> </p>
+
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); displayTDL();">Save</button>
+
+     <p>
+   or
+   </p>
+
+  <button class="btn btn-secondary" onclick="dontShowInput1H();
+        makeToDoList(); displayTDL();">
+I don't have any hard assignments today </button>
+
+
+
+</div>
+
+<center>
+
+
+<!--End of Form-->
+
+
+
+<!--Start of To-do List-->
+
+<div text-align="center" id=toDoList style="display:none">
+  <h1>Homework blocks for today:</h1>
+
+  <p>
+  Nice! Your homeworks organized into block now! you can complete them in any order! Use <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/">ITHB</a>  to get through them!
+  </p>
+
+<div class="easy-block" id="easy-block">
+<h3>Easy Block ✌️:</h3>
+<p>
+All your easy assignments for the day
+</p>
+  <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo2" name="toDo2" value="toDo2"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2"><span id="result2"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo3" name="toDo3" value="toDo3"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo4" name="toDo4" value="toDo4"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo5" name="toDo5" value="toDo5"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1"><span id="result5"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo6" name="toDo6" value="toDo6"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6"><span id="result6"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo7" name="toDo7" value="toDo7"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7"><span id="result7"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo8" name="toDo8" value="toDo8"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo8"><span id="result8"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo9" name="toDo9" value="toDo9"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo9"><span id="result9"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo10" name="toDo10" value="toDo10"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo10"><span id="result10"></span></label><br>
+
+</div>
+
+
+<div class="medium-block" id="medium-block">
+<h3>Medium Block 👍:</h3>
+<p>
+All your medium assignments for the day.
+</p>
+
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo1M" name="toDo1M" value="toDo1M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo2M" name="toDo2M" value="toDo2M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo3M" name="toDo3M" value="toDo3M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo4M" name="toDo4M" value="toDo4M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo5M" name="toDo5M" value="toDo5M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo5M"><span id="result5M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo6M" name="toDo6M" value="toDo6M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6M"><span id="result6M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo7M" name="toDo7M" value="toDo7M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7M"><span id="result7M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo8M" name="toDo8M" value="toDo8M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo8M"><span id="result8M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo9M" name="toDo9M" value="toDo9M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo9M"><span id="result9M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo10M" name="toDo10M" value="toDo10M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo10M"><span id="result10M"></span></label><br>
+</div>
+
+<div class="hard-block" id="hard-block">
+<h3>Hard Block 🤟</h3>
+<p>
+All your hard assignments for the day.
+</p>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo1H" name="toDo1H" value="toDo1H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo2H" name="toDo2H" value="toDo2H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo3H" name="toDo3H" value="toDo3H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo4H" name="toDo4H" value="toDo4H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo5H" name="toDo5H" value="toDo5H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo6H" name="toDo6H" value="toDo6H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6H"><span id="result6H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo7H" name="toDo7H" value="toDo7H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7H"><span id="result7H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;" id="toDo8H" name="toDo8H" value="toDo8H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo8H"><span id="result8H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo9H" name="toDo9H" value="toDo9H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo9H"><span id="result9H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo10H" name="toDo10H" value="toDo10H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo10H"><span id="result10H"></span></label><br>
+
+
+
+
+</div>
+
+
+<div id = "ithbNAV">
+<center><p>Now head over to ITHB to complete your homework blocks!</p></center>
+<a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
+</div>
+
+</div>
+
+
+
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
+
+
+
+<!--End of To-do List-->
+
+</center>
+</body>
+</html>
