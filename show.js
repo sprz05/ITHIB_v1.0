@@ -56,6 +56,10 @@ function saveData(e) {
 
 }
 
+
+
+
+
 // Callback called when button is clicked on page1.html
 function getData(e) {
 
@@ -71,10 +75,133 @@ function getData(e) {
   numMAIOut.innerHTML = `${numMAIStored}`
   numHAIOut.innerHTML = `${numHAIStored}`
 
+
+
+  function showInputE2(){
+    var numEAIStored = JSON.parse(localStorage.getItem('numEAI'));
+    if (numEAIStored.value == 0){
+       dontShowInput1E();
+   } else if (numEAIStored.value == 1){
+
+        onlyShowInput1();
+    } else if (numEAIStored.value == 2){
+
+        onlyShowInput2();
+    } else if (numEAIStored.value == 3){
+
+        onlyShowInput3();
+    } else if (numEAIStored.value == 4){
+
+        onlyShowInput4();
+    } else if (numEAIStored.value == 5){
+
+        onlyShowInput5();
+    } else if (numEAIStored.value == 6){
+
+          onlyShowInput6();
+    } else if (numEAIStored.value == 7){
+
+          onlyShowInput7();
+    } else if (numEAIStored.value == 8){
+
+          onlyShowInput8();
+    } else if (numEAIStored.value == 9){
+
+          onlyShowInput9();
+    } else if (numEAIStored.value == 10){
+
+          onlyShowInput10();
+    } else {
+      dontShowInput1E();
+    }
+
+  }
+  /* START: function show input medium*/
+  function showInputM2(){
+    var numMAIStored = JSON.parse(localStorage.getItem('numMAI'));
+   if (numMAIStored.value == 0){
+      dontShowInput1M();
+   }
+   else if (numMAIStored.value == 1){
+
+        onlyShowInput1M();
+    } else if (numMAIStored.value == 2){
+
+        onlyShowInput2M();
+    } else if (numMAIStored.value == 3){
+
+        onlyShowInput3M();
+    } else if (numMAIStored.value == 4){
+
+        onlyShowInput4M();
+    } else if (numMAIStored.value == 5){
+
+        onlyShowInput5M();
+    } else if (numMAIStored.value == 6){
+
+        onlyShowInput6M();
+    } else if (numMAIStored.value == 7){
+
+        onlyShowInput7M();
+    }else if (numMAIStored.value == 8){
+
+        onlyShowInput8M();
+    } else if (numMAIStored.value == 9){
+
+        onlyShowInput9M();
+    } else if (numMAIStored.value == 10){
+
+        onlyShowInput10M();
+    }
+     else{
+      dontShowInput1M();
+    }
+
+  }
+
+
+  /* START: function show input hard*/
+  function showInputH2(){
+    var numHAIStored = JSON.parse(localStorage.getItem('numHAI'));
+   if (numHAIStored.value == 0){
+        dontShowInput1H();
+   }
+    else if (numHAIStored.value == 1){
+        onlyShowInput1H();
+
+    } else if (numHAIStored.value == 2){
+        onlyShowInput2H();
+
+    } else if (numHAIStored.value == 3){
+        onlyShowInput3H();
+
+    } else if (numHAIStored.value == 4){
+        onlyShowInput4H();
+
+    }  else if (numHAIStored.value == 5){
+        onlyShowInput5H();
+
+    } else if (numHAIStored.value == 6){
+        onlyShowInput6H();
+
+    } else if (numHAIStored.value == 7){
+        onlyShowInput7H();
+
+    } else if (numHAIStored.value == 8){
+        onlyShowInput8H();
+
+    } else if (numHAIStored.value == 9){
+        onlyShowInput9H();
+
+    } else if (numHAIStored.value == 10){
+        onlyShowInput10H();
+
+    } else{
+        dontShowInput1H()
+    }
+  }
+
 }
-
-
-
 
 
 /* START of show input functions */
@@ -740,129 +867,6 @@ function onlyShowInput2M(){
 
 /* START: function show input easy*/
 
-function showInputE2(){
-var numEAI = document.getElementById('numEAI');
-  if (numEAI.value == 0){
-     dontShowInput1E();
- } else if (numEAI.value == 1){
-
-      onlyShowInput1();
-  } else if (numEAI.value == 2){
-
-      onlyShowInput2();
-  } else if (numEAI.value == 3){
-
-      onlyShowInput3();
-  } else if (numEAI.value == 4){
-
-      onlyShowInput4();
-  } else if (numEAI.value == 5){
-
-      onlyShowInput5();
-  } else if (numEAI.value == 6){
-
-        onlyShowInput6();
-  } else if (numEAI.value == 7){
-
-        onlyShowInput7();
-  } else if (numEAI.value == 8){
-
-        onlyShowInput8();
-  } else if (numEAI.value == 9){
-
-        onlyShowInput9();
-  } else if (numEAI.value == 10){
-
-        onlyShowInput10();
-  } else {
-    dontShowInput1E();
-  }
-
-}
-/* START: function show input medium*/
-function showInputM2(){
-var numMAI = document.getElementById('numMAI');
- if (numMAI.value == 0){
-    dontShowInput1M();
- }
- else if (numMAI.value == 1){
-
-      onlyShowInput1M();
-  } else if (numMAI.value == 2){
-
-      onlyShowInput2M();
-  } else if (numMAI.value == 3){
-
-      onlyShowInput3M();
-  } else if (numMAI.value == 4){
-
-      onlyShowInput4M();
-  } else if (numMAI.value == 5){
-
-      onlyShowInput5M();
-  } else if (numMAI.value == 6){
-
-      onlyShowInput6M();
-  } else if (numMAI.value == 7){
-
-      onlyShowInput7M();
-  }else if (numMAI.value == 8){
-
-      onlyShowInput8M();
-  } else if (numMAI.value == 9){
-
-      onlyShowInput9M();
-  } else if (numMAI.value == 10){
-
-      onlyShowInput10M();
-  }
-   else{
-    dontShowInput1M();
-  }
-
-}
-
-
-/* START: function show input hard*/
-function showInputH2(){
-var numHAI = document.getElementById('numHAI');
- if (numHAI.value == 0){
-      dontShowInput1H();
- }
-  else if (numHAI.value == 1){
-      onlyShowInput1H();
-
-  } else if (numHAI.value == 2){
-      onlyShowInput2H();
-
-  } else if (numHAI.value == 3){
-      onlyShowInput3H();
-
-  } else if (numHAI.value == 4){
-      onlyShowInput4H();
-
-  }  else if (numHAI.value == 5){
-      onlyShowInput5H();
-
-  } else if (numHAI.value == 6){
-      onlyShowInput6H();
-
-  } else if (numHAI.value == 7){
-      onlyShowInput7H();
-
-  } else if (numHAI.value == 8){
-      onlyShowInput8H();
-
-  } else if (numHAI.value == 9){
-      onlyShowInput9H();
-
-  } else if (numHAI.value == 10){
-      onlyShowInput10H();
-
-  } else{
-      dontShowInput1H()
-  }
-}
 
 
 function displayTDL2(){

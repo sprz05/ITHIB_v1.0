@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HOB</title>
+
+
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+      <!--     Fonts and icons     -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+      <!-- Nucleo Icons -->
+      <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- Font Awesome Icons -->
+      <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+      <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+      <!-- CSS Files -->
+      <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="general.css" />
+      <!--JS Files-->
+      <script src="ITHB.js"></script>
+
+<style>
+.h3{
+  color:white;
+}
+</style>
+
+  </head>
+
+  <!--form-->
+  <div id="feedback-main">
+  <a id="popup" class="feedback-button" href='https://forms.gle/Nnv3wonHbBbQMpxu5' data-fc-open='iqdbx' target="_blank">Feedback</a>
+  <script src="_include/js/feedback.js"></script>
+  <!--end of form-->
+
+  <body style="font-family: 'Roboto', sans-serif;">
+
+
+
+<!--Start of Form-->
+
+<center>
+  <div id="easyAssignments">
+
+    <p>On which days will you be able to do homework?</p>
+    <input name="numEAI" class="pink" min="0" max="10" type="number" id="numEAI">
+
+    <p>Monday</p>
+    <p>Tuesday</p>
+    <p>Wednesday</p>
+    <p>thursday</p>
+    <p>Friday</p>
+    <p>Saturday</p>
+    <p>Sunday</p>
+
+
+    <button class="btn btn-primary" onclick="showInputEText(); showInputE();">Enter</button>
+
+
+</div>
+
+
+
+<div id="mediumAssignments" style="display:none;">
+
+  <p>Hpw many medium assignments will you be doing this week?</p>
+  <input class="pink" min="0" max="10" type="number" id="numMAI">
+
+  <p></p>
+
+  <button class="btn btn-primary" onclick="showInputMText(); showInputM();">Enter</button>
+    <p style="display:none;" id="inputMText">List your medium assignments here (then click save)</p>
+    <form id="ui">
+    <fieldset>
+      <input class="red" style="display:none" id='data11' name='data11'>
+      <input class="yellow" style="display:none" id='data12' name='data12'>
+      <input class="green" style="display:none" id='data13' name='data13'>
+      <input class="yellow" style="display:none" id='data14' name='data14'>
+      <input class="yellow" style="display:none" id='data15' name='data15'>
+      <input class="yellow" style="display:none" id='data16' name='data16'>
+      <input class="yellow" style="display:none" id='data17' name='data17'>
+      <input class="yellow" style="display:none" id='data18' name='data18'>
+      <input class="yellow" style="display:none" id='data19' name='data19'>
+      <input class="yellow" style="display:none" id='data20' name='data20'>
+    <input value="submit" style="display:none" id="saveM" class="btn btn-primary" type="submit" onclick="displayH()" />
+   <p>or</p>
+  <button class="btn btn-secondary" onclick="dontShowInput1M();
+      displayH();">
+     I don't have any easy assignments today
+  </button>
+
+</div>
+
+<div id="hardAssignments" style="display:none;">
+
+  <p>How many hard assignments will you be doing this week?</p>
+  <input class="pink" min="0" max="10" type="number" id="numHAI">
+  <p></p>
+  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); showInputH();">Enter</button>
+    <p style="display:none;" id="inputHText">List your hard assignments here (then click save)</p>
+    <form id="ui">
+    <fieldset>
+
+      <input class="red" style="display:none" id='data21' name='data21'>
+      <input class="yellow" style="display:none" id='data22' name='data22'>
+      <input class="green" style="display:none" id='data23' name='data23'>
+      <input class="yellow" style="display:none" id='data24' name='data24'>
+      <input class="yellow" style="display:none" id='data25' name='data25'>
+      <input class="yellow" style="display:none" id='data26' name='data26'>
+      <input class="yellow" style="display:none" id='data27' name='data27'>
+      <input class="yellow" style="display:none" id='data28' name='data28'>
+      <input class="yellow" style="display:none" id='data29' name='data29'>
+      <input class="yellow" style="display:none" id='data30' name='data30'>
+
+    <input value="submit" style="display:none" id="saveH" class="btn btn-primary" type="submit" onclick="displayTDL()" />
+   <p>or</p>
+  <input value="I don't have any hard assignments" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); displayTDL();" />
+
+</div>
+
+<center>
+
+
+<!--End of Form-->
+
+
+
+<!--Start of To-do List-->
+
+<div text-align="center" id=toDoList style="display:none">
+  <h1>Homework blocks for today:</h1>
+
+  <p>
+  Nice! Your homeworks organized into block now! you can complete them in any order! Use <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/">ITHB</a>  to get through them!
+  </p>
+
+<div class="easy-block" id="easy-block">
+<h3>Easy Block ✌️:</h3>
+<p>
+All your easy assignments for the day
+</p>
+
+<input type="checkbox" style="font-size: 30px" id="toDo1" name="toDo1" value="toDo1"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo1"><output id="out" for="data"></output></label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo2" name="toDo2" value="toDo2"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo2"><output id="out2" for="data2"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo3" name="toDo3" value="toDo3"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo3"><output id="out3" for="data3"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo4" name="toDo4" value="toDo4"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo4"><output id="out4" for="data4"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo5" name="toDo5" value="toDo5"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo5"><output id="out5" for="data5"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo6" name="toDo6" value="toDo6"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo6"><output id="out6" for="data6"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo7" name="toDo7" value="toDo7"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo7"><output id="out7" for="data7"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo8" name="toDo8" value="toDo8"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo8"><output id="out8" for="data8"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo9" name="toDo9" value="toDo9"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo9"><output id="out9" for="data9"></output> </label><br />
+
+<input type="checkbox" style="font-size: 30px" id="toDo10" name="toDo10" value="toDo10"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo10"><output id="out10" for="data10"></output> </label><br />
+</div>
+
+
+<div id="medium-block">
+<h3>Medium Block ✌️:</h3>
+<p>
+All your medium assignments for the day
+</p>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo11"><output id='out11' for="data11"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo12" name="toDo12" value="toDo12"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo12"><output id='out12' for="data12"></output></label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo13" name="toDo13" value="toDo13"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo13"><output id="out13" for="data13"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo14" name="toDo14" value="toDo14"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo14"><output id="out14" for="data14"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo15" name="toDo15" value="toDo15"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo15"><output id="out15" for="data15"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo16" name="toDo16" value="toDo16"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo16"><output id="out16" for="data16"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo17" name="toDo17" value="toDo17"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo17"><output id="out17" for="data17"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo18" name="toDo18" value="toDo18"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo18"><output id="out18" for="data18"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo19" name="toDo19" value="toDo19"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo19"><output id="out19" for="data19"></output> </label><br/>
+
+<input type="checkbox" style="font-size: 30px" id="toDo20" name="toDo20" value="toDo20"/>
+<label style="font-size: 30px" class="strikethrough" for="toDo20"><output id="out20" for="data20"></output> </label><br/>
+</div>
+
+<div id="hard-block">
+<h3>Hard Block ✌️:</h3>
+<p>
+All your hard assignments for the day
+</p>
+<input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo21"><output id='out21' for="data21"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo22" name="toDo22" value="toDo22"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo22"><output id='out22' for="data22"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo23" name="toDo23" value="toDo23"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo23"><output id='out23' for="data23"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo24" name="toDo24" value="toDo24"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo24"><output id='out24' for="data24"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo25" name="toDo25" value="toDo25"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo25"><output id='out25' for="data25"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo26" name="toDo26" value="toDo26"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo26"><output id='out26' for="data26"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo27" name="toDo27" value="toDo27"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo27"><output id='out27' for="data27"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo28" name="toDo28" value="toDo28"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo28"><output id='out28' for="data28"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo29" name="toDo29" value="toDo29"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo29"><output id='out29' for="data29"></output></label><br>
+
+<input type="checkbox" style="font-size: 30px;" id="toDo30" name="toDo30" value="toDo30"/>
+<label style="font-size: 30px;" class="strikethrough" for="toDo30"><output id='out30' for="data30"></output></label><br>
+
+</div>
+
+
+      <div id = "ithbNAV">
+      <center><p>Now head over to ITHB to complete your homework blocks!</p></center>
+      <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
+      </div>
+
+
+</fieldset>
+</form>
+
+</div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="show.js"></script>
+
+
+<!--End of To-do List-->
+
+</center>
+</body>
+</html>

@@ -19,6 +19,7 @@
 <!-- Font Awesome Icons -->
 <link href="./assets/css/font-awesome.css" rel="stylesheet" />
 <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="scroll.css" rel="stylesheet" />
 <!-- CSS Files -->
 <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="assets\css\background.css">
@@ -44,13 +45,13 @@ p{
 
     <div id="mydiv">
       <div id="mydivheader">Click here to move</div>
-      <form id='ui'>
+      <form id='ui' class="itemconfiguration">
            <fieldset>
              <button id='btn' onclick="displayTDL2(); showInputH2(); showInputM2(); showInputE2();" type='button'>Show HOB To Do List</button>
              <div id="toDoList2" style="display:none">
-             <h1>To Do List</h1>
+
              <div class="easy-block" id="easy-block">
-               <h1>Easy Assignments</h1>
+               <h4>Easy Assignments</h4>
                <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
                <label style="font-size: 30px;" class="strikethrough" for="toDo1"><output id='out'></output></label><br>
 
@@ -83,7 +84,7 @@ p{
             </div>
 
             <div class="medium-block" id="medium-block">
-              <h1>Medium Assignments:</h1>
+              <h4>Medium Assignments:</h4>
 
               <input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11"/>
               <label style="font-size: 30px;" class="strikethrough" for="toDo11"><output id='out11'></output></label><br>
@@ -117,7 +118,7 @@ p{
             </div>
 
             <div class="hard-block" id="hard-block">
-              <h1>Hard Assignments:</h1>
+              <h4>Hard Assignments:</h4>
 
               <input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21"/>
               <label style="font-size: 30px;" class="strikethrough" for="toDo21"><output id='out21'></output></label><br>

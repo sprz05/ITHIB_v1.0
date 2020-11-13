@@ -265,4 +265,8 @@ function getData(e) {
   out28.innerHTML = `${stored28}`
   out29.innerHTML = `${stored29}`
   out30.innerHTML = `${stored30}`
+
+  if (out.innerHTML === undefined) {
+    document.getElementById("toDo1").style.display = "none";
+  }
 }
