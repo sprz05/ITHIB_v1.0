@@ -22,6 +22,7 @@
 <!-- CSS Files -->
 <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+<link rel="stylesheet" href="assets\css\draggable.css">
 
 <style>
 p{
@@ -40,6 +41,170 @@ p{
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
+
+    <div id="mydiv">
+      <div id="mydivheader">Click here to move</div>
+      <form id='ui'>
+           <fieldset>
+             <button id='btn' onclick="displayTDL2(); showInputH2(); showInputM2(); showInputE2();" type='button'>Show HOB To Do List</button>
+             <div id="toDoList2" style="display:none">
+             <h1>To Do List</h1>
+             <div class="easy-block" id="easy-block">
+               <h1>Easy Assignments</h1>
+               <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
+               <label style="font-size: 30px;" class="strikethrough" for="toDo1"><output id='out'></output></label><br>
+
+              <input type="checkbox" style="font-size: 30px;" id="toDo2" name="toDo2" value="toDo2"/>
+              <label style="font-size: 30px;" class="strikethrough" for="toDo2"><output id='out2'></output></label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo3" name="toDo3" value="toDo3"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo3"><output id="out3"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo4" name="toDo4" value="toDo4"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo4"><output id="out4"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo5" name="toDo5" value="toDo5"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo5"><output id="out5"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo6" name="toDo6" value="toDo6"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo6"><output id="out6"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo7" name="toDo7" value="toDo7"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo7"><output id="out7"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo8" name="toDo8" value="toDo8"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo8"><output id="out8"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo9" name="toDo9" value="toDo9"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo9"><output id="out9"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo10" name="toDo10" value="toDo10"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo10"><output id="out10"></output> </label><br/>
+            </div>
+
+            <div class="medium-block" id="medium-block">
+              <h1>Medium Assignments:</h1>
+
+              <input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11"/>
+              <label style="font-size: 30px;" class="strikethrough" for="toDo11"><output id='out11'></output></label><br>
+
+              <input type="checkbox" style="font-size: 30px;" id="toDo12" name="toDo12" value="toDo12"/>
+              <label style="font-size: 30px;" class="strikethrough" for="toDo12"><output id='out12'></output></label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo13" name="toDo13" value="toDo13"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo13"><output id="out13"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo14" name="toDo14" value="toDo14"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo14"><output id="out14"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo15" name="toDo15" value="toDo15"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo15"><output id="out15"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo16" name="toDo16" value="toDo16"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo16"><output id="out16"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo17" name="toDo17" value="toDo17"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo17"><output id="out17"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo18" name="toDo18" value="toDo18"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo18"><output id="out18"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo19" name="toDo19" value="toDo19"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo19"><output id="out19"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo20" name="toDo20" value="toDo20"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo20"><output id="out20"></output> </label><br/>
+            </div>
+
+            <div class="hard-block" id="hard-block">
+              <h1>Hard Assignments:</h1>
+
+              <input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21"/>
+              <label style="font-size: 30px;" class="strikethrough" for="toDo21"><output id='out21'></output></label><br>
+
+              <input type="checkbox" style="font-size: 30px;" id="toDo22" name="toDo22" value="toDo22"/>
+              <label style="font-size: 30px;" class="strikethrough" for="toDo22"><output id='out22'></output></label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo23" name="toDo23" value="toDo23"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo23"><output id="out23"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo24" name="toDo24" value="toDo24"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo24"><output id="out24"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo25" name="toDo25" value="toDo25"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo25"><output id="out25"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo26" name="toDo26" value="toDo26"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo26"><output id="out26"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo27" name="toDo27" value="toDo27"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo27"><output id="out27"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo28" name="toDo28" value="toDo28"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo28"><output id="out28"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo29" name="toDo29" value="toDo29"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo29"><output id="out29"></output> </label><br/>
+
+              <input type="checkbox" style="font-size: 30px" id="toDo30" name="toDo30" value="toDo30"/>
+              <label style="font-size: 30px" class="strikethrough" for="toDo30"><output id="out30"></output> </label><br/>
+            </div>
+
+            </div>
+           </fieldset>
+         </form>
+
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+    <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("mydiv"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
 
   <div id="1Div">
 
