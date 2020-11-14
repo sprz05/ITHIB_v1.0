@@ -46,6 +46,26 @@ h1{
 #about {
   top: 80px;
 }
+
+#mydiv2 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader2 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Yellow;
+  color: #fff;
+}
+
+#star {
+  top: 80px;
+}
 </style>
 
 
@@ -70,11 +90,13 @@ h1{
     <img src="https://docs.google.com/drawings/d/e/2PACX-1vSyOfMBDaAG6ljz-ztXuzf3hD2sR9bxDOUP40cNzlB6pk5As6TCP9A5XwbcSKiZqnH11zex04D5n30_/pub?w=222&amp;h=302">
     </a>
 
+
   </div>
 </div>
 
 
-<button class="btn btn-primary" onclick="openNav()">Change Bot</button>
+
+<button style="display:none"class="btn btn-primary" onclick="openNav()">Change Bot</button>
 <div id="app"></div>
 
 <script>
@@ -89,6 +111,9 @@ function closeNav() {
 
     <div id="mySidenav" class="sidenav">
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
+
+
+ <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
 </div>
 
     <div id="mydiv" style="display:none;">
@@ -101,9 +126,21 @@ function closeNav() {
 
     </div>
 
+
+    <div id="mydiv2" style="display:none;">
+      <div id="mydivheader2">Click here to move</div>
+
+  <iframe src="goalBot.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
     <script>
     //Make the DIV element draggagle:
     dragElement(document.getElementById("mydiv"));
+    dragElement(document.getElementById("mydiv2"));
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

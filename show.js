@@ -208,6 +208,10 @@ function showHOBAddon(){
   document.getElementById("about").style.display = "none";
 }
 
+function showGoalAddon(){
+  document.getElementById("mydiv2").style.display = "block";
+  document.getElementById("star").style.display = "none";
+}
 
 /* START of show input functions */
 function dontShowInput1M(){
