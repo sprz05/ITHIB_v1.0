@@ -213,6 +213,16 @@ function showGoalAddon(){
   document.getElementById("star").style.display = "none";
 }
 
+function hideHOBAddOn(){
+  document.getElementById("mydiv").style.display = "none";
+  document.getElementById("about").style.display = "block";
+}
+
+function hideGoalAddOn(){
+  document.getElementById("mydiv2").style.display = "none";
+  document.getElementById("star").style.display = "block";
+}
+
 /* START of show input functions */
 function dontShowInput1M(){
   document.getElementById("medium-block").style.display = "none";
