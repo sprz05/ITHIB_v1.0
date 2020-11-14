@@ -208,6 +208,7 @@ function showHOBAddon(){
   document.getElementById("about").style.display = "none";
 }
 
+
 /* START of show input functions */
 function dontShowInput1M(){
   document.getElementById("medium-block").style.display = "none";

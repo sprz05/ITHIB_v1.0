@@ -29,6 +29,9 @@
 p{
   font-size: 25px;
 }
+h1{
+  color:white;
+}
 #mySidenav {
   position: absolute;
   transition: 0.3s;
@@ -58,6 +61,31 @@ p{
     <div id="stars3"></div>
 
 <br>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="#">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSyOfMBDaAG6ljz-ztXuzf3hD2sR9bxDOUP40cNzlB6pk5As6TCP9A5XwbcSKiZqnH11zex04D5n30_/pub?w=222&amp;h=302">
+    </a>
+
+  </div>
+</div>
+
+
+<button class="btn btn-primary" onclick="openNav()">Change Bot</button>
+<div id="app"></div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
 
     <div id="mySidenav" class="sidenav">
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
