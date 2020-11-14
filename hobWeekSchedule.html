@@ -32,6 +32,10 @@
 .h3{
   color:white;
 }
+
+p {
+  color:black;
+}
 </style>
 
   </head>
@@ -52,7 +56,6 @@
   <div id="easyAssignments">
 
     <p>On which days will you be able to do homework?</p>
-    <input name="numEAI" class="pink" min="0" max="10" type="number" id="numEAI">
 
     <p>Monday</p>
     <p>Tuesday</p>
@@ -72,7 +75,7 @@
 
 <div id="mediumAssignments" style="display:none;">
 
-  <p>Hpw many medium assignments will you be doing this week?</p>
+  <p>How many medium assignments will you be doing this week?</p>
   <input class="pink" min="0" max="10" type="number" id="numMAI">
 
   <p></p>
@@ -95,7 +98,7 @@
    <p>or</p>
   <button class="btn btn-secondary" onclick="dontShowInput1M();
       displayH();">
-     I don't have any easy assignments today
+     I don't have any easy assignments this week
   </button>
 
 </div>
@@ -123,7 +126,7 @@
 
     <input value="submit" style="display:none" id="saveH" class="btn btn-primary" type="submit" onclick="displayTDL()" />
    <p>or</p>
-  <input value="I don't have any hard assignments" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); displayTDL();" />
+  <input value="I don't have any hard assignments this week" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); displayTDL();" />
 
 </div>
 

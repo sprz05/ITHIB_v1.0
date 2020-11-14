@@ -32,15 +32,32 @@
 .h3{
   color:white;
 }
+p{
+  color: black;
+}
+div.easy-block{
+  width:100%;
+  height: 700px;
+  background-color: #98ff5fff;
+  border-radius: 10px;
+}
+
+.medium-block{
+  width:100%;
+  height: 700px;
+  background-color: #fff05fff;
+  border-radius: 10px;
+}
+
+.hard-block{
+  width:100%;
+  height: 700px;
+  background-color: #ff5f5fff;
+  border-radius: 10px;
+}
 </style>
 
   </head>
-
-  <!--form-->
-  <div id="feedback-main">
-  <a id="popup" class="feedback-button" href='https://forms.gle/Nnv3wonHbBbQMpxu5' data-fc-open='iqdbx' target="_blank">Feedback</a>
-  <script src="_include/js/feedback.js"></script>
-  <!--end of form-->
 
   <body style="font-family: 'Roboto', sans-serif;">
 
@@ -106,7 +123,7 @@
    <p>or</p>
   <button class="btn btn-secondary" onclick="dontShowInput1M();
       displayH();">
-     I don't have any easy assignments today
+     I don't have any medium assignments today
   </button>
 
 </div>
@@ -148,14 +165,9 @@
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
-  <h1>Homework blocks for today:</h1>
-
-  <p>
-  Nice! Your homeworks organized into block now! you can complete them in any order! Use <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/">ITHB</a>  to get through them!
-  </p>
 
 <div class="easy-block" id="easy-block">
-<h3>Easy Block ✌️:</h3>
+<h3>Easy Block:</h3>
 <p>
 All your easy assignments for the day
 </p>
@@ -192,8 +204,11 @@ All your easy assignments for the day
 </div>
 
 
-<div id="medium-block">
-<h3>Medium Block ✌️:</h3>
+<div id="medium-block" style="width:100%;
+height: 700px;
+background-color: #fff05fff;
+border-radius: 10px;">
+<h3>Medium Block:</h3>
 <p>
 All your medium assignments for the day
 </p>
@@ -229,8 +244,11 @@ All your medium assignments for the day
 <label style="font-size: 30px" class="strikethrough" for="toDo20"><output id="out20" for="data20"></output> </label><br/>
 </div>
 
-<div id="hard-block">
-<h3>Hard Block ✌️:</h3>
+<div id="hard-block" style="width:100%;
+  height: 700px;
+  background-color: #ff5f5fff;
+  border-radius: 10px;">
+<h3>Hard Block:</h3>
 <p>
 All your hard assignments for the day
 </p>
@@ -265,14 +283,6 @@ All your hard assignments for the day
 <label style="font-size: 30px;" class="strikethrough" for="toDo30"><output id='out30' for="data30"></output></label><br>
 
 </div>
-
-
-      <div id = "ithbNAV">
-      <center><p>Now head over to ITHB to complete your homework blocks!</p></center>
-      <a target="_blank" href="https://sprz05.github.io/ITHIB_v1.0/" class="btn btn-primary">Head over to ITHB</a>
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
-
-      </div>
 
 
 </fieldset>

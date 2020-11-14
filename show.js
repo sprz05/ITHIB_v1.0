@@ -203,6 +203,10 @@ function getData(e) {
 
 }
 
+function showHOBAddon(){
+  document.getElementById("mydiv").style.display = "block";
+  document.getElementById("about").style.display = "none";
+}
 
 /* START of show input functions */
 function dontShowInput1M(){
