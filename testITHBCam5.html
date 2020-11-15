@@ -255,7 +255,7 @@ form { margin-top: 15px; }
               }
             </script>
 
-      <button class="btn btn-primary" style="display:none; color:white;" onclick=" turnOffCamera();  hideNextProbBtn();  myFunction1(); input11Function(); hideCam();" id="button0CA"><center>Continue</center></button>
+      <button class="btn btn-primary" style="display:none; color:white;" onclick=" turnOffCamera();  hideNextProbBtn();  hideCam(); myFunction1(); input11Function();" id="button0CA"><center>Continue</center></button>
 
       </center>
     </div>
@@ -633,7 +633,7 @@ form { margin-top: 15px; }
            <label for="kinda">kind of</label><br>
            <input type="radio" id="no10" name="understanding10" value="no">
            <label for="no">yes</label><br><br>
-           <button class="btn btn-info" onclick="organizeUnderstanding10(); showWorkOn10();">Enter</button>
+           <button class="btn btn-info" onclick="organizeUnderstanding10();">Enter</button>
        </div>
 
        <div id="understandingCheck11" style="display:none">
@@ -812,8 +812,11 @@ form { margin-top: 15px; }
         </h1>
     <h1></h1>
 
-    <p>Don't have something to do now? We can help!</p>
-    <a class="btn btn-primary" style="color:white; width:100%;" href="https://the-programmingclub.github.io/World-Wide-Clubs/">click me!</a>
+
+        <a class="btn btn-info" style="color:white; width:100%;" href="testITHBCam3.html">Solve 3 More Problems!</a>
+        <a class="btn btn-success" style="color:white; width:100%;" href="testITHBCam5.html">Solve 5 More Problems!</a>
+        <a class="btn btn-warning" style="color:white; width:100%;" href="testITHBCam10.html">Solve 10 More Problems!</a>
+        
     <img src="https://docs.google.com/drawings/d/e/2PACX-1vQgeDs8O3lBSuvsxIaqXkAmmIqAWy7InslJOv_JCi0Q6V1OCF8Qit71TtNJ0IWobFAhhIn100oZ78C8/pub?w=480&amp;h=360">
 
     </div>
@@ -1377,7 +1380,7 @@ function showBreakTimersAnotherAssignment(){
 
 function showWorkOn10(){
   document.getElementById("doneDiv").style.display = "none";
-  document.getElementById("understanding5").style.display = "none";
+  document.getElementById("understandingCheck5").style.display = "none";
   document.getElementById("workDiv").style.display = "block";
 }
 
