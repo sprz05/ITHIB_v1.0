@@ -715,7 +715,7 @@ form { margin-top: 15px; }
   <div id="workDiv" style="display:none">
     <h1>Great job! You did 3 problems, let's review the problems you had a hard time with!</h1>
     <p>Try and see if you can solve the problems you had a hard time & kinda had a hard time with.</p>
-
+    <br>
       <p id="hardTimeOn" style="display:none">Here's what you hard a time on</p>
       <p><span class="red" id="result1N"></span></p>
       <p><span class="red" id="result2N"></span></p>
@@ -1320,6 +1320,7 @@ function showBreakTimersAnotherAssignment(){
 
 function showWorkOn10(){
   document.getElementById("doneDiv").style.display = "none";
+  document.getElementById("understandingCheck3").style.display = "none";
   document.getElementById("workDiv").style.display = "block";
 }
 
