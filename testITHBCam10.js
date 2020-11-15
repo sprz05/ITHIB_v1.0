@@ -822,9 +822,7 @@ function showStopDiv() {
     }
 
 
-    hideUnderstandingCheckDiv2(){
-      document.getElementById("understandingCheckDiv").style.display = "none";
-    }
+
 
 
   function organizeUnderstanding1() {

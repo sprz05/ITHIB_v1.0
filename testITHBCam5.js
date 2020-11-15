@@ -822,26 +822,24 @@ function showStopDiv() {
     }
 
 
-    hideUnderstandingCheckDiv2(){
-      document.getElementById("understandingCheckDiv").style.display = "none";
-    }
 
 
-  function organizeUnderstanding1() {
-     var understanding1 = document.querySelector('input[name = "understanding1"]:checked').value;
-             if (understanding1 == 'yes' ){
-               document.getElementById("hardTimeOn").style.display = "block";
-                document.getElementById("result1Y").innerHTML = document.getElementById('name1').innerHTML;
-             } else if (understanding1 == 'kinda' ){
-               document.getElementById("kindaHardTimeOn").style.display = "block";
-               document.getElementById("result1K").innerHTML = document.getElementById('name1').innerHTML;
-             } else if (understanding1 == 'no' ){
-               document.getElementById("noHardTimeOn").style.display = "block";
-               document.getElementById("result1N").innerHTML = document.getElementById('name1').innerHTML;
-             } else {
-               return;
-             }
-      }
+
+    function organizeUnderstanding1() {
+       var understanding1 = document.querySelector('input[name = "understanding1"]:checked').value;
+               if (understanding1 == 'yes' ){
+                 document.getElementById("hardTimeOn").style.display = "block";
+                  document.getElementById("result1Y").innerHTML = document.getElementById('name1').innerHTML;
+               } else if (understanding1 == 'kinda' ){
+                 document.getElementById("kindaHardTimeOn").style.display = "block";
+                 document.getElementById("result1K").innerHTML = document.getElementById('name1').innerHTML;
+               } else if (understanding1 == 'no' ){
+                 document.getElementById("noHardTimeOn").style.display = "block";
+                 document.getElementById("result1N").innerHTML = document.getElementById('name1').innerHTML;
+               } else {
+                 return;
+               }
+        }
 
             function organizeUnderstanding2() {
      var understanding2 = document.querySelector('input[name = "understanding2"]:checked').value;
