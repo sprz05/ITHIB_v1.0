@@ -83,7 +83,7 @@ h1{
     <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand mr-lg-5" href="index.html">
+      <a class="navbar-brand mr-lg-5" href="https://sprz05.github.io/StudyBots/" target="_blank">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vQRLWChs7-u7gFu9-djXGCyCxvHTgF8HjNqq9DecZjKUy2Dl5mg3HHhEtVhy6Oz88NGmlLZKtsUTxiv/pub?w=376&amp;h=112">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +113,7 @@ h1{
             <div class="dropdown-menu dropdown-menu-xl">
               <div class="dropdown-menu-inner">
 
-                <a href="beforeHWBots.html" class="media d-flex align-items-center">
+                <a href="https://sprz05.github.io/StudyBots/beforeHWBots.html" target="_blank" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
 <i class="fas fa-arrow-left"></i>
                   </div>
@@ -123,7 +123,7 @@ h1{
                   </div>
                 </a>
 
-                <a href="duringHWBots.html" class="media d-flex align-items-center">
+                <a href="https://sprz05.github.io/StudyBots/duringHWBots.html" target="_blank" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
                     <i class="ni pencil-ruler"></i>
                     <i class="fas fa-pencil-ruler"></i>
@@ -135,7 +135,7 @@ h1{
                 </a>
 
 
-                <a href="afterHWBots.html" class="media d-flex align-items-center">
+                <a href="https://sprz05.github.io/StudyBots/afterHWBots.html" target="_blank" class="media d-flex align-items-center">
                   <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
                     <i class="ni ni-palette"></i>
                   </div>
@@ -146,12 +146,12 @@ h1{
                 </a>
 
 
-                  <a href="contact.html" class="nav-link" href="contact.html" role="button">
+                  <a href="contact.html" target="_blank" class="nav-link" href="contact.html" role="button">
                      <i class="fas fa-envelope-open-text"></i>
                     <span class="nav-link-inner--text">Contact</span>
                   </a>
 
-                 <a href="about.html" class="nav-link" href="#" role="button">
+                 <a href="about.html" target="_blank" class="nav-link" href="#" role="button">
                     <i class="fas fa-info-circle"></i>
                    <span class="nav-link-inner--text">About</span>
                  </a>
@@ -171,7 +171,7 @@ h1{
               <span class="nav-link-inner--text">Routines</span>
             </a>
             <div class="dropdown-menu">
-              <a href="regularRoutine.html" class="dropdown-item">Regular routine</a>
+              <a href="https://sprz05.github.io/StudyBots/regularRoutine.html" target="_blank" class="dropdown-item">Regular routine</a>
             </div>
           </li>
 
@@ -182,7 +182,7 @@ h1{
               <span class="nav-link-inner--text">More help</span>
             </a>
             <div class="dropdown-menu">
-              <a href="mathHWHelp.html" class="dropdown-item">Math Help</a>
+              <a href="https://sprz05.github.io/StudyBots/mathHWHelp.html" target="_blank" class="dropdown-item">Math Help</a>
             </div>
           </li>
 
@@ -192,14 +192,14 @@ h1{
           <li class="nav-item d-none d-lg-block ml-lg-4">
 
 
-            <a href="contact.html" class="btn btn-neutral btn-icon">
+            <a href="https://sprz05.github.io/StudyBots/contact.html" target="_blank" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
 
               </span>
               <span class="nav-link-inner--text">Contact</span>
             </a>
 
-            <a href="about.html" class="btn btn-neutral btn-icon">
+            <a href="https://sprz05.github.io/StudyBots/about.html" target="_blank" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
               </span>
               <span class="nav-link-inner--text">About</span>
@@ -241,11 +241,31 @@ function closeNav() {
 </script>
 
     <div id="mySidenav" class="sidenav">
+
+       <a type="button" data-toggle="popover" title="HOB" data-content="Organize your homework so it's easier to complete!">
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
+</a>
 
-
+<a type="button" data-toggle="popover" title="Goal Bot" data-content="Set some awesome goals for this homework session!">
  <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
+</a>
+
+
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top',
+        trigger : 'hover'
+    });
+});
+</script>
+
 
     <div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
