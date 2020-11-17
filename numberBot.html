@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Number Bot</title>
+  </head>
+  <body>
+    <p>How many assignments do you want to complete today?</p>
+    <input id="numAssignments" type="number" max="19" min="1"/>
+    <button onclick="check(); submit();"></button>
+  </body>
+</html>
+
+<script>
+function check(){
+  var numAssignments = document.getElemenById('numAssignments');
+  if (numAssignments.value > 19 | numAssignments.value < 1) {
+    alert('try to do 1-19 assignments :)')
+  } else {
+    break();
+  }
+}
+
+function submit(){
+    alert('your goal number has been submitted!')
+}
+</script>
