@@ -2,26 +2,56 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Number Bot</title>
+    <title>Goal Bot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="scroll.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+    <!--JS files -->
+    <script type="text/javascript" src="numBot.js"></script>
+
   </head>
   <body>
-    <p>How many assignments do you want to complete today?</p>
-    <input id="numAssignments" type="number" max="19" min="1"/>
-    <button onclick="check(); submit();"></button>
+
+<center>
+<div id="goalForm" style="background-color: rgba(255, 51, 177, 0.53); width: 100%; height:100%; border-radius: 10px;">
+
+  <div style="text-align:center;">
+    <br>
+    <h3 style="font-size: 16px;">What are some goals you have for homework today?</h3>
+    <br>
+    <br>
+    <input id="numAssignments" type="number"/>
+    <button class="btn btn-primary" type="submit" value="submit" onclick="check();">Submit</button>
+</div>
+</div>
+
+<div id="goalList" style="display:none; background-color: rgba(255, 51, 177, 0.53); width: 100%; height:100%; border-radius: 10px;">
+<h3>Here are your goals for today!</h3>
+
+<p id="goal4Echo"><span id="goal4Output"></span></p>
+
+<br>
+</div>
+<button id="okayBtn" style="display:none"onclick="onlyShowGoals();">Okay</button>
+
+
+</center>
+
+
   </body>
 </html>
-
-<script>
-function check(){
-  var numAssignments = document.getElemenById('numAssignments');
-  if (numAssignments.value > 19 | numAssignments.value < 1) {
-    alert('try to do 1-19 assignments :)')
-  } else {
-    break();
-  }
-}
-
-function submit(){
-    alert('your goal number has been submitted!')
-}
-</script>
