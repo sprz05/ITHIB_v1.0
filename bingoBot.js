@@ -19,6 +19,7 @@ document.getElementById("1A").onclick = function(){
   check1();
   check4();
   check7();
+	ultimateCheck();
 }
 
 document.getElementById("2A").onclick = function(){
@@ -26,6 +27,7 @@ document.getElementById("2A").onclick = function(){
   document.getElementById("2A").style.color  = 'green';
   check2();
   check4();
+	ultimateCheck();
 }
 
 document.getElementById("3A").onclick = function(){
@@ -34,6 +36,7 @@ document.getElementById("3A").onclick = function(){
   check3();
   check4();
   check6();
+	ultimateCheck();
 }
 
 document.getElementById("4A").onclick = function(){
@@ -41,6 +44,7 @@ document.getElementById("4A").onclick = function(){
   document.getElementById("4A").style.color  = 'green';
   check1();
   check5B();
+	ultimateCheck();
 }
 
 document.getElementById("5A").onclick = function(){
@@ -50,6 +54,7 @@ document.getElementById("5A").onclick = function(){
   check5B();
   check6();
   check7();
+	ultimateCheck();
 }
 
 document.getElementById("6A").onclick = function(){
@@ -57,6 +62,7 @@ document.getElementById("6A").onclick = function(){
   document.getElementById("6A").style.color  = 'green';
   check3();
   check5B();
+	ultimateCheck();
 }
 
 document.getElementById("7A").onclick = function(){
@@ -65,6 +71,7 @@ document.getElementById("7A").onclick = function(){
   check1();
   check5();
   check6();
+	ultimateCheck();
 }
 
 document.getElementById("8A").onclick = function(){
@@ -72,6 +79,7 @@ document.getElementById("8A").onclick = function(){
   document.getElementById("8A").style.color  = 'green';
   check2();
   check5();
+  ultimateCheck();
 }
 
 document.getElementById("9A").onclick = function(){
@@ -80,6 +88,7 @@ document.getElementById("9A").onclick = function(){
   check3();
   check5();
   check7();
+	ultimateCheck();
 }
 
 
@@ -133,6 +142,14 @@ function check7(){
   }
 }
 
+function ultimateCheck(){
+	if (document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
+    document.getElementById("gameBtnDiv").style.display ="block"
+		document.getElementById("BINGO").style.display ="none"
+  }
+}
+
+
 
 function showInputs(){
 	var assignments = document.getElementById("inputA").value;
@@ -141,10 +158,10 @@ function showInputs(){
     showMakeBtn();
 	} else if (assignments == 2){
 		document.getElementById("text1").style.display = "block";
-		document.getElementById("text2").style.display = "block";
+		document.getElementById("text2").style.display = "none";
     document.getElementById("text3").style.display = "none";
     document.getElementById("text4").style.display = "none";
-    document.getElementById("text5").style.display = "none";
+    document.getElementById("text5").style.display = "block";
     document.getElementById("text6").style.display = "none";
     document.getElementById("text7").style.display = "none";
     document.getElementById("text8").style.display = "none";
@@ -152,69 +169,69 @@ function showInputs(){
     showMakeBtn();
 	} else if (assignments == 3){
 		document.getElementById("text1").style.display = "block";
-		document.getElementById("text2").style.display = "block";
+		document.getElementById("text2").style.display = "none";
 		document.getElementById("text3").style.display = "block";
     document.getElementById("text4").style.display = "none";
     document.getElementById("text5").style.display = "none";
-    document.getElementById("text6").style.display = "none";
+    document.getElementById("text6").style.display = "block";
     document.getElementById("text7").style.display = "none";
     document.getElementById("text8").style.display = "none";
     document.getElementById("text9").style.display = "none";
     showMakeBtn();
 	} else if (assignments == 4){
 		document.getElementById("text1").style.display = "block";
-		document.getElementById("text2").style.display = "block";
+		document.getElementById("text2").style.display = "none";
 		document.getElementById("text3").style.display = "block";
-		document.getElementById("text4").style.display = "block";
-    document.getElementById("text5").style.display = "none";
+		document.getElementById("text4").style.display = "none";
+    document.getElementById("text5").style.display = "block";
     document.getElementById("text6").style.display = "none";
-    document.getElementById("text7").style.display = "none";
+    document.getElementById("text7").style.display = "block";
     document.getElementById("text8").style.display = "none";
     document.getElementById("text9").style.display = "none";
     showMakeBtn();
 	} else if (assignments == 5){
 		document.getElementById("text1").style.display = "block";
-		document.getElementById("text2").style.display = "block";
+		document.getElementById("text2").style.display = "none";
 		document.getElementById("text3").style.display = "block";
-		document.getElementById("text4").style.display = "block";
+		document.getElementById("text4").style.display = "none";
 		document.getElementById("text5").style.display = "block";
     document.getElementById("text6").style.display = "none";
-    document.getElementById("text7").style.display = "none";
+    document.getElementById("text7").style.display = "block";
     document.getElementById("text8").style.display = "none";
-    document.getElementById("text9").style.display = "none";
+    document.getElementById("text9").style.display = "block";
     showMakeBtn();
 	} else if (assignments == 6){
 		document.getElementById("text1").style.display = "block";
 		document.getElementById("text2").style.display = "block";
-		document.getElementById("text3").style.display = "block";
+		document.getElementById("text3").style.display = "none";
 		document.getElementById("text4").style.display = "block";
 		document.getElementById("text5").style.display = "block";
-		document.getElementById("text6").style.display = "block";
-    document.getElementById("text7").style.display = "none";
-    document.getElementById("text8").style.display = "none";
+		document.getElementById("text6").style.display = "none";
+    document.getElementById("text7").style.display = "block";
+    document.getElementById("text8").style.display = "block";
     document.getElementById("text9").style.display = "none";
     showMakeBtn();
 	} else if (assignments == 7){
-		document.getElementById("text1").style.display = "block";
+		document.getElementById("text1").style.display = "none";
 		document.getElementById("text2").style.display = "block";
 		document.getElementById("text3").style.display = "block";
 		document.getElementById("text4").style.display = "block";
 		document.getElementById("text5").style.display = "block";
 		document.getElementById("text6").style.display = "block";
-		document.getElementById("text7").style.display = "block";
-    document.getElementById("text8").style.display = "none";
-    document.getElementById("text9").style.display = "none";
+		document.getElementById("text7").style.display = "none";
+    document.getElementById("text8").style.display = "block";
+    document.getElementById("text9").style.display = "block";
     showMakeBtn();
 	} else if (assignments == 8){
 		document.getElementById("text1").style.display = "block";
 		document.getElementById("text2").style.display = "block";
-		document.getElementById("text3").style.display = "block";
+		document.getElementById("text3").style.display = "none";
 		document.getElementById("text4").style.display = "block";
 		document.getElementById("text5").style.display = "block";
 		document.getElementById("text6").style.display = "block";
 		document.getElementById("text7").style.display = "block";
 		document.getElementById("text8").style.display = "block";
-    document.getElementById("text9").style.display = "none";
+    document.getElementById("text9").style.display = "block";
     showMakeBtn();
 	} else if (assignments == 9){
 		document.getElementById("text1").style.display = "block";
