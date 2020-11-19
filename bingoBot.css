@@ -1,0 +1,19 @@
+html{
+  font-family: roboto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}

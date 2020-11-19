@@ -32,6 +32,9 @@ p{
 h1{
   color:white;
 }
+iframe{
+overflow-x: scroll;
+}
 #mySidenav {
   position: absolute;
   transition: 0.3s;
@@ -60,6 +63,21 @@ h1{
   cursor: move;
   z-index: 10;
   background-color: Yellow;
+  color: #fff;
+}
+
+#mydiv3 {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader3 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Green;
   color: #fff;
 }
 
@@ -242,7 +260,7 @@ function closeNav() {
 
     <div id="mySidenav" class="sidenav">
 
-       <a type="button" data-toggle="popover" title="HOB" data-content="Organize your homework so it's easier to complete!">
+<a type="button" data-toggle="popover" title="HOB" data-content="Organize your homework so it's easier to complete!">
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
 </a>
 
@@ -250,9 +268,15 @@ function closeNav() {
  <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
 </a>
 
-<a type="button" href="indexTestWithgoalNum.html" data-toggle="popover" title="Numer of Assignment Goal Bot" data-content="Set how many assignmnts you want to complete as a goal">
+<a type="button" data-toggle="popover" title="Bingo Bot" data-content="Make your homework assignment list into a bingo sheet">
+<img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
+</a>
+
+<a type="button" href="indexTestWithgoalNum.html" data-toggle="popover" title="Number of Assignment Goal Bot" data-content="Set how many assignmnts you want to complete as a goal">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRxcZAvrUgPmkUSliGC6bu7AT3lTCIoHdncshVwSp6KRjjroepEYq8_BLqFAScwczDdsIrDdBko177x/pub?w=222&amp;h=302">
 </a>
+
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -290,10 +314,22 @@ $(document).ready(function(){
 
     </div>
 
+    <div id="mydiv3" style="display:none;">
+      <div id="mydivheader3">Click here to move <span><button onclick="hideBingoAddOn()">x</button></span></div>
+
+  <iframe src="bingoBot9.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
     <script>
     //Make the DIV element draggagle:
     dragElement(document.getElementById("mydiv"));
     dragElement(document.getElementById("mydiv2"));
+    dragElement(document.getElementById("mydiv3"));
+
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

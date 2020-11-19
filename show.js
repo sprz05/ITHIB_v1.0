@@ -213,6 +213,11 @@ function showGoalAddon(){
   document.getElementById("star").style.display = "none";
 }
 
+function showBingoAddon(){
+  document.getElementById("mydiv3").style.display = "block";
+  document.getElementById("bingo").style.display = "none";
+}
+
 function hideHOBAddOn(){
   document.getElementById("mydiv").style.display = "none";
   document.getElementById("about").style.display = "block";
@@ -222,6 +227,13 @@ function hideGoalAddOn(){
   document.getElementById("mydiv2").style.display = "none";
   document.getElementById("star").style.display = "block";
 }
+
+function hideBingoAddOn(){
+  document.getElementById("mydiv3").style.display = "none";
+  document.getElementById("bingo").style.display = "block";
+}
+
+
 
 /* START of show input functions */
 function dontShowInput1M(){
