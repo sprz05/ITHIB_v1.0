@@ -251,6 +251,10 @@ function closeNav() {
  <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
 </a>
 
+<a type="button" data-toggle="popover" title="Bingo Bot" data-content="Make your homework assignment list into a bingo sheet">
+<img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
+</a>
+
 
 </div>
 
@@ -289,10 +293,22 @@ $(document).ready(function(){
 
     </div>
 
+    <div id="mydiv3" style="display:none;">
+      <div id="mydivheader3">Click here to move <span><button onclick="hideBingoAddOn()">x</button></span></div>
+
+  <iframe src="bingoBot9.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
     <script>
     //Make the DIV element draggagle:
     dragElement(document.getElementById("mydiv"));
     dragElement(document.getElementById("mydiv2"));
+    dragElement(document.getElementById("mydiv3"));
+
 
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -368,6 +384,7 @@ $(document).ready(function(){
     <div id="div0" style="background-color: rgba(255, 51, 177, 0.53); width: 100%; height:100%; border-radius: 10px;">
 
       <div id="goalNumForm" style="text-align:center;">
+        <h1>Number of Assignments Goal:</h1>
         <br>
         <h3 style="font-size: 16px;">How many assignments do you want to complete today?</h3>
         <br>
@@ -584,6 +601,7 @@ function startTimer(duration, display) {
 
     if (timer == 0){
       stopTimer();
+      alert('Timer Ended')
     }
   }, 1000);
 }
@@ -1213,6 +1231,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
           </script>
 
+            <center><h1>Choose One:</h1></center>
             <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();"> I'm not done with this assignment, I need more time!</button>
             <button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); plusOne();"> I want to work on my next assignment!</button>
             <button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10(); plusOne(); goalNumCheck();"> I'm done with my homework for today!</button>
