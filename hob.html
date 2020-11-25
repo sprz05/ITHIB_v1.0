@@ -5,6 +5,9 @@
   <head>
     <meta charset="utf-8">
     <title>HOB</title>
+
+
+
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
@@ -24,9 +27,6 @@
       <link rel="stylesheet" type="text/css" href="general.css" />
       <!--JS Files-->
       <script src="ITHB.js"></script>
-      <script src="hobE.js"></script>
-<script src="hobm.js"></script>
-<script src="hobH.js"></script>
 
 <style>
 .h3{
@@ -37,26 +37,24 @@ p{
 }
 div.easy-block{
   width:100%;
+  height: 700px;
   background-color: #98ff5fff;
   border-radius: 10px;
 }
 
 .medium-block{
   width:100%;
+  height: 700px;
   background-color: #fff05fff;
   border-radius: 10px;
 }
 
 .hard-block{
   width:100%;
+  height: 700px;
   background-color: #ff5f5fff;
   border-radius: 10px;
 }
-
-input[type=checkbox]:checked + label.strikethrough{
-  text-decoration: line-through;
-}
-
 </style>
 
   </head>
@@ -91,12 +89,13 @@ input[type=checkbox]:checked + label.strikethrough{
         <input class="yellow" style="display:none" id='data10' name='data10'>
       <input value="submit" style="display:none" id="saveE" class="btn btn-primary" onclick="displayM()" />
      <p>or</p>
-    <button class="btn btn-secondary" onclick="dontShowInput1E(); dontShowENav();
+    <button class="btn btn-secondary" onclick="dontShowInput1E();
         displayM();">
        I don't have any easy assignments today
     </button>
 
 </div>
+
 
 
 <div id="mediumAssignments" style="display:none;">
@@ -122,7 +121,7 @@ input[type=checkbox]:checked + label.strikethrough{
       <input class="yellow" style="display:none" id='data20' name='data20'>
     <input value="submit" style="display:none" id="saveM" class="btn btn-primary" type="submit" onclick="displayH()" />
    <p>or</p>
-  <button class="btn btn-secondary" onclick="dontShowInput1M();dontShowMNav();
+  <button class="btn btn-secondary" onclick="dontShowInput1M();
       displayH();">
      I don't have any medium assignments today
   </button>
@@ -152,7 +151,7 @@ input[type=checkbox]:checked + label.strikethrough{
 
     <input value="submit" style="display:none" id="saveH" class="btn btn-primary" type="submit" onclick="displayTDL()" />
    <p>or</p>
-  <input value="I don't have any hard assignments" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); dontShowHNav(); displayTDL();" />
+  <input value="I don't have any hard assignments" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); displayTDL();" />
 
 </div>
 
@@ -166,137 +165,124 @@ input[type=checkbox]:checked + label.strikethrough{
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
-<p id="navText2">Which block do you want to work on first?</p>
-<p style="display:none" id="navText">Which block do you want to work on next?</p>
 
-<button id="easyNav" class="btn btn-success" onclick="showEBlock()">Easy Block</button>
-<button id="mediumNav" class="btn btn-primary" onclick="showMBlock()">Medium Block</button>
-<button id="hardNav" class="btn btn-warning" onclick="showHBlock()">Hard Block</button>
-<button class="btn btn-danger" onclick="showGameDiv();">I finished all my Assignments!</button>
+  <button onclick="showGameDiv();">I finished all my assignments</button>
 
-<div class="easy-block" id="easy-block" style="display:none">
+<div class="easy-block" id="easy-block">
 <h3>Easy Block:</h3>
 <p>
 All your easy assignments for the day
 </p>
-<p>Cross off an assignment when you complete it!</p>
 
-<input type="checkbox" style="font-size: 30px" id="toDo1" name="toDo1" value="toDo1" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo1" name="toDo1" value="toDo1"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo1"><output id="out" for="data"></output></label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo2" name="toDo2" value="toDo2" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo2" name="toDo2" value="toDo2"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo2"><output id="out2" for="data2"></output></label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo3" name="toDo3" value="toDo3" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo3" name="toDo3" value="toDo3"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo3"><output id="out3" for="data3"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo4" name="toDo4" value="toDo4" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo4" name="toDo4" value="toDo4"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo4"><output id="out4" for="data4"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo5" name="toDo5" value="toDo5" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo5" name="toDo5" value="toDo5"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo5"><output id="out5" for="data5"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo6" name="toDo6" value="toDo6" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo6" name="toDo6" value="toDo6"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo6"><output id="out6" for="data6"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo7" name="toDo7" value="toDo7" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo7" name="toDo7" value="toDo7"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo7"><output id="out7" for="data7"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo8" name="toDo8" value="toDo8" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo8" name="toDo8" value="toDo8"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo8"><output id="out8" for="data8"></output> </label><br />
 
-<input type="checkbox" style="font-size: 30px" id="toDo9" name="toDo9" value="toDo9" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo9" name="toDo9" value="toDo9"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo9"><output id="out9" for="data9"></output> </label><br />
 
 <input type="checkbox" style="font-size: 30px" id="toDo10" name="toDo10" value="toDo10"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo10"><output id="out10" for="data10"></output> </label><br />
-<button onclick="showMBlock();">></button>
 </div>
 
 
-<div id="medium-block" style="display:none; width:100%;
+<div id="medium-block" style="width:100%;
+height: 700px;
 background-color: #fff05fff;
 border-radius: 10px;">
 <h3>Medium Block:</h3>
 <p>
-Try and work through all your medium assignments for the day
+All your medium assignments for the day
 </p>
-<p>Cross off an assignment when you complete it!</p>
 
-
-<input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo11"><output id='out11' for="data11"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo12" name="toDo12" value="toDo12" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo12" name="toDo12" value="toDo12"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo12"><output id='out12' for="data12"></output></label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo13" name="toDo13" value="toDo13" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo13" name="toDo13" value="toDo13"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo13"><output id="out13" for="data13"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo14" name="toDo14" value="toDo14" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo14" name="toDo14" value="toDo14"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo14"><output id="out14" for="data14"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo15" name="toDo15" value="toDo15" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo15" name="toDo15" value="toDo15"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo15"><output id="out15" for="data15"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo16" name="toDo16" value="toDo16" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo16" name="toDo16" value="toDo16"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo16"><output id="out16" for="data16"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo17" name="toDo17" value="toDo17" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo17" name="toDo17" value="toDo17"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo17"><output id="out17" for="data17"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo18" name="toDo18" value="toDo18" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo18" name="toDo18" value="toDo18"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo18"><output id="out18" for="data18"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo19" name="toDo19" value="toDo19" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo19" name="toDo19" value="toDo19"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo19"><output id="out19" for="data19"></output> </label><br/>
 
-<input type="checkbox" style="font-size: 30px" id="toDo20" name="toDo20" value="toDo20" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px" id="toDo20" name="toDo20" value="toDo20"/>
 <label style="font-size: 30px" class="strikethrough" for="toDo20"><output id="out20" for="data20"></output> </label><br/>
-
-
 </div>
 
-<div id="hard-block" style="display:none; width:100%;
+<div id="hard-block" style="width:100%;
+  height: 700px;
   background-color: #ff5f5fff;
   border-radius: 10px;">
 <h3>Hard Block:</h3>
 <p>
 All your hard assignments for the day
 </p>
-<p>Cross off an assignment when you complete it!</p>
-
-<input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo21"><output id='out21' for="data21"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo22" name="toDo22" value="toDo22" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo22" name="toDo22" value="toDo22"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo22"><output id='out22' for="data22"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo23" name="toDo23" value="toDo23" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo23" name="toDo23" value="toDo23"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo23"><output id='out23' for="data23"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo24" name="toDo24" value="toDo24" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo24" name="toDo24" value="toDo24"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo24"><output id='out24' for="data24"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo25" name="toDo25" value="toDo25" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo25" name="toDo25" value="toDo25"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo25"><output id='out25' for="data25"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo26" name="toDo26" value="toDo26" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo26" name="toDo26" value="toDo26"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo26"><output id='out26' for="data26"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo27" name="toDo27" value="toDo27" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo27" name="toDo27" value="toDo27"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo27"><output id='out27' for="data27"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo28" name="toDo28" value="toDo28" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo28" name="toDo28" value="toDo28"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo28"><output id='out28' for="data28"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo29" name="toDo29" value="toDo29" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo29" name="toDo29" value="toDo29"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo29"><output id='out29' for="data29"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo30" name="toDo30" value="toDo30" onclick="checkE(); checkM(); checkH()"/>
+<input type="checkbox" style="font-size: 30px;" id="toDo30" name="toDo30" value="toDo30"/>
 <label style="font-size: 30px;" class="strikethrough" for="toDo30"><output id='out30' for="data30"></output></label><br>
-
-
 
 </div>
 
@@ -306,20 +292,17 @@ All your hard assignments for the day
 
 </div>
 
-
 </div>
 
 
 <script src="script.js"></script>
 <script src="show.js"></script>
-<script></script>
-<script src="hobm.js"></script>
-<script src="hobH.js"></script>
 
-<script>
-  var n = 0;
-</script>
 
+<!--End of To-do List-->
+
+</center>
+</body>
 
 <div id="gameDiv" style="display:none">
 <p>There's no way I can check so I'm going to trust your word, as a reward for finishing all your assignments, want to play some games?</p>
@@ -329,45 +312,6 @@ All your hard assignments for the day
 </div>
 
 <script>
-function showEBlock(){
-  document.getElementById("easy-block").style.display = "block";
-  document.getElementById("navText").style.display = "block";
-    document.getElementById("navText2").style.display = "none";
-  document.getElementById("medium-block").style.display = "none";
-    document.getElementById("hard-block").style.display = "none";
-}
-
-function showMBlock(){
-  document.getElementById("medium-block").style.display = "block";
-    document.getElementById("navText").style.display = "block";
-        document.getElementById("navText2").style.display = "none";
-  document.getElementById("easy-block").style.display = "none";
-  document.getElementById("hard-block").style.display = "none";
-}
-
-function showHBlock(){
-  document.getElementById("hard-block").style.display = "block";
-    document.getElementById("navText").style.display = "block";
-        document.getElementById("navText2").style.display = "none";
-  document.getElementById("easy-block").style.display = "none";
-  document.getElementById("medium-block").style.display = "none";
-}
-
-  function dontShowMNav(){
-    document.getElementById("mediumNav").style.display = "none";
-  }
-
-   function dontShowHNav(){
-    document.getElementById("hardNav").style.display = "none";
-  }
-
-   function dontShowENav(){
-    document.getElementById("easyNav").style.display = "none";
-  }
-
-  function dontShowENav(){
-    document.getElementById("easyNav").style.display = "none";
-  }
 
 function showGameDiv(){
     document.getElementById("gameDiv").style.display = "block";
@@ -381,10 +325,4 @@ function hideGameDiv(){
     
 
 </script>
-
-
-<!--End of To-do List-->
-
-</center>
-</body>
 </html>

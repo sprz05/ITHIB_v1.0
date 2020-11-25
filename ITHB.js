@@ -688,39 +688,39 @@ function showSaveH(){
   function showInputE(){
   var numEAI = document.getElementById('numEAI');
     if (numEAI.value == 0){
-   		alert("If you don't have any, click I don't have any easy assignments today");
+            alert("If you don't have any, click I don't have any easy assignments today");
    }else if (numEAI.value == 1){
         showSaveE();
-      	onlyShowInput1();
-  	} else if (numEAI.value == 2){
+            onlyShowInput1();
+      } else if (numEAI.value == 2){
         showSaveE();
-      	onlyShowInput2();
+            onlyShowInput2();
     } else if (numEAI.value == 3){
         showSaveE();
-      	onlyShowInput3();
+            onlyShowInput3();
     } else if (numEAI.value == 4){
         showSaveE();
-      	onlyShowInput4();
+            onlyShowInput4();
     } else if (numEAI.value == 5){
         showSaveE();
-      	onlyShowInput5();
+            onlyShowInput5();
     } else if (numEAI.value == 6){
           showSaveE();
-        	onlyShowInput6();
+            onlyShowInput6();
     } else if (numEAI.value == 7){
           showSaveE();
-        	onlyShowInput7();
+            onlyShowInput7();
     } else if (numEAI.value == 8){
           showSaveE();
-        	onlyShowInput8();
+            onlyShowInput8();
     } else if (numEAI.value == 9){
           showSaveE();
-        	onlyShowInput9();
+            onlyShowInput9();
     } else if (numEAI.value == 10){
           showSaveE();
-        	onlyShowInput10();
+            onlyShowInput10();
     } else {
-    	alert ("Try doing between 1-10 easy assignments OR click I dont have any easy assignments today if you dont have any");
+      alert ("Try doing between 1-10 easy assignments OR click I dont have any easy assignments today if you dont have any");
     }
 
   }
@@ -728,7 +728,7 @@ function showSaveH(){
   function showInputM(){
   var numMAI = document.getElementById('numMAI');
    if (numMAI.value == 0){
-   			alert("If you don't have any, click I don't have any medium assignments");
+                  alert("If you don't have any, click I don't have any medium assignments");
    }
    else if (numMAI.value == 1){
         showSaveM();
@@ -772,7 +772,7 @@ function showSaveH(){
   function showInputH(){
   var numHAI = document.getElementById('numHAI');
    if (numHAI.value == 0){
-   	alert("If you don't have any, click I don't have any hard assignents");
+      alert("If you don't have any, click I don't have any hard assignents");
    }
     else if (numHAI.value == 1){
         onlyShowInput1H();
@@ -826,14 +826,3 @@ function displayTDL(){
   document.getElementById("hardAssignments").style.display = "none";
   document.getElementById("toDoList").style.display = "block";
 }
-
-
-
-
-
-
-
-
-
-
-
