@@ -826,3 +826,14 @@ function displayTDL(){
   document.getElementById("hardAssignments").style.display = "none";
   document.getElementById("toDoList").style.display = "block";
 }
+
+
+
+
+
+
+
+
+
+
+
