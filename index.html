@@ -164,9 +164,9 @@ overflow-x: scroll;
                 </a>
 
 
-                  <a href="contact.html" target="_blank" class="nav-link" href="contact.html" role="button">
+                 <a href="studyBotMaker.html" target="_blank" class="nav-link"  role="button">
                      <i class="fas fa-envelope-open-text"></i>
-                    <span class="nav-link-inner--text">Contact</span>
+                    <span class="nav-link-inner--text">Make a Study Bot</span>
                   </a>
 
                  <a href="about.html" target="_blank" class="nav-link" href="#" role="button">
@@ -210,12 +210,13 @@ overflow-x: scroll;
           <li class="nav-item d-none d-lg-block ml-lg-4">
 
 
-            <a href="https://sprz05.github.io/StudyBots/contact.html" target="_blank" class="btn btn-neutral btn-icon">
+           <a href="studyBotMaker.html" target="_blank" class="btn btn-danger btn-icon">
               <span class="btn-inner--icon">
 
               </span>
-              <span class="nav-link-inner--text">Contact</span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
             </a>
+
 
             <a href="https://sprz05.github.io/StudyBots/about.html" target="_blank" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
@@ -268,7 +269,7 @@ function closeNav() {
  <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
 </a>
 
-<a type="button" data-toggle="popover" title="Bingo Bot" data-content="Make your homework assignment list into a bingo sheet">
+<a type="button" data-toggle="popover" title="Bingo Bot" data-content="Make your homework assignment list into a bingo sheet :D">
 <img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
 </a>
 
@@ -727,7 +728,8 @@ function hideNextBtn(){
     <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? <br/><p style="color:white">If you don't know start with 10 minutes and try to work your way up slowly</center></h1>
     <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
     <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
-    <h1><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</h1></center>
+    <h1><center style ="display:none" id="workOnNextAssignmentTxt">Now work on your next assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
+    <p><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</p></center>
 
     <div id="masterTimer" class="container group">
 
@@ -1203,11 +1205,12 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
           </script>
 
-            <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();"> I'm not done with this assignment, I need more time!</button>
-            <button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()"> I want to work on another assignment!</button>
-            <button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();"> I'm done with my homework for today!</button>
+        <h1>Choose One:</h1>
 
-              <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
+<button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
+<button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()">I want to work on my next assignment!</button>
+<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today!</button>
+<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
