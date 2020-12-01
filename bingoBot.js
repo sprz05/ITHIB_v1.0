@@ -93,60 +93,77 @@ document.getElementById("9A").onclick = function(){
 
 
 function check1(){
-	if (document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green') {
+  var i = 0;
+	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green') {
     alert('bingo!');
+    i++;
   }
 }
 
 
 function check2(){
-	if (document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green') {
+  var i = 0;
+	if (i == 0 && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function check3(){
-	if (document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
+    var i = 0;
+	if (i == 0 &&document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function check4(){
-	if (document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' ) {
+  var i = 0;
+	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function check5B(){
-	if (document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' ) {
+  var i = 0;
+	if (i == 0 && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function check5(){
-	if (document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
+    var i = 0;
+	if (i == 0 && document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function check6(){
-	if (document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' ) {
+    var i = 0;
+	if (i == 0 && document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 
 function check7(){
-	if (document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
+  var i = 0;
+	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
     alert('bingo!');
-  }
+    i++;
+  } 
 }
 
 function ultimateCheck(){
-	if (document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
+    var i = 0;
+	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
     document.getElementById("gameBtnDiv").style.display ="block"
 		document.getElementById("BINGO").style.display ="none"
-  }
+  } 
 }
 
 
