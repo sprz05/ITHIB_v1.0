@@ -164,7 +164,7 @@ overflow-x: scroll;
                 </a>
 
 
-                 <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="nav-link"  role="button">
+                 <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="nav-link"  role="button" style="display:none">
                      <i class="fas fa-envelope-open-text"></i>
                     <span class="nav-link-inner--text">Make a Study Bot</span>
                   </a>
@@ -214,7 +214,7 @@ overflow-x: scroll;
           <li class="nav-item d-none d-lg-block ml-lg-4">
 
 
-           <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
+           <a href="https://sprz05.github.io/Study-BotMaker/" style="display:none" target="_blank" class="btn btn-danger btn-icon">
               <span class="btn-inner--icon">
 
               </span>
@@ -1216,8 +1216,8 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
 <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
 <button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()">I want to work on my next assignment!</button>
-<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today!</button>
-<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
+<button class="btn btn-success" style="color:white; height:100px; font-size: 20px;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today! I want a reward!</button>
+<button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -1550,8 +1550,14 @@ function hideStop(){
     </h1>
 
     <p>Don't have something to do now? We can help!</p>
-<a class="btn btn-secondary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
-<a class="btn btn-danger" style="color:white;" href="game.html">Play Games</a>
+    <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+    </a>
+<a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
+<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
 
     <h1 style="font-size:70px;"><strong>
       What you worked on today:
