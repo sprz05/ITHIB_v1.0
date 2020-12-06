@@ -387,6 +387,9 @@ $(document).ready(function(){
     }
     </script>
 
+    <audio id="beepAudio"></audio>
+
+
   <div id="1Div">
 
     <h1></h1>
@@ -579,19 +582,35 @@ function startTimer(duration, display) {
 
     if (timer == 0){
       stopTimer();
-      alert('Timer Ended');
+      beepCount = 0;             
+      document.getElementById("beepAudio").play();
     }
   }, 1000);
 }
 
+document.getElementById("beepAudio").src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+    document.getElementById("beepAudio").load();
+
  function resetTimer() {
       clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
     }
 
  function stopTimer() {
       clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
     }
 
+
+    let beepCount = 0;
+document.getElementById("beepAudio").addEventListener("ended", () => {
+    beepCount++;
+    if(beepCount < 100){       
+        document.getElementById("beepAudio").play();
+    } else {
+          alert("times up!");
+    }
+});
 
 
   function start10() {
@@ -836,7 +855,7 @@ function showNextContent(){
 }
 
 function showNextBtn(){
-	document.getElementById("nextBtn").style.display="block";
+  document.getElementById("nextBtn").style.display="block";
 }
 
 </script>
@@ -1047,6 +1066,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
       <div id=timerBreak5 style ="display:none">
       <center><h1>🧠</h1></center>
       <h1><span id="time5Break1">5:00</span></h1>
+                <p>Brain break! Click next when the timer ends</p>
       <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
     </div>
 
