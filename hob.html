@@ -30,34 +30,29 @@
 
 <style>
 .h3{
-  color:white;
+  color:black;
 }
 p{
   color: black;
 }
-div.easy-block{
-  width:100%;
-  height: 700px;
-  background-color: #98ff5fff;
-  border-radius: 10px;
-}
+body {
 
-.medium-block{
-  width:100%;
-  height: 700px;
-  background-color: #fff05fff;
-  border-radius: 10px;
-}
+font-family: 'Roboto', sans-serif;
+font-size: 22px;
+text-align: center;
+background: #ecf0e6;
+font-weight: 100;
+padding-top: 50px;
+padding-right: 80px;
+padding-bottom: 50px;
+padding-left: 80px;
 
-.hard-block{
-  width:100%;
-  height: 700px;
-  background-color: #ff5f5fff;
-  border-radius: 10px;
 }
 </style>
 
+
   </head>
+
 
   <body style="font-family: 'Roboto', sans-serif;">
 
@@ -69,89 +64,117 @@ div.easy-block{
   <div id="easyAssignments">
 
     <p>How many easy assignments do you have to do today?</p>
-    <input name="numEAI" class="pink" min="0" max="10" type="number" id="numEAI">
+    <input class="pink" min="0" max="10" type="number" id="numEAI" required>
 
     <p></p>
 
     <button class="btn btn-primary" onclick="showInputEText(); showInputE();">Enter</button>
+
+
+
       <p style="display:none;" id="inputEText">List your easy assignments here (then click save)</p>
-      <form id="ui">
-      <fieldset>
-        <input class="red" style="display:none" id='data' name='data'>
-        <input class="yellow" style="display:none" id='data2' name='data2'>
-        <input class="green" style="display:none" id='data3' name='data3'>
-        <input class="yellow" style="display:none" id='data4' name='data4'>
-        <input class="yellow" style="display:none" id='data5' name='data5'>
-        <input class="yellow" style="display:none" id='data6' name='data6'>
-        <input class="yellow" style="display:none" id='data7' name='data7'>
-        <input class="yellow" style="display:none" id='data8' name='data8'>
-        <input class="yellow" style="display:none" id='data9' name='data9'>
-        <input class="yellow" style="display:none" id='data10' name='data10'>
-      <input value="submit" style="display:none" id="saveE" class="btn btn-primary" onclick="displayM()" />
-     <p>or</p>
+
+        <input class="red" style="display:none" type="text" id="easyA1">
+        <input class="yellow" style="display:none" type="text" id="easyA2">
+        <input class="green" style="display:none" type="text" id="easyA3">
+        <input class="blue" style="display:none" type="text" id="easyA4">
+        <input class="purple" style="display:none" type="text" id="easyA5">
+        <input class="lightPink" style="display:none" type="text" id="easyA6">
+        <input class="pinkInput" style="display:none" type="text" id="easyA7">
+        <input class="darkPink" style="display:none" type="text" id="easyA8">
+        <input class="lightPurple" style="display:none" type="text" id="easyA9">
+        <input class="darkPurple" style="display:none" type="text" id="easyA10">
+
+
+      <button style="display:none" id="saveE" class="btn btn-primary" onclick="displayM();">Save</button>
+
+
+     <p>
+   or
+   </p>
+
     <button class="btn btn-secondary" onclick="dontShowInput1E();
         displayM();">
        I don't have any easy assignments today
     </button>
 
+
+
 </div>
 
 
-
-<div id="mediumAssignments" style="display:none;">
-
+<div id="mediumAssignments" style="display:none">
   <p>How many medium assignments do you have to do today?</p>
-  <input class="pink" min="0" max="10" type="number" id="numMAI">
+  <input class="pink" min="0" max="5" type="number" id="numMAI">
 
   <p></p>
 
   <button class="btn btn-primary" onclick="showInputMText(); showInputM();">Enter</button>
-    <p style="display:none;" id="inputMText">List your easy assignments here (then click save)</p>
-    <form id="ui">
-    <fieldset>
-      <input class="red" style="display:none" id='data11' name='data11'>
-      <input class="yellow" style="display:none" id='data12' name='data12'>
-      <input class="green" style="display:none" id='data13' name='data13'>
-      <input class="yellow" style="display:none" id='data14' name='data14'>
-      <input class="yellow" style="display:none" id='data15' name='data15'>
-      <input class="yellow" style="display:none" id='data16' name='data16'>
-      <input class="yellow" style="display:none" id='data17' name='data17'>
-      <input class="yellow" style="display:none" id='data18' name='data18'>
-      <input class="yellow" style="display:none" id='data19' name='data19'>
-      <input class="yellow" style="display:none" id='data20' name='data20'>
-    <input value="submit" style="display:none" id="saveM" class="btn btn-primary" type="submit" onclick="displayH()" />
-   <p>or</p>
-  <button class="btn btn-secondary" onclick="dontShowInput1M();
-      displayH();">
-     I don't have any medium assignments today
-  </button>
+
+
+
+    <p style="display:none" id="inputMText">List your medium assignments here (then click save):</p>
+    <input class="red" style="display:none" type="text" id="mediumA1">
+    <input class="yellow" style="display:none" type="text" id="mediumA2">
+    <input class="green" style="display:none" tsype="text" id="mediumA3">
+    <input class="blue" style="display:none" type="text" id="mediumA4">
+    <input class="purple" style="display:none" type="text" id="mediumA5">
+    <input class="lightPink" style="display:none" type="text" id="mediumA6">
+    <input class="pinkInput" style="display:none" type="text" id="mediumA7">
+    <input class="darkPink" style="display:none" type="text" id="mediumA8">
+    <input class="lightPurple" style="display:none" type="text" id="mediumA9">
+    <input class="darkPurple" style="display:none" type="text" id="mediumA10">
+
+
+    <p> </p>
+
+    <button style="display:none" id="saveM" class="btn btn-primary" onclick="displayH();">Save</button>
+
+         <p>
+   or
+   </p>
+
+     <button class="btn btn-secondary" onclick="dontShowInput1M();
+        displayH();">
+        I don't have any medium assignments today
+        </button>
 
 </div>
 
-<div id="hardAssignments" style="display:none;">
 
+<div id="hardAssignments" style="display:none">
   <p>How many hard assignments do you have to do today?</p>
-  <input class="pink" min="0" max="10" type="number" id="numHAI">
+  <input class="pink" min="0" max="5" type="number" id="numHAI">
   <p></p>
   <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); showInputH();">Enter</button>
-    <p style="display:none;" id="inputHText">List your hard assignments here (then click save)</p>
-    <form id="ui">
-    <fieldset>
 
-      <input class="red" style="display:none" id='data21' name='data21'>
-      <input class="yellow" style="display:none" id='data22' name='data22'>
-      <input class="green" style="display:none" id='data23' name='data23'>
-      <input class="yellow" style="display:none" id='data24' name='data24'>
-      <input class="yellow" style="display:none" id='data25' name='data25'>
-      <input class="yellow" style="display:none" id='data26' name='data26'>
-      <input class="yellow" style="display:none" id='data27' name='data27'>
-      <input class="yellow" style="display:none" id='data28' name='data28'>
-      <input class="yellow" style="display:none" id='data29' name='data29'>
-      <input class="yellow" style="display:none" id='data30' name='data30'>
 
-    <input value="submit" style="display:none" id="saveH" class="btn btn-primary" type="submit" onclick="displayTDL()" />
-   <p>or</p>
-  <input value="I don't have any hard assignments" type="submit" class="btn btn-secondary" onclick="dontShowInput1H(); displayTDL();" />
+
+  <p id="inputHText" style="display:none">List your hard assignments here (then click save):</p>
+    <input class="red" style="display:none" type="text" id="hardA1">
+    <input class="yellow" style="display:none" type="text" id="hardA2">
+    <input class="green" style="display:none" type="text"id="hardA3">
+    <input class="blue" style="display:none" type="text" id="hardA4">
+    <input class="purple" style="display:none" type="text" id="hardA5">
+    <input class="lightPink" style="display:none" type="text" id="hardA6">
+    <input class="pinkInput" style="display:none" type="text" id="hardA7">
+    <input class="darkPink" style="display:none" type="text" id="hardA8">
+    <input class="lightPurple" style="display:none" type="text" id="hardA9">
+    <input class="darkPurple" style="display:none" type="text" id="hardA10">
+
+    <p> </p>
+
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); displayTDL();">Save</button>
+
+     <p>
+   or
+   </p>
+
+  <button class="btn btn-secondary" onclick="dontShowInput1H();
+        makeToDoList(); displayTDL();">
+I don't have any hard assignments today </button>
+
+
 
 </div>
 
@@ -165,144 +188,149 @@ div.easy-block{
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
+  <h1>Homework blocks for today:</h1>
 
-  <button onclick="showGameDiv();">I finished all my assignments</button>
+  <p>
+  When you finish an assignment cross it off!
+  </p>
+
 
 <div class="easy-block" id="easy-block">
-<h3>Easy Block:</h3>
+<h3>Easy Block ✌️:</h3>
 <p>
 All your easy assignments for the day
 </p>
+  <input type="checkbox" style="font-size: 30px;" id="toDo1" name="toDo1" value="toDo1"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1"><span id="result1"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo1" name="toDo1" value="toDo1"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo1"><output id="out" for="data"></output></label><br/>
+  <input type="checkbox" style="font-size: 30px;" id="toDo2" name="toDo2" value="toDo2"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2"><span id="result2"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo2" name="toDo2" value="toDo2"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo2"><output id="out2" for="data2"></output></label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo3" name="toDo3" value="toDo3"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3"><span id="result3"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo3" name="toDo3" value="toDo3"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo3"><output id="out3" for="data3"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo4" name="toDo4" value="toDo4"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4"><span id="result4"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo4" name="toDo4" value="toDo4"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo4"><output id="out4" for="data4"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo5" name="toDo5" value="toDo5"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1"><span id="result5"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo5" name="toDo5" value="toDo5"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo5"><output id="out5" for="data5"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo6" name="toDo6" value="toDo6"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6"><span id="result6"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo6" name="toDo6" value="toDo6"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo6"><output id="out6" for="data6"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo7" name="toDo7" value="toDo7"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7"><span id="result7"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo7" name="toDo7" value="toDo7"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo7"><output id="out7" for="data7"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo8" name="toDo8" value="toDo8"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo8"><span id="result8"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo8" name="toDo8" value="toDo8"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo8"><output id="out8" for="data8"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo9" name="toDo9" value="toDo9"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo9"><span id="result9"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo9" name="toDo9" value="toDo9"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo9"><output id="out9" for="data9"></output> </label><br />
+  <input type="checkbox" style="font-size: 30px;" id="toDo10" name="toDo10" value="toDo10"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo10"><span id="result10"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo10" name="toDo10" value="toDo10"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo10"><output id="out10" for="data10"></output> </label><br />
 </div>
 
 
-<div id="medium-block" style="width:100%;
-height: 700px;
-background-color: #fff05fff;
-border-radius: 10px;">
-<h3>Medium Block:</h3>
+<div class="medium-block" id="medium-block">
+<h3>Medium Block 👍:</h3>
 <p>
-All your medium assignments for the day
+All your medium assignments for the day.
 </p>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo11" name="toDo11" value="toDo11"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo11"><output id='out11' for="data11"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo12" name="toDo12" value="toDo12"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo12"><output id='out12' for="data12"></output></label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo1M" name="toDo1M" value="toDo1M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo13" name="toDo13" value="toDo13"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo13"><output id="out13" for="data13"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo2M" name="toDo2M" value="toDo2M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo14" name="toDo14" value="toDo14"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo14"><output id="out14" for="data14"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo3M" name="toDo3M" value="toDo3M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo15" name="toDo15" value="toDo15"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo15"><output id="out15" for="data15"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo4M" name="toDo4M" value="toDo4M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo16" name="toDo16" value="toDo16"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo16"><output id="out16" for="data16"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo5M" name="toDo5M" value="toDo5M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo5M"><span id="result5M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo17" name="toDo17" value="toDo17"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo17"><output id="out17" for="data17"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo6M" name="toDo6M" value="toDo6M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6M"><span id="result6M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo18" name="toDo18" value="toDo18"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo18"><output id="out18" for="data18"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo7M" name="toDo7M" value="toDo7M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7M"><span id="result7M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo19" name="toDo19" value="toDo19"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo19"><output id="out19" for="data19"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo8M" name="toDo8M" value="toDo8M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo8M"><span id="result8M"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px" id="toDo20" name="toDo20" value="toDo20"/>
-<label style="font-size: 30px" class="strikethrough" for="toDo20"><output id="out20" for="data20"></output> </label><br/>
+  <input type="checkbox" style="font-size: 30px;"id="toDo9M" name="toDo9M" value="toDo9M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo9M"><span id="result9M"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo10M" name="toDo10M" value="toDo10M"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo10M"><span id="result10M"></span></label><br>
 </div>
 
-<div id="hard-block" style="width:100%;
-  height: 700px;
-  background-color: #ff5f5fff;
-  border-radius: 10px;">
-<h3>Hard Block:</h3>
+<div class="hard-block" id="hard-block">
+<h3>Hard Block 🤟</h3>
 <p>
-All your hard assignments for the day
+All your hard assignments for the day.
 </p>
-<input type="checkbox" style="font-size: 30px;" id="toDo21" name="toDo21" value="toDo21"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo21"><output id='out21' for="data21"></output></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo22" name="toDo22" value="toDo22"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo22"><output id='out22' for="data22"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo1H" name="toDo1H" value="toDo1H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo23" name="toDo23" value="toDo23"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo23"><output id='out23' for="data23"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo2H" name="toDo2H" value="toDo2H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo24" name="toDo24" value="toDo24"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo24"><output id='out24' for="data24"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo3H" name="toDo3H" value="toDo3H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo25" name="toDo25" value="toDo25"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo25"><output id='out25' for="data25"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo4H" name="toDo4H" value="toDo4H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo26" name="toDo26" value="toDo26"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo26"><output id='out26' for="data26"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo5H" name="toDo5H" value="toDo5H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo27" name="toDo27" value="toDo27"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo27"><output id='out27' for="data27"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo6H" name="toDo6H" value="toDo6H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6H"><span id="result6H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo28" name="toDo28" value="toDo28"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo28"><output id='out28' for="data28"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo7H" name="toDo7H" value="toDo7H"/>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7H"><span id="result7H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo29" name="toDo29" value="toDo29"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo29"><output id='out29' for="data29"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;" id="toDo8H" name="toDo8H" value="toDo8H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo8H"><span id="result8H"></span></label><br>
 
-<input type="checkbox" style="font-size: 30px;" id="toDo30" name="toDo30" value="toDo30"/>
-<label style="font-size: 30px;" class="strikethrough" for="toDo30"><output id='out30' for="data30"></output></label><br>
+  <input type="checkbox" style="font-size: 30px;"id="toDo9H" name="toDo9H" value="toDo9H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo9H"><span id="result9H"></span></label><br>
+
+  <input type="checkbox" style="font-size: 30px;"id="toDo10H" name="toDo10H" value="toDo10H"/>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo10H"><span id="result10H"></span></label><br>
+
+
+
 
 </div>
 
-
-</fieldset>
-</form>
-
-</div>
-
-</div>
+    <button onclick="showGameDiv();">I finished all my assignments</button>
+    <button onclick="restartTDL();">Make a new to do list</button>
 
 
-<script src="script.js"></script>
-<script src="show.js"></script>
+
+
+
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
+
+
 
 
 <!--End of To-do List-->
 
 </center>
 </body>
+</html>
+
 
 <div id="gameDiv" style="display:none">
 <p>There's no way I can check so I'm going to trust your word, as a reward for finishing all your assignments, want to play some games?</p>
@@ -318,11 +346,18 @@ function showGameDiv(){
     document.getElementById("toDoList").style.display = "none";
   }
 
+
+
 function hideGameDiv(){
     document.getElementById("toDoList").style.display = "block";
     document.getElementById("gameDiv").style.display = "none";
   }
+
+
+  function restartTDL(){
+    document.getElementById("easyAssignments").style.display = "block";
+    document.getElementById("toDoList").style.display = "none";
+  }
     
 
 </script>
-</html>

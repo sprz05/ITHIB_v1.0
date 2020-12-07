@@ -15,209 +15,213 @@ document.getElementById("inputHText").style.display = "block";
   }
 
   function onlyShowInput1(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "none";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "none";
       document.getElementById("toDo2").style.display = "none";
 
-      document.getElementById("data3").style.display = "none";
+      document.getElementById("easyA3").style.display = "none";
       document.getElementById("toDo3").style.display = "none";
 
-      document.getElementById("data4").style.display = "none";
+      document.getElementById("easyA4").style.display = "none";
       document.getElementById("toDo4").style.display = "none";
 
-      document.getElementById("data5").style.display = "none";
+      document.getElementById("easyA5").style.display = "none";
       document.getElementById("toDo5").style.display = "none";
 
-      document.getElementById("data6").style.display = "none";
+      document.getElementById("easyA6").style.display = "none";
       document.getElementById("toDo6").style.display = "none";
 
-      document.getElementById("data7").style.display = "none";
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
   function onlyShowInput2(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "none";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "none";
       document.getElementById("toDo3").style.display = "none";
 
-      document.getElementById("data4").style.display = "none";
+      document.getElementById("easyA4").style.display = "none";
       document.getElementById("toDo4").style.display = "none";
 
-      document.getElementById("data5").style.display = "none";
+      document.getElementById("easyA5").style.display = "none";
       document.getElementById("toDo5").style.display = "none";
 
-      document.getElementById("data6").style.display = "none";
+      document.getElementById("easyA6").style.display = "none";
       document.getElementById("toDo6").style.display = "none";
 
-      document.getElementById("data7").style.display = "none";
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
       function onlyShowInput3(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-
-      document.getElementById("data4").style.display = "none";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "none";
       document.getElementById("toDo4").style.display = "none";
-      document.getElementById("data5").style.display = "none";
+      document.getElementById("easyA5").style.display = "none";
       document.getElementById("toDo5").style.display = "none";
-      document.getElementById("data6").style.display = "none";
+
+      document.getElementById("easyA6").style.display = "none";
       document.getElementById("toDo6").style.display = "none";
-      document.getElementById("data7").style.display = "none";
+
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
-      document.getElementById("data8").style.display = "none";
+
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
-      document.getElementById("data9").style.display = "none";
+
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
-      document.getElementById("data10").style.display = "none";
+
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
       function onlyShowInput4(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "none";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "none";
       document.getElementById("toDo5").style.display = "none";
 
-      document.getElementById("data6").style.display = "none";
+      document.getElementById("easyA6").style.display = "none";
       document.getElementById("toDo6").style.display = "none";
 
-      document.getElementById("data7").style.display = "none";
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
       function onlyShowInput5(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
 
-      document.getElementById("data6").style.display = "none";
+      document.getElementById("easyA6").style.display = "none";
       document.getElementById("toDo6").style.display = "none";
 
-      document.getElementById("data7").style.display = "none";
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
 
       function onlyShowInput6(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
-      document.getElementById("data6").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      document.getElementById("easyA6").style.display = "block";
 
-      document.getElementById("data7").style.display = "none";
+      document.getElementById("easyA7").style.display = "none";
       document.getElementById("toDo7").style.display = "none";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
       function onlyShowInput7(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
-      document.getElementById("data6").style.display = "block";
-      document.getElementById("data7").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      document.getElementById("easyA6").style.display = "block";
+      document.getElementById("easyA7").style.display = "block";
 
-      document.getElementById("data8").style.display = "none";
+      document.getElementById("easyA8").style.display = "none";
       document.getElementById("toDo8").style.display = "none";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
 
       function onlyShowInput8(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
-      document.getElementById("data6").style.display = "block";
-      document.getElementById("data7").style.display = "block";
-      document.getElementById("data8").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      document.getElementById("easyA6").style.display = "block";
+      document.getElementById("easyA7").style.display = "block";
+      document.getElementById("easyA8").style.display = "block";
 
-      document.getElementById("data9").style.display = "none";
+      document.getElementById("easyA9").style.display = "none";
       document.getElementById("toDo9").style.display = "none";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
 
       function onlyShowInput9(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
-      document.getElementById("data6").style.display = "block";
-      document.getElementById("data7").style.display = "block";
-      document.getElementById("data8").style.display = "block";
-      document.getElementById("data9").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      document.getElementById("easyA6").style.display = "block";
+      document.getElementById("easyA7").style.display = "block";
+      document.getElementById("easyA8").style.display = "block";
+      document.getElementById("easyA9").style.display = "block";
 
-      document.getElementById("data10").style.display = "none";
+      document.getElementById("easyA10").style.display = "none";
       document.getElementById("toDo10").style.display = "none";
       }
 
       function onlyShowInput10(){
-      document.getElementById("data").style.display = "block";
-      document.getElementById("data2").style.display = "block";
-      document.getElementById("data3").style.display = "block";
-      document.getElementById("data4").style.display = "block";
-      document.getElementById("data5").style.display = "block";
-      document.getElementById("data6").style.display = "block";
-      document.getElementById("data7").style.display = "block";
-      document.getElementById("data8").style.display = "block";
-      document.getElementById("data9").style.display = "block";
-      document.getElementById("data10").style.display = "block";
+      document.getElementById("easyA1").style.display = "block";
+      document.getElementById("easyA2").style.display = "block";
+      document.getElementById("easyA3").style.display = "block";
+      document.getElementById("easyA4").style.display = "block";
+      document.getElementById("easyA5").style.display = "block";
+      document.getElementById("easyA6").style.display = "block";
+      document.getElementById("easyA7").style.display = "block";
+      document.getElementById("easyA8").style.display = "block";
+      document.getElementById("easyA9").style.display = "block";
+      document.getElementById("easyA10").style.display = "block";
       }
 
   /* START: medium show input functions */
@@ -226,224 +230,224 @@ document.getElementById("inputHText").style.display = "block";
   }
 
   function onlyShowInput1M(){
-      document.getElementById("data11").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "none";
+      document.getElementById("toDo2M").style.display = "none";
 
-      document.getElementById("data12").style.display = "none";
-      document.getElementById("toDo12").style.display = "none";
+      document.getElementById("mediumA3").style.display = "none";
+      document.getElementById("toDo3M").style.display = "none";
 
-      document.getElementById("data13").style.display = "none";
-      document.getElementById("toDo13").style.display = "none";
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
 
-      document.getElementById("data14").style.display = "none";
-      document.getElementById("toDo14").style.display = "none";
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
 
-      document.getElementById("data15").style.display = "none";
-      document.getElementById("toDo15").style.display = "none";
-
-      document.getElementById("data16").style.display = "none";
-      document.getElementById("toDo16").style.display = "none";
+      document.getElementById("mediumA6").style.display = "none";
+      document.getElementById("toDo6M").style.display = "none";
 
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
 
       }
   function onlyShowInput2M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "none";
+      document.getElementById("toDo3M").style.display = "none";
 
-      document.getElementById("data13").style.display = "none";
-      document.getElementById("toDo13").style.display = "none";
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
 
-      document.getElementById("data14").style.display = "none";
-      document.getElementById("toDo14").style.display = "none";
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
 
-      document.getElementById("data15").style.display = "none";
-      document.getElementById("toDo15").style.display = "none";
-
-      document.getElementById("data16").style.display = "none";
-      document.getElementById("toDo16").style.display = "none";
+      document.getElementById("mediumA6").style.display = "none";
+      document.getElementById("toDo6M").style.display = "none";
 
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
-    }
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
+
+      }
       function onlyShowInput3M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "none";
+      document.getElementById("toDo4M").style.display = "none";
 
-      document.getElementById("data14").style.display = "none";
-      document.getElementById("toDo14").style.display = "none";
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
 
-      document.getElementById("data15").style.display = "none";
-      document.getElementById("toDo15").style.display = "none";
-
-      document.getElementById("data16").style.display = "none";
-      document.getElementById("toDo16").style.display = "none";
+      document.getElementById("mediumA6").style.display = "none";
+      document.getElementById("toDo6M").style.display = "none";
 
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
-    }
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
+
+      }
       function onlyShowInput4M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "none";
-      document.getElementById("toDo15").style.display = "none";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "none";
+      document.getElementById("toDo5M").style.display = "none";
 
-      document.getElementById("data16").style.display = "none";
-      document.getElementById("toDo16").style.display = "none";
+      document.getElementById("mediumA6").style.display = "none";
+      document.getElementById("toDo6M").style.display = "none";
 
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
-    }
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
+
+      }
       function onlyShowInput5M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
 
 
-      document.getElementById("data16").style.display = "none";
-      document.getElementById("toDo16").style.display = "none";
+      document.getElementById("mediumA6").style.display = "none";
+      document.getElementById("toDo6M").style.display = "none";
 
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
-    }
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
+      }
 
       function onlyShowInput6M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
-      document.getElementById("data16").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      document.getElementById("mediumA6").style.display = "block";
 
-      document.getElementById("data17").style.display = "none";
-      document.getElementById("toDo17").style.display = "none";
+      document.getElementById("mediumA7").style.display = "none";
+      document.getElementById("toDo7M").style.display = "none";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
       }
       function onlyShowInput7M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
-      document.getElementById("data16").style.display = "block";
-      document.getElementById("data17").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      document.getElementById("mediumA6").style.display = "block";
+      document.getElementById("mediumA7").style.display = "block";
 
-      document.getElementById("data18").style.display = "none";
-      document.getElementById("toDo18").style.display = "none";
+      document.getElementById("mediumA8").style.display = "none";
+      document.getElementById("toDo8M").style.display = "none";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
       }
 
       function onlyShowInput8M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
-      document.getElementById("data16").style.display = "block";
-      document.getElementById("data17").style.display = "block";
-      document.getElementById("data18").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      document.getElementById("mediumA6").style.display = "block";
+      document.getElementById("mediumA7").style.display = "block";
+      document.getElementById("mediumA8").style.display = "block";
 
-      document.getElementById("data19").style.display = "none";
-      document.getElementById("toDo19").style.display = "none";
+      document.getElementById("mediumA9").style.display = "none";
+      document.getElementById("toDo9M").style.display = "none";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
       }
 
       function onlyShowInput9M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
-      document.getElementById("data16").style.display = "block";
-      document.getElementById("data17").style.display = "block";
-      document.getElementById("data18").style.display = "block";
-      document.getElementById("data19").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      document.getElementById("mediumA6").style.display = "block";
+      document.getElementById("mediumA7").style.display = "block";
+      document.getElementById("mediumA8").style.display = "block";
+      document.getElementById("mediumA9").style.display = "block";
 
-      document.getElementById("data20").style.display = "none";
-      document.getElementById("toDo20").style.display = "none";
+      document.getElementById("mediumA10").style.display = "none";
+      document.getElementById("toDo10M").style.display = "none";
       }
 
       function onlyShowInput10M(){
-      document.getElementById("data11").style.display = "block";
-      document.getElementById("data12").style.display = "block";
-      document.getElementById("data13").style.display = "block";
-      document.getElementById("data14").style.display = "block";
-      document.getElementById("data15").style.display = "block";
-      document.getElementById("data16").style.display = "block";
-      document.getElementById("data17").style.display = "block";
-      document.getElementById("data18").style.display = "block";
-      document.getElementById("data19").style.display = "block";
-      document.getElementById("data20").style.display = "block";
+      document.getElementById("mediumA1").style.display = "block";
+      document.getElementById("mediumA2").style.display = "block";
+      document.getElementById("mediumA3").style.display = "block";
+      document.getElementById("mediumA4").style.display = "block";
+      document.getElementById("mediumA5").style.display = "block";
+      document.getElementById("mediumA6").style.display = "block";
+      document.getElementById("mediumA7").style.display = "block";
+      document.getElementById("mediumA8").style.display = "block";
+      document.getElementById("mediumA9").style.display = "block";
+      document.getElementById("mediumA10").style.display = "block";
       }
 
 
@@ -453,216 +457,214 @@ document.getElementById("inputHText").style.display = "block";
       }
 
       function onlyShowInput1H(){
-        document.getElementById("data21").style.display = "block";
-        document.getElementById("data22").style.display = "none";
-        document.getElementById("toDo22").style.display = "none";
+        document.getElementById("hardA1").style.display = "block";
+        document.getElementById("hardA2").style.display = "none";
+        document.getElementById("toDo2H").style.display = "none";
 
-        document.getElementById("data23").style.display = "none";
-        document.getElementById("toDo23").style.display = "none";
+        document.getElementById("hardA3").style.display = "none";
+        document.getElementById("toDo3H").style.display = "none";
 
-        document.getElementById("data24").style.display = "none";
-        document.getElementById("toDo24").style.display = "none";
+        document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
 
-        document.getElementById("data25").style.display = "none";
-        document.getElementById("toDo25").style.display = "none";
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
 
-        document.getElementById("data26").style.display = "none";
-      document.getElementById("toDo26").style.display = "none";
+        document.getElementById("hardA6").style.display = "none";
+      document.getElementById("toDo6H").style.display = "none";
 
-      document.getElementById("data27").style.display = "none";
-      document.getElementById("toDo27").style.display = "none";
+      document.getElementById("hardA7").style.display = "none";
+      document.getElementById("toDo7H").style.display = "none";
 
-      document.getElementById("data28").style.display = "none";
-      document.getElementById("toDo28").style.display = "none";
+      document.getElementById("hardA8").style.display = "none";
+      document.getElementById("toDo8H").style.display = "none";
 
-      document.getElementById("data29").style.display = "none";
-      document.getElementById("toDo29").style.display = "none";
+      document.getElementById("hardA9").style.display = "none";
+      document.getElementById("toDo9H").style.display = "none";
 
-      document.getElementById("data30").style.display = "none";
-      document.getElementById("toDo30").style.display = "none";
+      document.getElementById("hardA10").style.display = "none";
+      document.getElementById("toDo10H").style.display = "none";
           }
       function onlyShowInput2H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+        document.getElementById("hardA3").style.display = "none";
+        document.getElementById("toDo3H").style.display = "none";
 
-        document.getElementById("data23").style.display = "none";
-        document.getElementById("toDo23").style.display = "none";
+        document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
 
-        document.getElementById("data24").style.display = "none";
-        document.getElementById("toDo24").style.display = "none";
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
 
-        document.getElementById("data25").style.display = "none";
-        document.getElementById("toDo25").style.display = "none";
+        document.getElementById("hardA6").style.display = "none";
+      document.getElementById("toDo6H").style.display = "none";
 
-        document.getElementById("data26").style.display = "none";
-      document.getElementById("toDo26").style.display = "none";
+      document.getElementById("hardA7").style.display = "none";
+      document.getElementById("toDo7H").style.display = "none";
 
-      document.getElementById("data27").style.display = "none";
-      document.getElementById("toDo27").style.display = "none";
+      document.getElementById("hardA8").style.display = "none";
+      document.getElementById("toDo8H").style.display = "none";
 
-      document.getElementById("data28").style.display = "none";
-      document.getElementById("toDo28").style.display = "none";
+      document.getElementById("hardA9").style.display = "none";
+      document.getElementById("toDo9H").style.display = "none";
 
-      document.getElementById("data29").style.display = "none";
-      document.getElementById("toDo29").style.display = "none";
+      document.getElementById("hardA10").style.display = "none";
+      document.getElementById("toDo10H").style.display = "none";
 
-      document.getElementById("data30").style.display = "none";
-      document.getElementById("toDo30").style.display = "none";
-           }
+     }
           function onlyShowInput3H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "none";
-          document.getElementById("toDo24").style.display = "none";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "none";
+        document.getElementById("toDo4H").style.display = "none";
 
-          document.getElementById("data25").style.display = "none";
-          document.getElementById("toDo25").style.display = "none";
+        document.getElementById("hardA5").style.display = "none";
+        document.getElementById("toDo5H").style.display = "none";
+        document.getElementById("hardA6").style.display = "none";
+      document.getElementById("toDo6H").style.display = "none";
 
-          document.getElementById("data26").style.display = "none";
-        document.getElementById("toDo26").style.display = "none";
+      document.getElementById("hardA7").style.display = "none";
+      document.getElementById("toDo7H").style.display = "none";
 
-        document.getElementById("data27").style.display = "none";
-        document.getElementById("toDo27").style.display = "none";
+      document.getElementById("hardA8").style.display = "none";
+      document.getElementById("toDo8H").style.display = "none";
 
-        document.getElementById("data28").style.display = "none";
-        document.getElementById("toDo28").style.display = "none";
+      document.getElementById("hardA9").style.display = "none";
+      document.getElementById("toDo9H").style.display = "none";
 
-        document.getElementById("data29").style.display = "none";
-        document.getElementById("toDo29").style.display = "none";
-
-        document.getElementById("data30").style.display = "none";
-        document.getElementById("toDo30").style.display = "none";
-             }
+      document.getElementById("hardA10").style.display = "none";
+      document.getElementById("toDo10H").style.display = "none";
+          }
           function onlyShowInput4H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "none";
-          document.getElementById("toDo25").style.display = "none";
-          document.getElementById("data26").style.display = "none";
-        document.getElementById("toDo26").style.display = "none";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "none";
+          document.getElementById("toDo5H").style.display = "none";
+          document.getElementById("hardA6").style.display = "none";
+      document.getElementById("toDo6H").style.display = "none";
 
-        document.getElementById("data27").style.display = "none";
-        document.getElementById("toDo27").style.display = "none";
+      document.getElementById("hardA7").style.display = "none";
+      document.getElementById("toDo7H").style.display = "none";
 
-        document.getElementById("data28").style.display = "none";
-        document.getElementById("toDo28").style.display = "none";
+      document.getElementById("hardA8").style.display = "none";
+      document.getElementById("toDo8H").style.display = "none";
 
-        document.getElementById("data29").style.display = "none";
-        document.getElementById("toDo29").style.display = "none";
+      document.getElementById("hardA9").style.display = "none";
+      document.getElementById("toDo9H").style.display = "none";
 
-        document.getElementById("data30").style.display = "none";
-        document.getElementById("toDo30").style.display = "none";
+      document.getElementById("hardA10").style.display = "none";
+      document.getElementById("toDo10H").style.display = "none";
 
-             }
+          }
           function onlyShowInput5H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "none";
-      document.getElementById("toDo26").style.display = "none";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "none";
+      document.getElementById("toDo6H").style.display = "none";
 
-      document.getElementById("data27").style.display = "none";
-      document.getElementById("toDo27").style.display = "none";
+      document.getElementById("hardA7").style.display = "none";
+      document.getElementById("toDo7H").style.display = "none";
 
-      document.getElementById("data28").style.display = "none";
-      document.getElementById("toDo28").style.display = "none";
+      document.getElementById("hardA8").style.display = "none";
+      document.getElementById("toDo8H").style.display = "none";
 
-      document.getElementById("data29").style.display = "none";
-      document.getElementById("toDo29").style.display = "none";
+      document.getElementById("hardA9").style.display = "none";
+      document.getElementById("toDo9H").style.display = "none";
 
-      document.getElementById("data30").style.display = "none";
-      document.getElementById("toDo30").style.display = "none";
-
+      document.getElementById("hardA10").style.display = "none";
+      document.getElementById("toDo10H").style.display = "none";
 
           }
 
           function onlyShowInput6H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "block";
 
-          document.getElementById("data27").style.display = "none";
-          document.getElementById("toDo27").style.display = "none";
+          document.getElementById("hardA7").style.display = "none";
+          document.getElementById("toDo7H").style.display = "none";
 
-          document.getElementById("data28").style.display = "none";
-          document.getElementById("toDo28").style.display = "none";
+          document.getElementById("hardA8").style.display = "none";
+          document.getElementById("toDo8H").style.display = "none";
 
-          document.getElementById("data29").style.display = "none";
-          document.getElementById("toDo29").style.display = "none";
+          document.getElementById("hardA9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
-          document.getElementById("data30").style.display = "none";
-          document.getElementById("toDo30").style.display = "none";
-
+          document.getElementById("hardA10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
           function onlyShowInput7H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "block";
-          document.getElementById("data27").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "block";
+          document.getElementById("hardA7").style.display = "block";
 
-          document.getElementById("data28").style.display = "none";
-          document.getElementById("toDo28").style.display = "none";
+          document.getElementById("hardA8").style.display = "none";
+          document.getElementById("toDo8H").style.display = "none";
 
-          document.getElementById("data29").style.display = "none";
-          document.getElementById("toDo29").style.display = "none";
+          document.getElementById("hardA9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
-          document.getElementById("data30").style.display = "none";
-          document.getElementById("toDo30").style.display = "none";
-    }
+          document.getElementById("hardA10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
+          }
 
           function onlyShowInput8H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "block";
-          document.getElementById("data27").style.display = "block";
-          document.getElementById("data28").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "block";
+          document.getElementById("hardA7").style.display = "block";
+          document.getElementById("hardA8").style.display = "block";
 
-          document.getElementById("data29").style.display = "none";
-          document.getElementById("toDo29").style.display = "none";
+          document.getElementById("hardA9").style.display = "none";
+          document.getElementById("toDo9H").style.display = "none";
 
-          document.getElementById("data30").style.display = "none";
+          document.getElementById("hardA10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
 
           function onlyShowInput9H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "block";
-          document.getElementById("data27").style.display = "block";
-          document.getElementById("data28").style.display = "block";
-          document.getElementById("data29").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "block";
+          document.getElementById("hardA7").style.display = "block";
+          document.getElementById("hardA8").style.display = "block";
+          document.getElementById("hardA9").style.display = "block";
 
-          document.getElementById("data30").style.display = "none";
-          document.getElementById("toDo30").style.display = "none";
+          document.getElementById("hardA10").style.display = "none";
+          document.getElementById("toDo10H").style.display = "none";
           }
 
           function onlyShowInput10H(){
-          document.getElementById("data21").style.display = "block";
-          document.getElementById("data22").style.display = "block";
-          document.getElementById("data23").style.display = "block";
-          document.getElementById("data24").style.display = "block";
-          document.getElementById("data25").style.display = "block";
-          document.getElementById("data26").style.display = "block";
-          document.getElementById("data27").style.display = "block";
-          document.getElementById("data28").style.display = "block";
-          document.getElementById("data29").style.display = "block";
-          document.getElementById("data30").style.display = "block";
+          document.getElementById("hardA1").style.display = "block";
+          document.getElementById("hardA2").style.display = "block";
+          document.getElementById("hardA3").style.display = "block";
+          document.getElementById("hardA4").style.display = "block";
+          document.getElementById("hardA5").style.display = "block";
+          document.getElementById("hardA6").style.display = "block";
+          document.getElementById("hardA7").style.display = "block";
+          document.getElementById("hardA8").style.display = "block";
+          document.getElementById("hardA9").style.display = "block";
+          document.getElementById("hardA10").style.display = "block";
           }
 
 
@@ -825,4 +827,42 @@ function displayH(){
 function displayTDL(){
   document.getElementById("hardAssignments").style.display = "none";
   document.getElementById("toDoList").style.display = "block";
+}
+
+
+
+function makeToDoList(){
+ document.getElementById("result1").innerHTML = document.getElementById('easyA1').value;
+ document.getElementById("result2").innerHTML = document.getElementById('easyA2').value;
+ document.getElementById("result3").innerHTML = document.getElementById('easyA3').value;
+ document.getElementById("result4").innerHTML = document.getElementById('easyA4').value;
+ document.getElementById("result5").innerHTML = document.getElementById('easyA5').value;
+ document.getElementById("result6").innerHTML = document.getElementById('easyA6').value;
+ document.getElementById("result7").innerHTML = document.getElementById('easyA7').value;
+ document.getElementById("result8").innerHTML = document.getElementById('easyA8').value;
+ document.getElementById("result9").innerHTML = document.getElementById('easyA9').value;
+ document.getElementById("result10").innerHTML = document.getElementById('easyA10').value;
+
+
+ document.getElementById("result1M").innerHTML = document.getElementById('mediumA1').value;
+ document.getElementById("result2M").innerHTML = document.getElementById('mediumA2').value;
+ document.getElementById("result3M").innerHTML = document.getElementById('mediumA3').value;
+ document.getElementById("result4M").innerHTML = document.getElementById('mediumA4').value;
+ document.getElementById("result5M").innerHTML = document.getElementById('mediumA5').value;
+ document.getElementById("result6M").innerHTML = document.getElementById('mediumA6').value;
+ document.getElementById("result7M").innerHTML = document.getElementById('mediumA7').value;
+ document.getElementById("result8M").innerHTML = document.getElementById('mediumA8').value;
+ document.getElementById("result9M").innerHTML = document.getElementById('mediumA9').value;
+ document.getElementById("result10M").innerHTML = document.getElementById('mediumA10').value;
+
+ document.getElementById("result1H").innerHTML = document.getElementById('hardA1').value;
+ document.getElementById("result2H").innerHTML = document.getElementById('hardA2').value;
+ document.getElementById("result3H").innerHTML = document.getElementById('hardA3').value;
+ document.getElementById("result4H").innerHTML = document.getElementById('hardA4').value;
+ document.getElementById("result5H").innerHTML = document.getElementById('hardA5').value;
+ document.getElementById("result6H").innerHTML = document.getElementById('hardA6').value;
+ document.getElementById("result7H").innerHTML = document.getElementById('hardA7').value;
+ document.getElementById("result8H").innerHTML = document.getElementById('hardA8').value;
+ document.getElementById("result9H").innerHTML = document.getElementById('hardA9').value;
+ document.getElementById("result10H").innerHTML = document.getElementById('hardA10').value;
 }
