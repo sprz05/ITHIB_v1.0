@@ -27,6 +27,7 @@
       <link rel="stylesheet" type="text/css" href="general.css" />
       <!--JS Files-->
       <script src="ITHB.js"></script>
+      <script src="search.js"></script>
 
 <style>
 .h3{
@@ -146,7 +147,7 @@ padding-left: 80px;
   <p>How many hard assignments do you have to do today?</p>
   <input class="pink" min="0" max="5" type="number" id="numHAI">
   <p></p>
-  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); showInputH();">Enter</button>
+  <button class="btn btn-primary" onclick="showInputHText(); showSaveH(); search(); showInputH();">Enter</button>
 
 
 
@@ -164,7 +165,7 @@ padding-left: 80px;
 
     <p> </p>
 
-  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); displayTDL();">Save</button>
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); displayTDL();">Save</button>
 
      <p>
    or
@@ -241,34 +242,127 @@ All your medium assignments for the day.
 
 
   <input type="checkbox" style="font-size: 30px;"id="toDo1M" name="toDo1M" value="toDo1M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1M"><span id="result1M"></span>
+  </label><span>
+    
+    <a style="display:none" id="slideshowHelpBtn1" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn1"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span><br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo2M" name="toDo2M" value="toDo2M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo2M"><span id="result2M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2M"><span id="result2M"></span></label>
+    <span>
+    
+    <a style="display:none" id="slideshowHelpBtn2" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn2"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo3M" name="toDo3M" value="toDo3M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo3M"><span id="result3M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo3M"><span id="result3M"></span></label>
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn3" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn3"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo4M" name="toDo4M" value="toDo4M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo4M"><span id="result4M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo4M"><span id="result4M"></span></label>
+
+  <span>
+    
+    <a style="display:none" id="slideshowHelpBtn4" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn4"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo5M" name="toDo5M" value="toDo5M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo5M"><span id="result5M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo5M"><span id="result5M"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn5" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn5"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo6M" name="toDo6M" value="toDo6M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo6M"><span id="result6M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6M"><span id="result6M"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn6" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn6"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo7M" name="toDo7M" value="toDo7M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo7M"><span id="result7M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7M"><span id="result7M"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn7" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn7"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo8M" name="toDo8M" value="toDo8M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo8M"><span id="result8M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo8M"><span id="result8M"></span></label>
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn8" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn8"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo9M" name="toDo9M" value="toDo9M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo9M"><span id="result9M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo9M"><span id="result9M"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn9" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn9"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo10M" name="toDo10M" value="toDo10M"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo10M"><span id="result10M"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo10M"><span id="result10M"></span></label>
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn10" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn10"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 </div>
 
 <div class="hard-block" id="hard-block">
@@ -278,36 +372,140 @@ All your hard assignments for the day.
 </p>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo1H" name="toDo1H" value="toDo1H"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo1H"><span id="result1H"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo1H"><span id="result1H"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn11" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn11"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo2H" name="toDo2H" value="toDo2H"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo2H"><span id="result2H"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo2H"><span id="result2H"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn12" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn12"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo3H" name="toDo3H" value="toDo3H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo3H"><span id="result3H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo3H"><span id="result3H"></span></label>
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn13" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn13"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo4H" name="toDo4H" value="toDo4H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo4H"><span id="result4H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo4H"><span id="result4H"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn14" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn14"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo5H" name="toDo5H" value="toDo5H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo1H"><span id="result5H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo1H"><span id="result5H"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn15" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn15"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo6H" name="toDo6H" value="toDo6H"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo6H"><span id="result6H"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo6H"><span id="result6H"></span></label>
+
+
+<span>
+    
+    <a style="display:none" id="slideshowHelpBtn16" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn16"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo7H" name="toDo7H" value="toDo7H"/>
-  <label style="font-size: 30px;"class="strikethrough" for="toDo7H"><span id="result7H"></span></label><br>
+  <label style="font-size: 30px;"class="strikethrough" for="toDo7H"><span id="result7H"></span></label>
+
+
+  <span>
+    
+    <a style="display:none" id="slideshowHelpBtn17" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn17"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;" id="toDo8H" name="toDo8H" value="toDo8H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo8H"><span id="result8H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo8H"><span id="result8H"></span></label>
+
+
+  <span>
+    
+    <a style="display:none" id="slideshowHelpBtn18" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn18"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo9H" name="toDo9H" value="toDo9H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo9H"><span id="result9H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo9H"><span id="result9H"></span></label>
+
+
+  <span>
+    
+    <a style="display:none" id="slideshowHelpBtn19" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn19"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+  <br>
 
   <input type="checkbox" style="font-size: 30px;"id="toDo10H" name="toDo10H" value="toDo10H"/>
-  <label style="font-size: 30px;" class="strikethrough" for="toDo10H"><span id="result10H"></span></label><br>
+  <label style="font-size: 30px;" class="strikethrough" for="toDo10H"><span id="result10H"></span></label>
 
 
+
+  <span>
+    
+    <a style="display:none" id="slideshowHelpBtn20" href="https://docs.google.com/document/u/2/d/e/2PACX-1vRNEOSqt21HwgOTmLLJIdmVoFGNdUn4DjPpnRg-7C7unGpZYcK9m5AtesYryjcXmo4a35hNX1yt--RN/pub" target="_blank" class="btn btn-secondary">Need Help?</a>
+    <a style="display:none" id="mathHelpBtn20"  target="_blank" href="https://sprz05.github.io/StudyBots/mathHWHelp.html" class="btn btn-secondary">Need Help with math?</a>
+
+  </span>
+
+
+
+  <br>
 
 
 </div>
