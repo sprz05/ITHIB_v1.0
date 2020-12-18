@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<link href="./assets/css/font-awesome.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="scroll.css" rel="stylesheet" />
+<!-- CSS Files -->
+<link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="assets\css\background.css">
+<link rel="stylesheet" href="assets\css\draggable.css">
+
+
+<script src="ITHBlite2.js" type="text/javascript"></script>
+
+<style>
+p{
+  font-size: 25px;
+}
+h1{
+  color:white;
+}
+
+#star {
+  top: 80px;
+}
+#mySidenav {
+  margin-top: -70px;
+  position: absolute;
+  transition: 0.3s;
+  padding: 10px;
+  width: 100px;
+  left: -10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+</style>
+
+
+
+</head>
+  <body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+      <audio id="beepAudio" src="http://soundbible.com/grab.php?id=1252&amp;type=mp3"></audio>
+
+ <div id="mySidenav" class="sidenav">
+
+<button id="btnTrigger" style="width:200px" type="button" class="btn btn-block btn-warning mb-3" data-toggle="modal" data-target="#modal-notification">Change how long I can conctrate on homework</button>
+
+
+</div>
+
+    <!--- User inputs --->
+
+    <div id="concentrationDiv">
+      <h1 style="height:100px;">Let's Start Homework!</h1>
+      <div></div>
+      <p>For how long can you concentrate on homework? If you don't know start at ten (You can always change it later on)</p>
+      <div style = "height:80px"></div>
+    <input list="HWTimeOp" style="width:90px;" type="number" id="everyXMin" placeholder="10" /><span>minutes.</p>
+
+
+      <datalist id="HWTimeOp">
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+        <option>35</option>
+      </datalist>
+
+
+    <div></div>
+
+    <!--- checkBeforeStart() might be the problem!! --->
+    <button style="color:white;" class="btn bg-gradient-danger" onclick="checkBeforeStart();">Start</button> 
+    </div>
+
+    <div id="breakDiv" style="display:none;">
+    <p>Take a </p>
+    <input style="width:60px;" type="number" id="everyYMin" /> <span>minte brain break.</span>
+    <div></div>
+    <button class="btn btn-success" onclick="start2nd();">Start Break</button>
+    </div>
+
+    
+    <!--- User inputs --->
+
+
+
+
+
+    <!--- Timers --->
+    <div id="HWTimerDiv" style="display:none"> 
+      <center><h1 style="height:100px;">Homework Time!</h1></center>
+    <h1><span id="homeworkTimer"></span></h1>
+    <p>Head over to your homework! A sound will play when it's time to take a break.</p>
+    </div>
+    
+    <div id="BreakTimerDiv" style="display:none">
+      <h1 style="height:100px;">Break Time</h1>
+      <center><h1>🧠</h1></center>
+    <h1><span id="breakTimer"></span></h1>
+    <p>Go and take a break! A sound will play when your break times up!</p>
+
+
+    <div id ="brainBreakDiv" style="text-align: center; background-color: rgba(255, 51, 177, 0.53); width: 50%; border-radius: 10px;">
+                <h1 style="color:white;">Need a Brain Break?</h1>
+              <button class="btn btn-secondary" onclick="giveBrainBreak();">
+                 Standing brain break
+              </button>
+                 <p id="randomSBB"> </p>
+                 <button class="btn btn-secondary" onclick="giveSittingBrainBreak();">
+                Sitting Brain Break
+                 </button>
+                 <p id="randomSitBB"> </p>
+            </div>
+
+    </div>
+    <!--- Timers --->
+
+
+
+    <div id="timerDoneDiv" style="display:none;">
+      <center>
+        <h1>Times up! Choose one to make the timer stop:</h1>
+      <button class="btn btn-success" style="display:none; width:200px;" id="breakTimeBtn" onclick="concentrationCheck(); showInputBreakTime();">Break time!</button>
+
+        <div></div>
+
+      <button class="btn btn btn-primary" style="display:none; width:200px;" id="homeworkTimeBtn" onclick="end2nd();">Homework time!</button>
+      <button style="width:200px" class="btn btn btn-warning" id="endAll" onclick="endAll(); resetTimer();">I'm done with homework for today</button>
+    </center>
+    </div>  
+
+
+
+    <!--- End Results --->
+
+    <div id="endHW" style="display:none">
+      <p><span>You did homework for:</span><p id="totalHWMin"></p><span>minutes</span></p>
+
+      <p><span>You took:</span><p id="totalBreaksMin"></p><span>breaks</span></p>
+
+    </div>  
+
+    <!--- End Results --->
+
+ 
+
+ <div class="col-md-4"> 
+          <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
+                <div class="modal-header">
+                  <h6 class="modal-title" id="modal-title-notification">Notification from ITHBlite</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="py-3 text-center">
+                    <i class="ni ni-bell-55 ni-3x"></i>
+                    <h4 class="heading mt-4">Have you been able to stay concentrated on your homework?</h4>
+                    <p>Would you like to change how often I remind you to take a brain break?</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-white" onclick="showConcentrationDiv();">Yes! Let's change it!</button>
+                  <button id="closeMod" type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">No, I'm good</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+<script>
+
+    let timerId;
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes, seconds;
+ timerId = setInterval(function() {
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (timer == 0){
+      beepCount = 0;             
+      document.getElementById("beepAudio").play(); 
+
+           
+            document.getElementById("timerDoneDiv").style.display = "block";
+            document.getElementById("BreakTimerDiv").style.display = "none";
+            document.getElementById("HWTimerDiv").style.display = "none";
+    }
+  }, 1000);
+}
+
+document.getElementById("beepAudio").src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+    document.getElementById("beepAudio").load();
+
+ function resetTimer() {
+      clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
+    }
+
+    let beepCount = 0;
+document.getElementById("beepAudio").addEventListener("ended", () => {
+    beepCount++;
+    if(beepCount < 100){       
+        document.getElementById("beepAudio").play();
+    } else {
+          alert("Times up!");
+    }
+});
+
+
+var alert1stEnd;
+var alert2ndEnd;
+
+var iOne = 0;
+var iTwo = 0;
+
+var firstIntDiv = document.getElementById("firstIntDiv");
+var secondIntDiv = document.getElementById("secondIntDiv");
+
+var x;
+var y;
+
+
+
+function checkBeforeStart(){
+  if (x = document.getElementById("everyXMin").value < 10){
+    alert("Try to do homework for more than 10 minutes")
+  } else {
+    start1st();
+  }
+}
+
+
+function start1st(){
+ x = document.getElementById("everyXMin").value * 60000; 
+
+ document.getElementById("timerDoneDiv").style.display = "none";
+ document.getElementById("HWTimerDiv").style.display = "block";
+ document.getElementById("concentrationDiv").style.display = "none";
+ startHomeworkTimer();
+
+ console.log("Homework Time started");
+ alert1stEnd = setTimeout(alertEnd1st, x);
+}
+
+
+function alertEnd1st(){
+  iOne++;
+    console.log("this is:");
+  console.log(iOne);
+  console.log("Homework time ended");
+
+  document.getElementById("HWTimerDiv").style.display = "none";
+
+  document.getElementById("homeworkTimeBtn").style.display = "none"; //hide break time btn
+  document.getElementById("timerDoneDiv").style.display = "block";
+  document.getElementById("breakTimeBtn").style.display = "block"; //only show the break time button  
+}
+
+
+
+function concentrationCheck(){
+  if (iOne == 3 ||iOne == 10 ||iOne == 20){
+     $('#btnTrigger').click();
+   }
+}
+
+//2nd interval start & stop//
+
+function start2nd(){
+   resetTimer();
+
+   y = document.getElementById("everyYMin").value * 60000;
+
+   document.getElementById("breakDiv").style.display = "none"; 
+   document.getElementById("BreakTimerDiv").style.display = "block";
+   startBreakTimer();
+
+  console.log("break time started");
+  alert2ndEnd = setTimeout(alertEnd2nd, y);
+}
+
+function alertEnd2nd(){
+  console.log("break time ended");
+  document.getElementById("BreakTimerDiv").style.display = "none";
+
+  document.getElementById("breakTimeBtn").style.display = "none"; //only show the homework time button
+  document.getElementById("homeworkTimeBtn").style.display = "block"; //show the entire div with the buttons
+}
+
+function end2nd() {
+  resetTimer();
+  document.getElementById("BreakTimerDiv").style.display = "none";
+  start1st();
+  iTwo++;
+}
+
+function endAll(){
+  var iOneX =  iOne * x;
+  var iTwoY = iTwo * y;
+  document.getElementById("totalHWMin").innerHTML = iOneX/60000;
+  document.getElementById("totalBreaksMin").innerHTML = iTwo;
+
+
+  document.getElementById("endHW").style.display = "block";
+  document.getElementById("HWTimerDiv").style.display = "none";
+  document.getElementById("secondIntDiv").style.display = "none";
+  document.getElementById("firstIntDiv").style.display = "none";
+}
+
+
+function showConcentrationDiv(){
+  resetTimer();
+  $('#closeMod').click();
+  document.getElementById("concentrationDiv").style.display = "block";
+  document.getElementById("breakDiv").style.display = "none";
+  document.getElementById("BreakTimerDiv").style.display = "none";
+  document.getElementById("HWTimerDiv").style.display = "none";
+  document.getElementById("timerDoneDiv").style.display = "none";
+}
+
+
+var minutes; 
+
+  function startHomeworkTimer() {
+    var everyXMin = document.getElementById("everyXMin").value;
+       minutes = 60 * everyXMin,
+          displayHomework = document.querySelector('#homeworkTimer');
+      startTimer(minutes, displayHomework);
+  };
+
+
+  function startBreakTimer() {
+    var everyYMin = document.getElementById("everyYMin").value;
+       minutes = 60 * everyYMin,
+          displayBreak = document.querySelector('#breakTimer');
+      startTimer(minutes, displayBreak);
+  };
+
+
+
+function showInputBreakTime(){
+  resetTimer();
+  document.getElementById("timerDoneDiv").style.display = "none";
+  document.getElementById("breakDiv").style.display = "block";
+}
+
+
+   var standingBrainBreaks = [
+  "Run in place for 20 seconds🏃🏃‍♀️",
+  "Take 3 deep breaths 🌬️",
+  "Do bunny hops for 20 seconds🐰",
+  "Get a glass of water🌊",
+  "Do 20 jumping jacks🙆‍♂️🙆‍♀️",
+  "Go outside and take three deep breaths🌬️🌳",
+  "Jump as high as you can, 3 times⛹️‍♀️",
+  "Run in place for 10 seconds🏃‍♀️",
+  "Do bunny hops for 10 seconds🐰",
+  "Do mountain climbers for 10 seconds🧗‍♀️",
+  "Jump as high as you can, 5 times⛹️‍♂️",
+];
+function giveBrainBreak(){
+var randomSBB = Math.floor(Math.random() * standingBrainBreaks.length);
+document.getElementById("randomSBB").innerHTML = standingBrainBreaks[randomSBB];
+}
+
+
+
+var sittingBrainBreaks = [
+  "Run in place for 20 seconds🏃🏃‍♀️",
+  "Take 3 deep breaths 🌬️",
+  "Close your eyes for 10 seconds👁‍🗨",
+  "Make a wave with your arms🌊",
+  "Stretch your hands as far as you can🙌",
+  "Twist your body from side to side",
+  "Take 5 deep breaths🌬️",
+  "Shake your arms and hands out🖐",
+  "Close your eyes and think of a place that you'd like to travel to🏖",
+  "Close your eyes and think of something that makes you happy😊",
+  "Try to spell your name with your arms or hands 🤞👋🖐👈 (That's my name in sign language)",
+];
+function giveSittingBrainBreak(){
+var randomSitBB = Math.floor(Math.random() * sittingBrainBreaks.length);
+document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitBB];
+}
+
+</script>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
+
+
+<!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+  <script>
+    function scrollToDownload() {
+
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
+
+  </body>
+</html>
+
