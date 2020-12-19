@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bingoBot</title>
+    <link href="bingoBot.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="scroll.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+    <link rel="stylesheet" href="assets\css\draggable.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style>
+p, th{
+  color:black;
+}
+
+th:hover {
+    background-color: LightBlue;
+} 
+
+th:active {
+    background-color: green;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+canvas {
+  display: block;
+  position: relative;
+  zindex: 1;
+  pointer-events: none;
+}
+
+#content {
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  color: silver;
+  font-family: verdana;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: inline-block;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+
+</style>
+<body style="background-color:white;">
+
+
+<div id="BINGO">
+
+
+<div id="form">
+<h1>Create a Bingo Card for Your Assignments</h1>
+<p>How many Assignments do want on your bingo card?:</p>
+<input id="inputA" type="number"/>
+<button id="Enter" class="btn btn-success" onclick="showInputs();">Enter</button>
+<center>
+<p id="hint" style="display:none">Delete the text in the input box, Enter your assignments, leave some the way they are or add your own tasks!</p>
+<input id="text1" type="text" value="Free" style="display:none;"/>
+<input id="text2" type="text" value="Go outside" style="display:none;"/>
+<input id="text3" type="text" value="Do homework for 10 minutes" style="display:none;"/>
+<input id="text4" type="text" value="Take a brain break" style="display:none;"/>
+<input id="text5" type="text" value="Free" style="display:none;"/>
+<input id="text6" type="text" value="Do homework for 20 minutes" style="display:none;"/>
+<input id="text7" type="text" value="Take 2 brain breaks" style="display:none;"/>
+<input id="text8" type="text" value="Free" style="display:none;"/>
+<input id="text9" type="text" value="take 3 brain breaks" style="display:none;"/>
+<input id="text10" type="text" value="Free" style="display:none;"/>
+<input id="text11" type="text" value="Do homework for 5 minutes" style="display:none;"/>
+<input id="text12" type="text" value="Take 3 deep breaths" style="display:none;"/>
+<input id="text13" type="text" value="Complete 2 assignments" style="display:none;"/>
+<input id="text14" type="text" value="Free" style="display:none;"/>
+<input id="text15" type="text" value="Do homework for 30 minutes" style="display:none;"/>
+<input id="text16" type="text" value="Free" style="display:none;"/>
+
+
+<button  style="display:none" class="btn btn-info" id="makeCRD" onclick="showTable(); makeTable();">Make Card</button>
+</center>
+
+<div style="height:50px"></div>
+</div>
+
+<div id="bingo" style="display:none">
+<center><h1>Homework BINGO</h1></center>
+<center>
+  <p>Click on the box when you finish one of your assignments! Try and get everything on your card!</p>
+<table style="text-align:center">
+  <tr>
+    <th id="1A"><span id="1A"></span></th>
+    <th id="2A"><span id="2A"></span></th>
+    <th id="3A"><span id="3A"></span></th>
+    <th id="4A"><span id="4A"></span></th>
+  </tr>
+    <tr>
+    <th id="5A"><span id="5A"></span></th>
+    <th id="6A"><span id="6A"></span></th>
+    <th id="7A"><span id="7A"></span></th>
+    <th id="8A"><span id="8A"></span></th>
+  </tr>
+  <tr>
+    <th id="9A"><span id="9A"></span></th>
+    <th id="10A"><span id="10A"></span></th>
+    <th id="11A"><span id="11A"></span></th>
+    <th id="12A"><span id="12A"></span></th>
+  </tr>
+  <tr>
+    <th id="13A"><span id="13A"></span></th>
+    <th id="14A"><span id="14A"></span></th>
+    <th id="15A"><span id="15A"></span></th>
+    <th id="16A"><span id="16A"></span></th>
+  </tr>
+</table>
+</center>
+
+<a href="bingoBot14.html">Restart</a>
+</div>
+
+</div>
+
+<div id="gameBtnDiv" style="display:none">
+    <div id="content">
+  <h1 style="height:100px; font-weight: bold;">ULTIMATE BINGO!</h1>
+<p>Great job!!! As a reward do you want to play a game?</p>
+<a class="btn btn-info" target="_blank" href="game.html">Play Games</a>
+</div>
+<canvas id="canvas"></canvas>
+</div>
+
+
+    <script src="bingoBot14.js"></script>
+  </body>
+</html>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRPBUABTFYjnnbVUk3EKBrA-L5Y6VszfWwB9lB-ApZ6JVkaIsrgCJpfvT4D6pNOaUnoTRXhL05pyMyi/pub?w=322&amp;h=356">

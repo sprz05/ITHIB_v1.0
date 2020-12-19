@@ -95,7 +95,6 @@ document.getElementById("9A").onclick = function(){
 function check1(){
   var i = 0;
 	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green') {
-    alert('bingo!');
     i++;
   }
 }
@@ -104,7 +103,6 @@ function check1(){
 function check2(){
   var i = 0;
 	if (i == 0 && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -112,7 +110,6 @@ function check2(){
 function check3(){
     var i = 0;
 	if (i == 0 &&document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -120,7 +117,6 @@ function check3(){
 function check4(){
   var i = 0;
 	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("2A").style.backgroundColor  == 'green' && document.getElementById("3A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -128,7 +124,6 @@ function check4(){
 function check5B(){
   var i = 0;
 	if (i == 0 && document.getElementById("4A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("6A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -136,7 +131,6 @@ function check5B(){
 function check5(){
     var i = 0;
 	if (i == 0 && document.getElementById("7A").style.backgroundColor  == 'green' && document.getElementById("8A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -144,7 +138,6 @@ function check5(){
 function check6(){
     var i = 0;
 	if (i == 0 && document.getElementById("3A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("7A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
@@ -153,7 +146,6 @@ function check6(){
 function check7(){
   var i = 0;
 	if (i == 0 && document.getElementById("1A").style.backgroundColor  == 'green' && document.getElementById("5A").style.backgroundColor  == 'green' && document.getElementById("9A").style.backgroundColor  == 'green' ) {
-    alert('bingo!');
     i++;
   } 
 }
