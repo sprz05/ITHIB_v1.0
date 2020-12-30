@@ -61,7 +61,7 @@ function dontShowGoal1(){
 
 function showGoal2(){
   document.getElementById('goal2Ad').style.display="block";
-  document.getElementById('goal2Echo').style.display="block"
+  document.getElementById('goal2Echo').style.display="block";
 }
 
 function dontShowGoal2(){
@@ -81,12 +81,10 @@ function dontShowGoal3(){
 
 function showGoal4(){
   document.getElementById("goal4Output").innerHTML = document.getElementById('goal4Input').value;
-  document.getElementById('goal4Ad').style.display="block";
   document.getElementById('goal4Echo').style.display="block"
 }
 
 function dontShowGoal4(){
-  document.getElementById('goal4Ad').style.display="none";
   document.getElementById('goal4Echo').style.display="none";
 }
 
@@ -95,4 +93,24 @@ function onlyShowGoals(){
   document.getElementById('goalAdviceDiv').style.display="none";
   document.getElementById('goalForm').style.display="none";
   document.getElementById('goalList').style.display="block";
+}
+
+function search() {
+  var str = document.getElementById('goal4Input').value;
+
+  if (str.includes("project") || str.includes("PROJECT") || str.includes("Project")) {
+     document.getElementById("PHOB").style.display = "block";
+  } else if (str.includes("Productive") || str.includes("productive") || str.includes("PRODUCTIVE")) {
+    document.getElementById("HOB").style.display = "block";
+    document.getElementById("ITHB").style.display = "block";
+  } else if (str.includes("Week") || str.includes("week") || str.includes("WEEK") || str.includes("Plan") || str.includes("plan")) {
+    document.getElementById("WHOB").style.display = "block";
+  } else if (str.includes("Test") || str.includes("test") || str.includes("TEST") || str.includes("Study") || str.includes("study")) {
+    document.getElementById("ITHBTest").style.display = "block";
+  } else if (str == null || str == "" || str == " ") {
+    console.log("No other goals >>>")
+  } else {
+    document.getElementById("SLAB").style.display = "block";
+  }
+
 }

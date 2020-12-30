@@ -26,30 +26,36 @@
 
   </head>
   <body>
+        <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 
 <center>
 <div id="goalForm" style="background-color: rgba(255, 51, 177, 0.53); width: 100%; height:100%; border-radius: 10px;">
 
   <div style="text-align:center;">
     <br>
-    <h3 style="font-size: 16px;">What are some goals you have for homework today?</h3>
-    <br>
+    <h1 style="font-size: 60px">⭐</h1>
+
+    <h1 style="color:white">What are some goals you have for homework today?</h1>
     <br>
     <input type="checkbox" style="font-size: 30px" id="goal1" name="goal1" value="goal1"/>
-    <label style="font-size: 12px" class="strikethrough" for="goal1">To finish all my work</label><br/>
+    <label  class="strikethrough" for="goal1">To finish all my work</label><br/>
 
     <input type="checkbox" style="font-size: 30px" id="goal2" name="goal2" value="goal2"/>
-    <label style="font-size: 12px" class="strikethrough" for="goal2">To not get distracted</label><br/>
+    <label  class="strikethrough" for="goal2">To not get distracted</label><br/>
 
     <input type="checkbox" style="font-size: 30px" id="goal3" name="goal3" value="goal3"/>
-    <label style="font-size: 12px" class="strikethrough" for="toDo20">To not feel less stressed when doing homework</label><br/>
+    <label  class="strikethrough" for="toDo20">To not feel less stressed when doing homework</label><br/>
 
     <input type="checkbox" style="font-size: 30px" id="goal4" name="goal4" value="goal4"/>
-    <label style="font-size: 12px" class="strikethrough" for="goal4">Other<input id="goal4Input"type="text" onclick="check();"/></label><br/>
+    <label  class="strikethrough" for="goal4">Other<input id="goal4Input"type="text" onclick="check();"/></label><br/>
 
 
 
     <button class="btn btn-primary" type="submit" value="submit" onclick="showGoalList(); search()">Submit</button>
+
+    <h1 style='height:10px'></h1>
 </div>
 </div>
 
@@ -65,7 +71,7 @@
 <div id="goalAdviceDiv" style="display:none; background-color: rgba(255, 51, 177, 0.53); width: 100%; height:100%; border-radius: 10px;">
 <h3>Advice:</h3>
 
-<p id="goal1Ad">To finish all your work, how about you use <span><a href="https://sprz05.github.io/HOBv1.0/index.html"  target="_blank"> HOB</a></span> to make a to do list for you and then use <a href="ITHB.html" target="_blank"> ITHB</a> to stay on task.</p>
+<p id="goal1Ad">To finish all your work, how about you use <span><a href="https://sprz05.github.io/HOBv1.0/index.html"  target="_blank"> HOB</a></span> to make a do list for you?</p>
 <p id="goal2Ad">To not get distracted try using<span><a href="ITHB.html" target="_blank"> ITHB</a></span></p>
 <p id="goal3Ad">To feel less stressed when doing your homework use <span><a href="ITHB.html"  target="_blank"> ITHB</a></span> to take brain breaks.</p>
 <!---<p id="goal4Ad">To try and achive your other goal remind your self of it by clicking on the star icon to view your goals, or see if theres some advice from other students on <span><a href="https://sprz05.github.io/SLAB_v1.0/"  target="_blank">SLAB</a></span></p>--->
@@ -87,11 +93,11 @@
 </div>
 
 <div id="SLAB" style="display:none;">
-    <p>Looks like we couldn't find a lot of bots to help you with your other goals, try looking at</p>
+    <p>Looks like we couldn't find a lot of bots to help you with your other homework goals for today ... try looking in</p>
     <span>
     <a href="https://sprz05.github.io/SLAB_v1.0/" target="_blank"> SLAB</a>
     </span>
-    <p> for advice on your homework or look for bots on your own <span><a href="https://sprz05.github.io/StudyBots/specficBot.html"> Here</a></span></p>
+    <p> for advice on your homework OR look for bots on your own <span><a href="https://sprz05.github.io/StudyBots/specficBot.html"> Here</a></span></p>
 </div>
 
 <div id="WHOB" style="display:none;">
@@ -103,6 +109,8 @@
   <p>To study for your test try using ITHBTest, note works best with worksheets:</p>  
     <span><a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" target="_blank"> ITHBTest</a></span>
 </div>  
+
+
 
 
 
