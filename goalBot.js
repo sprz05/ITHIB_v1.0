@@ -2,6 +2,7 @@ function showGoalList(){
   document.getElementById('goalForm').style.display = "none";
   document.getElementById('goalList').style.display = "block";
   document.getElementById('goalAdviceDiv').style.display = "block";
+  document.getElementById('newGoalBtn').style.display = "block";
   goal1();
   goal2();
   goal3();
