@@ -146,15 +146,28 @@ $(document).ready(function(){
 
     <div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
-      <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
+      <a href="https://sprz05.github.io/HOBv1.0/" style="display:none" target="_blank">Open in New Tab</a>
 
-        <iframe src="hob.html" width="400" height="400" id="HOBAddon"></iframe>
-        <iframe src="hob.html" width="400" height="400" id="HOBAddon"></iframe><!---Show hobSEcheSave-->
+        <button class="btn btn-danger" onclick="showSavedHOBIframe()">See recently made homework plan</button>
+        <button class="btn btn-danger" onclick="showHOBIframe()">Make a new homework plan</button>
+
+
+        <iframe id="saved" src="https://sprz05.github.io/HOBv1.0/hobSchedule.html" style="display:none" width="400" height="400" id="HOBAddon"></iframe>
+
+        <iframe src="hob.html" width="400" height="400" id="HOBAddon" style="display:none"></iframe>
+
 
          <script src="script.js"></script>
          <script src="show.js"></script>
-
     </div>
+
+
+    <script>
+      function showSavedHOBIframe(){
+        document.getElementById("").style.display = "";
+        document.getElementById("").style.display = "";
+      }
+    </script>
 
 
     <div id="mydiv2" style="display:none;">

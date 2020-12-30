@@ -165,7 +165,7 @@ padding-left: 80px;
 
     <p> </p>
 
-  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); displayTDL();">Save</button>
+  <button style="display:none" id="saveH" class="btn btn-primary" onclick="makeToDoList(); search(); set(); displayTDL();">Save</button>
 
      <p>
    or
@@ -557,5 +557,9 @@ function hideGameDiv(){
     document.getElementById("toDoList").style.display = "none";
   }
     
-
+function set(){
+var ToDoListToSave = document.getElementById("toDoList").innerHTML;
+localStorage.setItem('hobList', ToDoListToSave);
+console.log(ToDoListToSave)
+}
 </script>

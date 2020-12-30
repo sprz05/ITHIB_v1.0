@@ -304,7 +304,7 @@ $(document).ready(function(){
 </script>
 
 
-    <div id="mydiv" style="display:none;">
+<!--<div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
       <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
 
@@ -313,7 +313,56 @@ $(document).ready(function(){
          <script src="script.js"></script>
          <script src="show.js"></script>
 
+    </div>--->
+
+
+
+
+    <div id="mydiv" style="display:none;">
+      <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
+      <a style="display:none" id="goBckHobQ" onclick="goBackToHOBQ()" ><- Go Back</a>
+
+        <div id="hobShowIframeQ">
+        <p style="font-size: 20px">If you just made a homework plan with hob:</p>
+        <button class="btn btn-danger" onclick="showSavedHOBIframe()">See my most recent homework plan</button>
+        <h1></h1>
+        <p style="font-size: 20px">If you havent made a homework plan with hob today:</p>
+        <button class="btn btn-danger" onclick="showHOBIframe()">Make a new homework plan</button>
+       </div>
+
+        <iframe id="savedHOBList" src="https://sprz05.github.io/HOBv1.0/hobSchedule.html" style="display:none" width="400" height="400" id="HOBAddon"></iframe>
+
+        <iframe id="makeHobList" src="hob.html" width="400" height="400" id="HOBAddon" style="display:none"></iframe>
+
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
     </div>
+
+
+    <script>
+      function showSavedHOBIframe(){
+        document.getElementById("savedHOBList").style.display = "block";
+        document.getElementById("makeHobList").style.display = "none";
+        document.getElementById("hobShowIframeQ").style.display = "none";
+        document.getElementById("goBckHobQ").style.display = "block";
+      }
+
+       function showHOBIframe(){
+        document.getElementById("savedHOBList").style.display = "none";
+        document.getElementById("makeHobList").style.display = "block";
+        document.getElementById("hobShowIframeQ").style.display = "none";
+        document.getElementById("goBckHobQ").style.display = "block";
+      }
+
+      function goBackToHOBQ(){
+                document.getElementById("goBckHobQ").style.display = "none";
+        document.getElementById("savedHOBList").style.display = "none";
+        document.getElementById("makeHobList").style.display = "none";
+        document.getElementById("hobShowIframeQ").style.display = "block";
+      }
+    </script>
+
 
 
     <div id="mydiv2" style="display:none;">
