@@ -81,6 +81,21 @@ overflow-x: scroll;
   color: #fff;
 }
 
+#mydiv4 {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader4 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Green;
+  color: #fff;
+}
+
 #star {
   top: 80px;
 }
@@ -270,12 +285,16 @@ function closeNav() {
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
 </a>
 
-<a type="button" data-toggle="popover" title="Goal Bot" data-content="Set some awesome goals for this homework session!">
+<a type="button" data-toggle="popover" title="Goal Bot" data-content="Not sure which bot to use? Enter your homework goals to see which bots to use!">
  <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
 </a>
-
 <a type="button" data-toggle="popover" title="BingoBot" data-content="Make your homework assignment list into a bingo sheet :D">
 <img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
+</a>
+
+<a type="button" data-toggle="popover" title="Project-HOB" data-content="Make a project plan for your school project or long homework assignment">
+<img onclick="showProjectHOB()" id="ProjectHOB" src="https://docs.google.com/drawings/d/e/2PACX-1vT2VYss3iQF7QvSmdhuMPDgyHAPHa7Jjkz-DXWOlWQ99f24KHaZGgGa0CQIc3iIVUoNPzNy-pfiFrvO/pub?w=222&amp;h=302">
+
 </a>
 
 <a type="button" target="_blank" href="https://sprz05.github.io/SLAB_v1.0/" data-toggle="popover" title="SLAB" data-content="Homework & learning advice from students!">
@@ -283,9 +302,9 @@ function closeNav() {
 </a>
 
 
-<a type="button" href="indexTestWithgoalNum.html" data-toggle="popover" title="Number of Assignment Goal Bot" data-content="Set how many assignmnts you want to complete as a goal">
+<!---<a type="button" href="indexTestWithgoalNum.html" data-toggle="popover" title="Number of Assignment Goal Bot" data-content="Set how many assignmnts you want to complete as a goal">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRxcZAvrUgPmkUSliGC6bu7AT3lTCIoHdncshVwSp6KRjjroepEYq8_BLqFAScwczDdsIrDdBko177x/pub?w=222&amp;h=302">
-</a>
+</a>--->
 
 
 </div>
@@ -304,7 +323,7 @@ $(document).ready(function(){
 </script>
 
 
-<!--<div id="mydiv" style="display:none;">
+<div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
       <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
 
@@ -313,12 +332,12 @@ $(document).ready(function(){
          <script src="script.js"></script>
          <script src="show.js"></script>
 
-    </div>--->
+    </div>
 
 
 
 
-    <div id="mydiv" style="display:none;">
+    <!--<div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
       <a style="display:none" id="goBckHobQ" onclick="goBackToHOBQ()" ><- Go Back</a>
 
@@ -341,7 +360,7 @@ $(document).ready(function(){
 
          <script src="script.js"></script>
          <script src="show.js"></script>
-    </div>
+    </div>--->
 
 
     <script>
@@ -387,6 +406,17 @@ $(document).ready(function(){
       <div id="mydivheader3">Click here to move <span><button onclick="hideBingoAddOn()">x</button></span></div>
 
   <iframe src="bingoBot9.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+     <div id="mydiv4" style="display:none;">
+      <a href="https://sprz05.github.io/Project-HOB/index.html" target="_blank">Open in New Tab</a>
+      <div id="mydivheader4">Click here to move <span><button onclick="hideProjectHOBAddOn()">x</button></span></div>
+
+  <iframe src="https://sprz05.github.io/Project-HOB/index.html" width="400" height="400" id="HOBAddon"></iframe>
 
          <script src="script.js"></script>
          <script src="show.js"></script>
@@ -453,6 +483,7 @@ $(document).ready(function(){
     dragElement(document.getElementById("mydiv"));
     dragElement(document.getElementById("mydiv2"));
     dragElement(document.getElementById("mydiv3"));
+    dragElement(document.getElementById("mydiv4"));
 
 
     function dragElement(elmnt) {

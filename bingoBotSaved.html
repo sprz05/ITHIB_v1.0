@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>bingoBot</title>
+    <link href="bingoBot.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="./assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="scroll.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets\css\background.css">
+    <link rel="stylesheet" href="assets\css\draggable.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style>
+p, th{
+  color:black;
+}
+
+th:hover {
+    background-color: LightBlue;
+} 
+
+th:active {
+    background-color: green;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+canvas {
+  display: block;
+  position: relative;
+  zindex: 1;
+  pointer-events: none;
+}
+
+#content {
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -150px;
+  color: silver;
+  font-family: verdana;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: inline-block;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+
+</style>
+<body style="background-color:white;">
+
+
+<div id="savedHobList">
+  <h1>Looks like you haven't made a bingo sheet yet ...</h1>
+  <a href="bingoBotHomePg.html" target="_blank" style="color:white"><buttton class="btn btn-primary">Make one!</buttton></a>
+  <button class="btn btn-danger" onclick="reload()">Reload to see your Bingo Sheet</button>
+</div>
+
+
+<a id="makeNew" href="bingoBotHomePg.html" target="_blank" style="color:white; display:none"><buttton class="btn btn-primary">Make a new Bingo Sheet</buttton></a>
+
+    <script src="bingoBot14.js"></script>
+  </body>
+</html>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRPBUABTFYjnnbVUk3EKBrA-L5Y6VszfWwB9lB-ApZ6JVkaIsrgCJpfvT4D6pNOaUnoTRXhL05pyMyi/pub?w=322&amp;h=356">
+
+<script>
+ var savedBingoSheet = localStorage.getItem('bingoSheet');
+
+
+  function madOneAlready(){
+  if(savedBingoSheet == null){
+    console.log("welcome");
+  } else {
+    getAndSet();
+    document.getElementById("makeNew").style.display = "block";
+  }
+}
+
+window.addEventListener('load', (event) => {
+  madOneAlready();
+});
+
+function getAndSet(){
+  console.log(savedBingoSheet);
+  document.getElementById("savedHobList").innerHTML = savedBingoSheet;
+}
+
+function reload(){
+  location.reload();
+    return false;
+}
+</script>

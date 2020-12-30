@@ -218,6 +218,14 @@ function showBingoAddon(){
   document.getElementById("bingo").style.display = "none";
 }
 
+function showProjectHOB(){
+  document.getElementById("mydiv4").style.display = "block";
+  document.getElementById("ProjectHOB").style.display = "none";
+}
+
+
+
+
 function hideHOBAddOn(){
   document.getElementById("mydiv").style.display = "none";
   document.getElementById("about").style.display = "block";
@@ -231,8 +239,12 @@ function hideGoalAddOn(){
 function hideBingoAddOn(){
   document.getElementById("mydiv3").style.display = "none";
   document.getElementById("bingo").style.display = "block";
-}
+} 
 
+function hideProjectHOBAddOn(){
+  document.getElementById("mydiv4").style.display = "none";
+  document.getElementById("ProjectHOB").style.display = "block";
+}
 
 
 /* START of show input functions */

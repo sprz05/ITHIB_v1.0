@@ -630,3 +630,9 @@ function showTable(){
         };
     })();
 })();
+
+
+function set(){
+var bingoSheet = document.getElementById("bingo").innerHTML;
+localStorage.setItem('bingoSheet', bingoSheet);
+}

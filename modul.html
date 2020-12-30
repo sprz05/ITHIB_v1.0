@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<link href="./assets/css/font-awesome.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="scroll.css" rel="stylesheet" />
+<!-- CSS Files -->
+<link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="assets\css\background.css">
+<link rel="stylesheet" href="assets\css\draggable.css">
+
+
+<script src="ITHBlite2.js" type="text/javascript"></script>
+
+<style>
+p{
+  font-size: 25px;
+}
+h1{
+  color:white;
+}
+
+#star {
+  top: 80px;
+}
+#mySidenav {
+  position: absolute;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  left: -10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+ 
+
+    <audio id="beepAudio" src="http://soundbible.com/grab.php?id=1252&amp;type=mp3"></audio>
+
+
+ <div id="mySidenav" class="sidenav">
+
+<div class="col-md-4">
+          <button type="button" class="btn btn-block btn-warning mb-3" data-toggle="modal" data-target="#modal-notification">Notification</button>
+          <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
+                <div class="modal-header">
+                  <h6 class="modal-title" id="modal-title-notification">Your attention is required</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="py-3 text-center">
+                    <i class="ni ni-bell-55 ni-3x"></i>
+                    <h4 class="heading mt-4">You should read this!</h4>
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-white">Ok, Got it</button>
+                  <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<button id="btnTrigger" style="width:200px" type="button" class="btn btn-block btn-warning mb-3" data-toggle="modal" data-target="#modal-notification">Change how often I'm reminded to take a brain break</button>
+
+
+
+
+ <div class="col-md-4"> 
+          <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
+                <div class="modal-header">
+                  <h6 class="modal-title" id="modal-title-notification">Notification from ITHBlite</h6>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="py-3 text-center">
+                    <i class="ni ni-bell-55 ni-3x"></i>
+                    <h4 class="heading mt-4">Have you been able to stay concentrated on your homework?</h4>
+                    <p>Would you like to change how often I remind you to take a brain break?</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-white" onclick="showForm();">Yes! Let's change it!</button>
+                  <button id="closeMod" type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">No, I'm good</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<script>
+
+    let timerId;
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes, seconds;
+ timerId = setInterval(function() {
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (timer == 0){
+      stopTimer();
+      beepCount = 0;             
+      document.getElementById("beepAudio").play(); 
+      iOne++;
+
+
+            document.getElementById("breakTimeTimers").style.display = "none";
+            document.getElementById("timerDoneDiv").style.display = "block";
+
+
+
+            console.log('timer ended');
+    }
+  }, 1000);
+}
+
+document.getElementById("beepAudio").src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+    document.getElementById("beepAudio").load();
+
+ function resetTimer() {
+      clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
+    }
+
+ function stopTimer() {
+      clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
+    }
+
+
+    let beepCount = 0;
+document.getElementById("beepAudio").addEventListener("ended", () => {
+    beepCount++;
+    if(beepCount < 100){       
+        document.getElementById("beepAudio").play();
+    } else {
+          alert("Times up!");
+    }
+});
+
+ </script>   
+
+</body>
+</html>
+
+
+
+
+<div id="endHW" style="display:none">
+      <p><span>You did homework for:</span><p id="totalHWMin"></p><span>minutes</span></p>
+
+      <p><span>You took:</span><p id="totalBreaksMin"></p><span>breaks</span></p>
+
+    </div>  
+
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
+
+
+<!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="./assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="./assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+  <script>
+    function scrollToDownload() {
+
+      if ($('.section-download').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-download').offset().top
+        }, 1000);
+      }
+    }
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script>
