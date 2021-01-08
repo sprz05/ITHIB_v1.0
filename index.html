@@ -1315,6 +1315,11 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
         document.getElementById("showContinue30Timer").style.display = "none";
         document.getElementById("2Div").style.display = "block";
       }
+
+      function skipDiv1First(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("1Div").style.display = "block";
+      }
     </script>
 
 <div style="display:none" id="breakTimers">
@@ -1327,7 +1332,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
    <button class="btn btn-danger" style="color:white;" onclick="showContinue20Timer(); showBrainBreakDiv(); startContinue20Break();">20 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue25Timer(); showBrainBreakDiv(); startContinue25Break();">25 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue30Timer(); showBrainBreakDiv(); startContinue30Break();">30 minute break</button>
-   <button class="btn btn-primary" style="color:white;" onclick="showDiv2()">Skip</button>
+   <button class="btn btn-primary" style="color:white;" onclick="skipDiv1First()">Skip</button>
 
 
 </div>
