@@ -1389,7 +1389,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
 <button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()">I want to work on my next assignment!</button>
 <button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today! I want a reward!</button>
-<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
+<button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -1803,3 +1803,32 @@ function hideStop(){
 
 </body>
 </html>
+
+
+
+<style>
+  .feedback-button {
+  height: 40px;
+  border: solid 3px #CCCCCC;
+  background: #333;
+  width: 100px;
+  line-height: 32px;
+  -webkit-transform: rotate(-90deg);
+  font-weight: 600;
+  color: white;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  text-align: center;
+  font-size: 17px;
+  position: fixed;
+  right: -40px;
+  top: 45%;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  z-index: 999;
+}
+
+</style>
+
+<a href="https://forms.gle/iwHa3QSgh5rBps69A" target="_blank"><button id="popup" class="feedback-button">Feedback</button></a>
+<script src="_include/js/feedback.js"></script>
