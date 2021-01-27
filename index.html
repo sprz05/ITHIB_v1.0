@@ -179,12 +179,12 @@ overflow-x: scroll;
                 </a>
 
 
-                 <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="nav-link"  role="button" style="display:none">
+                 <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="nav-link"  role="button">
                      <i class="fas fa-envelope-open-text"></i>
                     <span class="nav-link-inner--text">Make a Study Bot</span>
                   </a>
 
-                 <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" target="_blank" class="nav-link" href="#" role="button" style="display:none">
+                 <a style="display:none" href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" target="_blank" class="nav-link" href="#" role="button">
                     <i class="fas fa-info-circle"></i>
                    <span class="nav-link-inner--text">Study Mode</span>
                  </a>
@@ -229,7 +229,7 @@ overflow-x: scroll;
           <li class="nav-item d-none d-lg-block ml-lg-4">
 
 
-           <a href="https://sprz05.github.io/Study-BotMaker/" style="display:none" target="_blank" class="btn btn-danger btn-icon">
+           <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
               <span class="btn-inner--icon">
 
               </span>
@@ -237,7 +237,7 @@ overflow-x: scroll;
             </a>
 
 
-            <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" target="_blank" class="btn btn-neutral btn-icon">
+            <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" style="display:none" target="_blank" class="btn btn-neutral btn-icon">
               <span class="btn-inner--icon">
               </span>
               <span class="nav-link-inner--text">Study Mode</span>
@@ -683,8 +683,13 @@ $(document).ready(function(){
       <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
       <input type="text" id="name20" />
 
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input21Function();" id="button0R" class="button button3">Enter</button>
+        <button class="btn btn-primary" style="color:white;" onclick="input21Function();" id="button0R" class="button button3">Enter</button>
     </div>
+
+    <div id="stopDIV" style="display:none;">
+  <h1>Woah! You've done a lot of work (almost 20 assignments!) Let's call it a day Or take a long break and come then come back :D</h1>
+  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
+</div>
 
 
     <script>
@@ -900,7 +905,7 @@ function hideNextBtn(){
     <div id="2Div" style="display:none">
     <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? <br/><p style="color:white">If you don't know start with 10 minutes and try to work your way up slowly</center></h1>
     <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
-    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
+    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white; margin-left: 50px; margin-right: 50px">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
     <h1><center style ="display:none" id="workOnNextAssignmentTxt">Now work on your next assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
     <p><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</p></center>
 
@@ -1325,7 +1330,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 <div style="display:none" id="breakTimers">
 
   <h1>🧠</h1>
-  <p>Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
+  <p style="margin-left: 50px; margin-right: 50px">Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue5Timer(); showBrainBreakDiv(); startContinue5Timer();">5 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue10Timer(); showBrainBreakDiv(); startContinue10Break();">10 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue15Timer(); showBrainBreakDiv(); startContinue15Break();">15 minute break</button>
@@ -1421,7 +1426,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
   <div id="breakTimers2" style="display:none">
   <h1 style="font-size: 200px">🧠</h1>
-  <p>But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
+  <p style="margin-left: 50px; margin-right: 50px">But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
     <script>
       function show5BreakTimer(){
         document.getElementById("breakTimers2").style.display = "none";
@@ -1458,24 +1463,26 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
    </script>
 
       <button class="btn btn-danger" style="color:white;" onclick="show5BreakTimer(); start5Timer1(); showBrainBreakDiv();">take a 5 minute break💧</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show10BreakTimer(); start10Break1(); showBrainBreakDiv();">take a 10 minute break☔</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show15BreakTimer(); start15Break1(); showBrainBreakDiv();">take a 15 minute break🌧️</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show20BreakTimer(); start20Break1(); showBrainBreakDiv();">take a 20 minute break⛈️</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show25BreakTimer(); start25Break1(); showBrainBreakDiv();">take a 25 minute break🌊</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show30BreakTimer(); start30Break1(); showBrainBreakDiv();">take a 30 minute break🏖️</button>
-
+      <p></p>
       <button class="btn btn-primary" style="color:white;"  onclick="skip2Div1();">Skip</button>
   </div>
 
 
-<div id="stop" style="display:none;">
-  <h1>Woah there! You've done a lot of work! Let's call it a day? Or take a long break and come back :D</h1>
-  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
-</div>
+
 
   <script>
 function hideStop(){
-  document.getElementById("stop").style.display = "none";
+  document.getElementById("stopDIV").style.display = "none";
 }
 //this shows what they worked on:
     function input2Function() {
@@ -1631,8 +1638,8 @@ function hideStop(){
 
   <script>
     function input21Function() {
-      document.getElementById("input21").style.display = "none";
-      document.getElementById("stop").style.display = "block";
+      document.getElementById("input20").style.display = "none";
+      document.getElementById("stopDIV").style.display = "block";
     }
 
   </script>
@@ -1755,7 +1762,7 @@ function hideStop(){
     <h3><span id="result17"></span></h3>
     <h3><span id="result18"></span></h3>
     <h3><span id="result19"></span></h3>
-    <h3><span id="result20"></span></h3>
+    <h3 style="display:none"><span id="result20"></span></h3>
 
 
 
