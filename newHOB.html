@@ -35,7 +35,7 @@
 
   <body  style="font-family: 'Roboto', sans-serif; color:gray; background: #ecf0e6; margin: 0;">
 
-
+<div id="TDLS">
 <div text-align="center" id=toDoList>
   <h1 style="font-size: 30px; color:gray">Homework blocks for today:</h1>
   <p style="font-size: 10px">Cross off assignments as you finish them!</p>
@@ -151,7 +151,36 @@ list.addEventListener('click', function(ev) {
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSQkPl6yUPpzvsclJQUFeLcs84XnYjbO6JXAkhPM5qpKNNIvqBILZ1QoR9udCGf31am__48NYwvm834/pub?w=414&amp;h=418">
 
+ <button onclick="showGameDiv();">I finished all my assignments</button>
+    <br>
 
+
+
+</div>
+
+
+
+<div id="gameDiv" style="display:none">
+<p>There's no way I can check so I'm going to trust your word, as a reward for finishing all your assignments, want to play some games?</p>
+<br>
+  <a href="game.html" target="_blank" class="btn btn-primary">Yes! I earned my reward!</a>
+  <button class="btn btn-warning" onclick="hideGameDiv();">No, go back I haven't finished my assignments</button>
+</div>
+
+<script>
+
+function showGameDiv(){
+    document.getElementById("gameDiv").style.display = "block";
+    document.getElementById("TDLS").style.display = "none";
+  }
+
+
+
+function hideGameDiv(){
+    document.getElementById("TDLS").style.display = "block";
+    document.getElementById("gameDiv").style.display = "none";
+  }
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
