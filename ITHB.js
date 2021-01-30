@@ -689,8 +689,20 @@ function showSaveH(){
 
   function showInputE(){
   var numEAI = document.getElementById('numEAI');
-    if (numEAI.value == 0){
+    if (numEAI.value == 0 || numEAI.value == null || numEAI.value == ""){
             alert("If you don't have any, click I don't have any easy assignments today");
+            document.getElementById("inputEText").style.display = "none";
+            document.getElementById("saveE").style.display = "none";
+            document.getElementById("easyA1").style.display = "none";
+            document.getElementById("easyA2").style.display = "none";
+            document.getElementById("easyA3").style.display = "none";
+            document.getElementById("easyA4").style.display = "none";
+            document.getElementById("easyA5").style.display = "none";
+            document.getElementById("easyA6").style.display = "none";
+            document.getElementById("easyA7").style.display = "none";
+            document.getElementById("easyA8").style.display = "none";
+            document.getElementById("easyA9").style.display = "none";
+            document.getElementById("easyA10").style.display = "none";
    }else if (numEAI.value == 1){
         showSaveE();
             onlyShowInput1();
@@ -729,8 +741,20 @@ function showSaveH(){
   /* START: function show input medium*/
   function showInputM(){
   var numMAI = document.getElementById('numMAI');
-   if (numMAI.value == 0){
-                  alert("If you don't have any, click I don't have any medium assignments");
+   if (numMAI.value == 0 || numMAI.value == null || numMAI.value == ""){
+            alert("If you don't have any, click I don't have any medium assignments");
+            document.getElementById("inputMText").style.display = "none";
+            document.getElementById("saveM").style.display = "none";
+            document.getElementById("mediumA1").style.display = "none";
+            document.getElementById("mediumA2").style.display = "none";
+            document.getElementById("mediumA3").style.display = "none";
+            document.getElementById("mediumA4").style.display = "none";
+            document.getElementById("mediumA5").style.display = "none";
+            document.getElementById("mediumA6").style.display = "none";
+            document.getElementById("mediumA7").style.display = "none";
+            document.getElementById("mediumA8").style.display = "none";
+            document.getElementById("mediumA9").style.display = "none";
+            document.getElementById("mediumA10").style.display = "none";
    }
    else if (numMAI.value == 1){
         showSaveM();
@@ -773,8 +797,20 @@ function showSaveH(){
   /* START: function show input hard*/
   function showInputH(){
   var numHAI = document.getElementById('numHAI');
-   if (numHAI.value == 0){
+   if (numHAI.value == 0 || numHAI.value == null || numHAI.value == ""){ 
       alert("If you don't have any, click I don't have any hard assignents");
+                  document.getElementById("inputHText").style.display = "none";
+            document.getElementById("saveH").style.display = "none";
+            document.getElementById("hardA1").style.display = "none";
+            document.getElementById("hardA2").style.display = "none";
+            document.getElementById("hardA3").style.display = "none";
+            document.getElementById("hardA4").style.display = "none";
+            document.getElementById("hardA5").style.display = "none";
+            document.getElementById("hardA6").style.display = "none";
+            document.getElementById("hardA7").style.display = "none";
+            document.getElementById("hardA8").style.display = "none";
+            document.getElementById("hardA9").style.display = "none";
+            document.getElementById("hardA10").style.display = "none";
    }
     else if (numHAI.value == 1){
         onlyShowInput1H();
@@ -814,6 +850,17 @@ function showSaveH(){
 
 
 /* display functions in form */
+function displayE(){
+  document.getElementById("easyAssignments").style.display = "block";
+  document.getElementById("mediumAssignments").style.display = "none";
+}
+
+
+function displayMGoBack(){
+  document.getElementById("mediumAssignments").style.display = "block";
+  document.getElementById("hardAssignments").style.display = "none";
+}
+
 function displayM(){
   document.getElementById("easyAssignments").style.display = "none";
   document.getElementById("mediumAssignments").style.display = "block";
@@ -865,4 +912,114 @@ function makeToDoList(){
  document.getElementById("result8H").innerHTML = document.getElementById('hardA8').value;
  document.getElementById("result9H").innerHTML = document.getElementById('hardA9').value;
  document.getElementById("result10H").innerHTML = document.getElementById('hardA10').value;
+}
+
+
+function set(){
+var ToDoListToSave = document.getElementById("toDoList").innerHTML;
+localStorage.setItem('hobList', ToDoListToSave);
+console.log(ToDoListToSave)
+}
+
+
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Create a new list item when clicking on the "Add" button
+function newEasyElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myULEasy").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+// Create a new list item when clicking on the "Add" button
+function newMediumElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInputMedium").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myULMedium").appendChild(li);
+  }
+  document.getElementById("myInputMedium").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+// Create a new list item when clicking on the "Add" button
+function newHardElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInputHard").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myULHard").appendChild(li);
+  }
+  document.getElementById("myInputHard").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
