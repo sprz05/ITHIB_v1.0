@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<link href="./assets/css/font-awesome.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+<link href="scroll.css" rel="stylesheet" />
+<!-- CSS Files -->
+<link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="assets\css\background.css">
+<link rel="stylesheet" href="assets\css\draggable.css">
+<!-- JS Files -->
+<script src="ITHBv2.0.js"></script>
+
+<style>
+p{
+  font-size: 25px;
+}
+h1{
+  color:white;
+}
+iframe{
+overflow-x: scroll;
+}
+#mySidenav {
+  position: absolute;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  left: -10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+#about {
+  top: 80px;
+}
+
+#mydiv2 {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader2 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Yellow;
+  color: #fff;
+}
+
+#mydiv3 {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader3 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Green;
+  color: #fff;
+}
+
+#mydiv4 {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader4 {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: Green;
+  color: #fff;
+}
+
+#star {
+  top: 80px;
+}
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    <div class="dropdown">
+  <a href="#" class="btn btn-default dropdown-toggle " data-toggle="dropdown" id="navbarDropdownMenuLink2">
+       🗣️Translate
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+      <li>
+          <a class="dropdown-item" href="https://sprz05.github.io/ITHIB_v1.0/">
+             English
+          </a>
+      </li>
+      <li>
+          <a class="dropdown-item" href="https://sprz05.github.io/ITHBSpanish/">
+             Spanish
+          </a>
+      </li>
+      <li>
+  </ul>
+</div>
+
+    <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+    <div class="container">
+      <a class="navbar-brand mr-lg-5" href="https://sprz05.github.io/StudyBots/index.html" target="_blank">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vQRLWChs7-u7gFu9-djXGCyCxvHTgF8HjNqq9DecZjKUy2Dl5mg3HHhEtVhy6Oz88NGmlLZKtsUTxiv/pub?w=376&amp;h=112">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ6FR7uN3QiqiKp6ieGISgrAv22clfRbkwUsTql33XBBz323MLMV7KZ9L0KJqmSOzxrXnVngATaowMg/pub?w=752&amp;h=224">              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+<i class="fas fa-robot"></i>
+              <span class="nav-link-inner--text">Bots</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-xl">
+              <div class="dropdown-menu-inner">
+
+                <a href="https://sprz05.github.io/StudyBots/beforeHWBots.html" target="_blank" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+<i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">Before Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots for before you start homework</p>
+                  </div>
+                </a>
+
+                <a href="https://sprz05.github.io/StudyBots/duringHWBots.html" target="_blank" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                    <i class="ni pencil-ruler"></i>
+                    <i class="fas fa-pencil-ruler"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">During Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that help you with homework.</p>
+                  </div>
+                </a>
+
+
+                <a href="https://sprz05.github.io/StudyBots/afterHWBots.html" target="_blank" class="media d-flex align-items-center">
+                  <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                    <i class="ni ni-palette"></i>
+                  </div>
+                  <div class="media-body ml-3">
+                    <h6 class="heading text-primary mb-md-1">After Homework</h6>
+                    <p class="description d-none d-md-inline-block mb-0">Study Bots that provdie programs when your done with homework as a reward!</p>
+                  </div>
+                </a>
+
+
+                 <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="nav-link"  role="button">
+                     <i class="fas fa-envelope-open-text"></i>
+                    <span class="nav-link-inner--text">Make a Study Bot</span>
+                  </a>
+
+                 <a style="display:none" href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" target="_blank" class="nav-link" href="#" role="button">
+                    <i class="fas fa-info-circle"></i>
+                   <span class="nav-link-inner--text">Study Mode</span>
+                 </a>
+
+
+              </div>
+
+              </div>
+
+
+
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="https://sprz05.github.io/StudyBots/newBots.html" target="_blank" role="button">
+                <i class="fas fa-star"></i>
+              <span class="nav-link-inner--text">New Bots</span>
+            </a>
+          </li>
+
+          <!--other servicies FUTURE -->
+          <li class="nav-item dropdown" style="display:none">
+            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Tutors</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="https://sprz05.github.io/StudyBots/mathHWHelp.html" target="_blank" class="dropdown-item">Math Help</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="https://sprz05.github.io/StudyBots/contribute.html" target="_blank" class="nav-link" role="button">
+              <i class="ni ni-collection d-lg-none"></i>
+              <span class="nav-link-inner--text">Contribute</span>
+            </a>
+          </li>
+
+
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+          <li class="nav-item d-none d-lg-block ml-lg-4">
+
+
+           <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+            </a>
+
+
+            <a href="https://sprz05.github.io/ITHIB_v1.0/testITHBCam.html" style="display:none" target="_blank" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+              </span>
+              <span class="nav-link-inner--text">Study Mode</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+<br>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="#">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSyOfMBDaAG6ljz-ztXuzf3hD2sR9bxDOUP40cNzlB6pk5As6TCP9A5XwbcSKiZqnH11zex04D5n30_/pub?w=222&amp;h=302">
+    </a>
+
+
+  </div>
+</div>
+
+
+
+<button style="display:none"class="btn btn-primary" onclick="openNav()">Change Bot</button>
+<div id="app"></div>
+
+    <div id="mySidenav" class="sidenav">
+
+
+<a type="button" data-toggle="popover" title="HOB" data-content="Organize your homework so it's easier to complete!">
+<img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
+</a>
+
+<a type="button" data-toggle="popover" title="Goal Bot" data-content="Not sure which bot to use? Enter your homework goals to see which bots to use!">
+ <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
+</a>
+<a type="button" data-toggle="popover" title="BingoBot" data-content="Make your homework assignment list into a bingo sheet :D">
+<img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
+</a>
+
+<a type="button" data-toggle="popover" title="Project-HOB" data-content="Make a project plan for your school project or long homework assignment">
+<img onclick="showProjectHOB()" id="ProjectHOB" src="https://docs.google.com/drawings/d/e/2PACX-1vT2VYss3iQF7QvSmdhuMPDgyHAPHa7Jjkz-DXWOlWQ99f24KHaZGgGa0CQIc3iIVUoNPzNy-pfiFrvO/pub?w=222&amp;h=302">
+
+</a>
+
+<a type="button" target="_blank" href="https://sprz05.github.io/SLAB_v1.0/" data-toggle="popover" title="SLAB" data-content="Homework & learning advice from students!">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vT2NgWJAVim0QF_r4bpGP6TY9wwSfPU42WdA-VdmvL5bnsalm9AVY99F4-q0W2mDMoIkA0x3Ac0SNNW/pub?w=222&amp;h=302">
+</a>
+
+
+<!---<a type="button" href="indexTestWithgoalNum.html" data-toggle="popover" title="Number of Assignment Goal Bot" data-content="Set how many assignmnts you want to complete as a goal">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vRxcZAvrUgPmkUSliGC6bu7AT3lTCIoHdncshVwSp6KRjjroepEYq8_BLqFAScwczDdsIrDdBko177x/pub?w=222&amp;h=302">
+</a>--->
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+
+<div id="mydiv" style="display:none;">
+      <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
+      <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
+
+       <iframe src="hob.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+
+
+    <div id="mydiv2" style="display:none;">
+            <a href="goalBotMain.html" target="_blank">Open in New Tab</a>
+      <div id="mydivheader2">Click here to move <span><button onclick="hideGoalAddOn()">x</button></span></div>
+
+  <iframe src="goalBot.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+    <div id="mydiv3" style="display:none;">
+      <a href="bingoBot9.html" target="_blank">Open in New Tab</a>
+      <div id="mydivheader3">Click here to move <span><button onclick="hideBingoAddOn()">x</button></span></div>
+
+  <iframe src="bingoBot9.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+     <div id="mydiv4" style="display:none;">
+      <a href="https://sprz05.github.io/Project-HOB/index.html" target="_blank">Open in New Tab</a>
+      <div id="mydivheader4">Click here to move <span><button onclick="hideProjectHOBAddOn()">x</button></span></div>
+
+  <iframe src="https://sprz05.github.io/Project-HOB/index.html" width="400" height="400" id="HOBAddon"></iframe>
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+
+    </div>
+
+
+
+    <div id="mydiv" style="display:none;">
+      <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
+      <a style="display:none" id="goBckHobQ" onclick="goBackToHOBQ()" ><- Go Back</a>
+
+        <div id="hobShowIframeQ">
+        <p style="font-size: 20px">If you just made a homework plan with hob:</p>
+        <button class="btn btn-danger" onclick="showSavedHOBIframe()">See my most recent homework plan</button>
+        <h1></h1>
+        <p style="font-size: 20px">If you havent made a homework plan with hob today:</p>
+        <button class="btn btn-danger" onclick="showHOBIframe()">Make a new homework plan</button>
+       </div>
+
+        <iframe id="savedHOBList" src="https://sprz05.github.io/HOBv1.0/hobSchedule.html" style="display:none" width="400" height="400" id="HOBAddon"></iframe>
+
+        <iframe id="makeHobList" src="hob.html" width="400" height="400" id="HOBAddon" style="display:none"></iframe>
+
+
+         <script src="script.js"></script>
+         <script src="show.js"></script>
+    </div>
+
+
+    <audio id="beepAudio"></audio>
+
+
+  <div id="1Div">
+
+    <h1></h1>
+
+
+    <div id="input1">
+
+
+  <center>
+    <h1><center>What are you going to work on first (e.g. ELA homework)?</center></h1>
+
+    <input class="context" type="text" id="name1"/>
+    <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input2Function(); resetTimer();" id="button"><center>Enter</center></button>
+</center>
+
+       <img src="https://i.ibb.co/hsN6RvJ/ITHB-IMAGE-Div1-6.jpg" alt="ITHB-IMAGE-Div1-6" border="0">
+
+    </div>
+
+    <div id="input2" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+
+      <input type="text" id="name2" />
+
+       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input3Function(); resetTimer();" id="button0A" class="button button3">Enter</button>
+    </div>
+
+    <div id="input3" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+
+      <input type="text" id="name3" />
+
+       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input4Function();" id="button0B" class="button button3">Enter</button>
+    </div>
+
+    <div id="input4" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+
+      <input type="text" id="name4" />
+
+       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input5Function();" id="button0C" class="button button3">Enter</button>
+    </div>
+
+    <div id="input5" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name5" />
+
+       <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input6Function(); " id="button0CA" class="button button3">Enter</button>
+    </div>
+
+    <div id="input6" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name6" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input7Function();" id="button0D" class="button button3">Enter</button>
+    </div>
+
+    <div id="input7" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name7" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input8Function();" id="button0E" class="button button3">Enter</button>
+    </div>
+
+    <div id="input8" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name8" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input9Function();" id="button0F" class="button button3">Enter</button>
+    </div>
+
+    <div id="input9" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name9" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input10Function(); " id="button0G" class="button button3">Enter</button>
+    </div>
+
+    <div id="input10" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name10" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input11Function(); " id="button0H" class="button button3">Enter</button>
+    </div>
+
+    <div id="input11" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name11" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input12Function(); " id="button0I" class="button button3">Enter</button>
+    </div>
+
+    <div id="input12" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name12" />
+      <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input13Function(); " id="button0J" class="button button3">Enter</button>
+    </div>
+
+    <div id="input13" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name13" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input14Function(); " id="button0K" class="button button3">Enter</button>
+    </div>
+
+    <div id="input14" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name14" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input15Function(); " id="button0L" class="button button3">Enter</button>
+    </div>
+
+    <div id="input15" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name15" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input16Function(); " id="button0M" class="button button3">Enter</button>
+    </div>
+
+    <div id="input16" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name16" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input17Function(); " id="button0N" class="button button3">Enter</button>
+    </div>
+
+    <div id="input17" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name17" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input18Function(); " id="button0O" class="button button3">Enter</button>
+    </div>
+
+    <div id="input18" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name18" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input19Function(); " id="button0P" class="button button3">Enter</button>
+    </div>
+
+    <div id="input19" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name19" />
+
+        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input20Function(); " id="button0Q" class="button button3">Enter</button>
+    </div>
+
+    <div id="input20" style="display:none">
+      <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
+      <input type="text" id="name20" />
+      <button class="btn btn-primary" style="color:white;" onclick="input21Function();" id="button0R" class="button button3">Enter</button>
+    </div>
+
+    <div id="stopDIV" style="display:none;">
+  <h1>Woah! You've done a lot of work (almost 20 assignments!) Let's call it a day Or take a long break and come then come back :D</h1>
+  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
+</div>
+</div>
+
+
+
+
+
+    <div id="2Div" style="display:none">
+    <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? <br/><p style="color:white">If you don't know start with 10 minutes and try to work your way up slowly</center></h1>
+    <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
+    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white; margin-left: 50px; margin-right: 50px">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
+    <h1><center style ="display:none" id="workOnNextAssignmentTxt">Now work on your next assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
+    <p><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</p></center>
+
+    <div id="masterTimer" class="container group">
+
+    <button onclick="showHW10Timer(); start10()" class="btn btn-default">10 minutes</button>
+    <button onclick="showHW15Timer(); start15()" class="btn btn-primary">15 minutes</button>
+    <button onclick="showHW20Timer(); start20()" class="btn btn-info">20 minutes</button>
+    <button onclick="showHW25Timer(); start25()" class="btn btn-success">25 minutes</button>
+    <button onclick="showHW30Timer(); start30()" class="btn" style="background-color: #ffef42; color: white;">30 minutes</button>
+    <button onclick="showHW35Timer(); start35()" class="btn btn-warning">35 minutes</button>
+    <button onclick="showHW40Timer(); start40()" class="btn btn-danger">40 minutes</button>
+
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
+
+    </div>
+
+
+    </div>
+
+    <div id=hwTimer10 style ="display:none">
+    <center><h1></h1></center>
+<center><h1>Time to work on your assignment</h1></center>
+    <h1 style="font-size:90px; color:white;"><span id="time10">10:00</span></h1>
+    <p> Click next when the timer ends or if you finish your assignment!</p>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="resetTimer(); showDoneDiv();">Next</button></center>
+    </div>
+
+
+    <div id=hwTimer15 style ="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+    <h1 style="font-size:90px; color:white;"><span id="time15">15:00</span></h1>
+    <p> Click next when the timer ends or if you finish your assignment!</p>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+    <div id=hwTimer20 style="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+      <h1 style="font-size:90px; color:white;"><span id="time20">20:00</span></h1>
+      <p> Click next when the timer ends or if you finish your assignment!</p>
+      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+    <div id=hwTimer25 style="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+      <h1 style="font-size:90px; color:white;"><span id="time25">25:00</span></h1>
+      <p> Click next when the timer ends or if you finish your assignment!</p>
+      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+    <div id=hwTimer30 style="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+    <h1 style="font-size:90px; color:white;"><span id="time30">30:00</span></h1>
+    <p> Click next when the timer ends or if you finish your assignment!</p>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+    <div id=hwTimer35 style="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+    <h1 style="font-size:90px; color:white;"><span id="time35">35:00</span></h1>
+    <p> Click next when the timer ends or if you finish your assignment!</p>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+    <div id=hwTimer40 style="display:none">
+<center><h1> Time to work on your assignment</h1></center>
+    <h1 style="font-size:90px; color:white;"><span id="time40">40:00</span></h1>
+    <p> Click next when the timer ends or if you finish your assignment!</p>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+  </div>
+
+
+
+
+
+
+  <br/>
+
+
+
+
+
+      <!-- Keep working on the same Assignment break time timers -->
+
+      <div id="showContinue5Timer" style ="display:none">
+      <center><h1>🧠</h1></center>
+      <h1><span id="timeContinue5Break">5:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+
+      <div id="showContinue10Timer" style ="display:none">
+          <center><h1>🧠</h1></center>
+          <h1><span id="timeContinue10Break">10:00</span></h1>
+          <p>Brain break! Click next when the timer ends</p>
+          <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+
+      <div id="showContinue15Timer" style ="display:none">
+      <center><h1>🧠</h1></center>
+      <h1 style="font-size:90px;"><span id="timeContinue15Break">15:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+      <div id="showContinue20Timer" style="display:none">
+        <center><h1>🧠</h1></center>
+        <h1><span id="timeContinue20Break">20:00</span></h1>
+        <p>Brain break! Click next when the timer ends</p>
+        <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+      <div id="showContinue25Timer" style="display:none">
+        <center><h1>🧠</h1></center>
+        <h1><span id="timeContinue25Break">25:00</span></h1>
+        <p>Brain break! Click next when the timer ends</p>
+        <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+      <div id="showContinue30Timer" style="display:none">
+      <center><h1>🧠</h1></center>
+      <h1><span id="timeContinue30Break">30:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button class="btn btn-primary" style="color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); hideBrainBreakDiv(); resetTimer();" id="div2NextBtn">next</button></center>
+      </div>
+
+
+      <!-- next Assignment break time timers -->
+
+      <div id=timerBreak5 style ="display:none">
+      <center><h1>🧠</h1></center>
+      <h1><span id="time5Break1">5:00</span></h1>
+                <p>Brain break! Click next when the timer ends</p>
+      <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+    </div>
+
+      <div id="timerBreak10" style ="display:none">
+      <center><h1>🧠</h1></center>
+      <h1><span id="time10Break1">10:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+      </div>
+
+
+      <div id="timerBreak15" style ="display:none">
+      <center><h1>🧠</h1></center>
+      <h1 style="font-size:90px;"><span id="time15Break1">15:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+      </div>
+
+      <div id="timerBreak20" style="display:none">
+        <center><h1>🧠</h1></center>
+        <h1><span id="time20Break1">20:00</span></h1>
+        <p>Brain break! Click next when the timer ends</p>
+        <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+      </div>
+
+      <div id="timerBreak25" style="display:none">
+        <center><h1>🧠</h1></center>
+        <h1><span id="time25Break1">25:00</span></h1>
+        <p>Brain break! Click next when the timer ends</p>
+        <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+      </div>
+
+      <div id="timerBreak30" style="display:none">
+      <center><h1>🧠</h1></center>
+      <h1><span id="time30Break1">30:00</span></h1>
+      <p>Brain break! Click next when the timer ends</p>
+      <center><button id="nextAssignment" class="btn btn-danger" style="color:white;" onclick="showDiv1(); hideBrainBreakDiv(); resetTimer();">next</button></center>
+      </div>
+
+      <br style="height: 40px;"/>
+
+
+      <center>
+   
+    </center>
+
+      <div id="breakNextBtns">
+
+      <center><button id="standInButton" style="display:none"></button>
+      </div>
+
+
+
+ <center>
+   <div id="brainBreakDiv" style="display:none; text-align: center; background-color: rgba(255, 51, 177, 0.53); width: 50%; border-radius: 10px;">
+          <h1 style="color:white;">Need a Brain Break?</h1>
+        <button class="btn btn-secondary" onclick="giveBrainBreak();">
+           Standing brain break
+        </button>
+           <p id="randomSBB"> </p>
+           <button class="btn btn-secondary" onclick="giveSittingBrainBreak();">
+          Sitting Brain Break
+           </button>
+           <p id="randomSitBB"> </p>
+      </div>
+      </center>
+
+
+
+
+<div style="display:none" id="breakTimers">
+
+  <h1>🧠</h1>
+  <p style="margin-left: 50px; margin-right: 50px">Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue5Timer(); showBrainBreakDiv(); startContinue5Timer();">5 minute break</button>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue10Timer(); showBrainBreakDiv(); startContinue10Break();">10 minute break</button>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue15Timer(); showBrainBreakDiv(); startContinue15Break();">15 minute break</button>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue20Timer(); showBrainBreakDiv(); startContinue20Break();">20 minute break</button>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue25Timer(); showBrainBreakDiv(); startContinue25Break();">25 minute break</button>
+   <button class="btn btn-danger" style="color:white;" onclick="showContinue30Timer(); showBrainBreakDiv(); startContinue30Break();">30 minute break</button>
+   <button class="btn btn-primary" style="color:white;" onclick="skipDiv1First()">Skip</button>
+
+
+</div>
+
+     <button class="btn btn-primary" style="display: none; color:white; align:center;" class="btn btn-secondary" onclick="showDiv2(); resetTimer();" id="div2NextBtn">next</button>
+
+
+
+</div>
+
+
+
+        <div id="doneDiv" style="display:none">
+
+
+
+        <h1>Choose One:</h1>
+
+<button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
+<button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()">I want to work on my next assignment!</button>
+<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today! I want a reward!</button>
+<button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p style="color:black;">Complete the form then click next</p>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_nmTRrv0z2XdjxrTIpjKP43sBhdkiQ8YauiU4JsBWyx8FVA/viewform?embedded=true" width="400" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="workOn(); showWorkOn10();" >Next</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
+        </div>
+
+
+
+
+  <div id="breakTimers2" style="display:none">
+  <h1 style="font-size: 200px">🧠</h1>
+  <p style="margin-left: 50px; margin-right: 50px">But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
+
+
+      <button class="btn btn-danger" style="color:white;" onclick="show5BreakTimer(); start5Timer1(); showBrainBreakDiv();">take a 5 minute break💧</button>
+      <p></p>
+      <button class="btn btn-danger" style="color:white;" onclick="show10BreakTimer(); start10Break1(); showBrainBreakDiv();">take a 10 minute break☔</button>
+      <p></p>
+      <button class="btn btn-danger" style="color:white;" onclick="show15BreakTimer(); start15Break1(); showBrainBreakDiv();">take a 15 minute break🌧️</button>
+      <p></p>
+      <button class="btn btn-danger" style="color:white;" onclick="show20BreakTimer(); start20Break1(); showBrainBreakDiv();">take a 20 minute break⛈️</button>
+      <p></p>
+      <button class="btn btn-danger" style="color:white;" onclick="show25BreakTimer(); start25Break1(); showBrainBreakDiv();">take a 25 minute break🌊</button>
+      <p></p>
+      <button class="btn btn-danger" style="color:white;" onclick="show30BreakTimer(); start30Break1(); showBrainBreakDiv();">take a 30 minute break🏖️</button>
+      <p></p>
+      <button class="btn btn-primary" style="color:white;"  onclick="skip2Div1();">Skip</button>
+  </div>
+
+
+<!--What students worked on-->
+
+  <div id="workDiv" style="display:none">
+    <h1>
+      Great Job!
+    </h1>
+
+    <p>Don't have something to do now? We can help!</p>
+    <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+    </a>
+<a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
+<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
+
+    <h1 style="font-size:70px;"><strong>
+      What you worked on today:
+    </strong></h1>
+
+
+    <h3><span id="result1"></span><span id="spentTime1"></span></h3>
+    <h3><span id="result2"></span></h3>
+    <h3><span id="result3"></span></h3>
+    <h3><span id="result4"></span></h3>
+    <h3><span id="result5"></span></h3>
+    <h3><span id="result6"></span></h3>
+    <h3><span id="result7"></span></h3>
+    <h3><span id="result8"></span></h3>
+    <h3><span id="result9"></span></h3>
+    <h3><span id="result10"></span></h3>
+    <h3><span id="result11"></span></h3>
+    <h3><span id="result12"></span></h3>
+    <h3><span id="result13"></span></h3>
+    <h3><span id="result14"></span></h3>
+    <h3><span id="result15"></span></h3>
+    <h3><span id="result16"></span></h3>
+    <h3><span id="result17"></span></h3>
+    <h3><span id="result18"></span></h3>
+    <h3><span id="result19"></span></h3>
+    <h3 style="display:none"><span id="result20"></span></h3>
+
+
+ 
+
+
+
+<h1></h1>
+<img src="https://i.ibb.co/ZNfdBkY/ITHB-IMAGE-Div1-10.jpg" alt="ITHB-IMAGE-Div1-10" border="0">
+
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+<style>
+  .feedback-button {
+  height: 40px;
+  border: solid 3px #CCCCCC;
+  background: #333;
+  width: 100px;
+  line-height: 32px;
+  -webkit-transform: rotate(-90deg);
+  font-weight: 600;
+  color: white;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  text-align: center;
+  font-size: 17px;
+  position: fixed;
+  right: -40px;
+  top: 45%;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  z-index: 999;
+}
+
+</style>
+
+<a href="https://forms.gle/iwHa3QSgh5rBps69A" target="_blank"><button id="popup" class="feedback-button">Feedback</button></a>
+<script src="_include/js/feedback.js"></script>
+
+ <script>
+  let timerId;
+function startTimer(duration, display) {
+  var timer = duration,
+    minutes, seconds;
+ timerId = setInterval(function() {
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (timer == 0){
+      stopTimer();
+      beepCount = 0;             
+      document.getElementById("beepAudio").play();
+    }
+  }, 1000);
+}
+
+document.getElementById("beepAudio").src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+    document.getElementById("beepAudio").load();
+
+ function resetTimer() {
+      clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
+    }
+
+ function stopTimer() {
+      clearInterval(timerId);
+      document.getElementById("beepAudio").pause();
+    }
+
+
+    let beepCount = 0;
+document.getElementById("beepAudio").addEventListener("ended", () => {
+    beepCount++;
+    if(beepCount < 100){       
+        document.getElementById("beepAudio").play();
+    } else {
+          alert("times up!");
+    }
+});
+
+
+  function start10() {
+      var tenMinutes = 60 * 10,
+          display10 = document.querySelector('#time10');
+      startTimer(tenMinutes, display10);
+
+  };
+
+
+  function start15() {
+      var fifteenMinutes = 60 * 15,
+          display15 = document.querySelector('#time15');
+      startTimer(fifteenMinutes, display15);
+  };
+
+  function start20() {
+      var twentyMinutes = 60 * 20,
+          display20 = document.querySelector('#time20');
+      startTimer(twentyMinutes, display20);
+  };
+
+  function start25() {
+      var twentyfiveMinutes = 60 * 25,
+          display25 = document.querySelector('#time25');
+      startTimer(twentyfiveMinutes, display25);
+  };
+
+  function start30() {
+      var thirtyMinutes = 60 * 30,
+          display30 = document.querySelector('#time30');
+      startTimer(thirtyMinutes, display30);
+  };
+
+  function start35() {
+      var thirtyMinutes = 60 * 35,
+          display30 = document.querySelector('#time35');
+      startTimer(thirtyMinutes, display30);
+  };
+
+  function start40() {
+      var thirtyMinutes = 60 * 40,
+          display30 = document.querySelector('#time40');
+      startTimer(thirtyMinutes, display30);
+  };
+
+
+/*break timers for continuing to work on the same assignment*/
+
+function startContinue5Timer() {
+    var fiveMinutes = 60 * 5,
+        display5 = document.querySelector('#timeContinue5Break');
+    startTimer(fiveMinutes, display5);
+
+};
+
+
+  function startContinue10Break() {
+      var tenMinutes = 60 * 10,
+          display10 = document.querySelector('#timeContinue10Break');
+      startTimer(tenMinutes, display10);
+
+  };
+
+  function startContinue15Break() {
+      var fifteenMinutes = 60 * 15,
+          display15 = document.querySelector('#timeContinue15Break');
+      startTimer(fifteenMinutes, display15);
+
+  };
+
+  function startContinue20Break() {
+      var fifteenMinutes = 60 * 20,
+          display20 = document.querySelector('#timeContinue20Break');
+      startTimer(fifteenMinutes, display20);
+
+  };
+
+  function startContinue25Break() {
+      var twentyfiveMinutes = 60 * 25,
+          display25 = document.querySelector('#timeContinue25Break');
+      startTimer(twentyfiveMinutes, display25);
+
+  };
+
+  function startContinue30Break() {
+      var thirtyMinutes = 60 * 30,
+          display30 = document.querySelector('#timeContinue30Break');
+      startTimer(thirtyMinutes, display30);
+
+  };
+
+
+  /*break timers for next assignment*/
+
+  function start5Timer1() {
+      var fiveMinutesB2 = 60 * 5,
+          display5B2 = document.querySelector('#time5Break1');
+      startTimer(fiveMinutesB2, display5B2);
+
+  };
+
+
+    function start10Break1() {
+        var tenMinutesB2 = 60 * 10,
+            display10B2 = document.querySelector('#time10Break1');
+        startTimer(tenMinutesB2, display10B2);
+
+    };
+
+    function start15Break1() {
+        var fifteenMinutes = 60 * 15,
+            display15 = document.querySelector('#time15Break1');
+        startTimer(fifteenMinutes, display15);
+
+    };
+
+    function start20Break1() {
+        var fifteenMinutes = 60 * 20,
+            display20 = document.querySelector('#time20Break1');
+        startTimer(fifteenMinutes, display20);
+
+    };
+
+    function start25Break1() {
+        var twentyfiveMinutes = 60 * 25,
+            display25 = document.querySelector('#time25Break1');
+        startTimer(twentyfiveMinutes, display25);
+
+    };
+
+    function start30Break1() {
+        var thirtyMinutes = 60 * 30,
+            display30 = document.querySelector('#time30Break1');
+        startTimer(thirtyMinutes, display30);
+
+    };
+
+
+
+function hideNextBtn(){
+  document.getElementById("nextBtn").style.display = "none";
+}
+  </script>
