@@ -189,16 +189,16 @@ I don't have any hard assignments today </button>
 <!--Start of To-do List-->
 
 <div text-align="center" id=toDoList style="display:none">
-  <h1>Homework blocks for today:</h1>
+  <h1 style="font-size: 15px">Homework blocks for today:</h1>
 
-  <p>
+  <p style="font-size: 10px">
   When you finish an assignment cross it off!
   </p>
 
 
 <div class="easy-block" id="easy-block">
 <h3>Easy Block ✌️:</h3>
-<p>
+<p style="font-size: 15px">
 All your easy assignments for the day
 </p>
 
@@ -241,7 +241,7 @@ list.addEventListener('click', function(ev) {
 
 <div class="medium-block" id="medium-block">
 <h3>Medium Block 👍:</h3>
-<p>
+<p style="font-size: 15px">
 All your medium assignments for the day.
 </p>
 
@@ -286,7 +286,7 @@ list.addEventListener('click', function(ev) {
 
 <div class="hard-block" id="hard-block">
 <h3>Hard Block 🤟</h3>
-<p>
+<p style="font-size: 15px">
 All your hard assignments for the day.
 </p>
 
@@ -326,7 +326,8 @@ list.addEventListener('click', function(ev) {
 
 </script>
 
-    <button onclick="showGameDiv();">I finished all my assignments</button>
+    <button style="display:none" onclick="showGameDiv();">I finished all my assignments</button>
+    <br>
     <button onclick="restartTDL();">Edit</button>
 
 

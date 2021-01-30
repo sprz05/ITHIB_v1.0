@@ -69,12 +69,12 @@ body {
 font-family: 'Roboto', sans-serif;
 font-size: 22px;
 text-align: center;
-font-weight: 100;
+background: #ecf0e6;
 padding-top: 50px;
-padding-right: 80px;
+padding-right: 0px;
 padding-bottom: 50px;
-padding-left: 80px;
-
+padding-left: 0px;
+color:gray;
 }
 
 input[type=checkbox]:checked + label.strikethrough{
@@ -243,49 +243,18 @@ div.hard-block{
 }
 
 
-/* Style the input */
-.inputEasy {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-.inputMedium {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-.inputHard {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
 
 /* Style the "Add" button */
 .addBtn {
-  padding: 10px;
-  width: 25%;
+  width:15%;
+  height: 40px;
   background: #d9d9d9;
   color: #555;
-  float: left;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
+  border-radius: 5;
 }
 
 .addBtn:hover {
