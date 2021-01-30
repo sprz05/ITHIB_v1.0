@@ -24,6 +24,9 @@
 <link href="./assets/css/argon-design-system.css?v=1.2.0" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="assets\css\background.css">
 <link rel="stylesheet" href="assets\css\draggable.css">
+<!-- JS Files -->
+<script src="stopWatch.js"></script>
+
 
 <style>
 p{
@@ -113,11 +116,63 @@ overflow-x: scroll;
     <div id="stars2"></div>
     <div id="stars3"></div>
 
-   
+    <!--Stopwatch-------------------->
+<h1 style="display:none"><time>00:00:00</time></h1>
+<!--Stopwatch-------------------->
 
-<br>
+<script>
+        var resultOfSpentTimeOnAssignment; 
 
-<div class="dropdown">
+  var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+
+/* Start button */
+function startStopwatch(){
+  timer();
+}
+
+/* Stop button */
+function stopStopwatch() {
+    clearTimeout(t);
+}
+
+/* Clear button */
+function clearStopwatch() {
+    h1.textContent = "00:00:00";
+    seconds = 0; minutes = 0; hours = 0;
+}
+
+function getMin() {
+   document.getElementById(resultOfSpentTimeOnAssignment).innerHTML = " ---------------------- " + hours + " hours " + minutes + " minutes";
+   clearStopwatch();
+}
+
+</script>
+
+    <div class="dropdown">
   <a href="#" class="btn btn-default dropdown-toggle " data-toggle="dropdown" id="navbarDropdownMenuLink2">
        🗣️Translate
   </a>
@@ -136,16 +191,45 @@ overflow-x: scroll;
   </ul>
 </div>
 
- <div id="mySidenav" class="sidenav">
+   
+
+<br>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="#">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSyOfMBDaAG6ljz-ztXuzf3hD2sR9bxDOUP40cNzlB6pk5As6TCP9A5XwbcSKiZqnH11zex04D5n30_/pub?w=222&amp;h=302">
+    </a>
+
+
+  </div>
+</div>
+
+
+
+<button style="display:none"class="btn btn-primary" onclick="openNav()">Change Bot</button>
+<div id="app"></div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+    <div id="mySidenav" class="sidenav">
 
 
 <a type="button" data-toggle="popover" title="HOB" data-content="Organize your homework so it's easier to complete!">
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
 </a>
 
-<!--<a type="button" data-toggle="popover" title="Goal Bot" data-content="Not sure which bot to use? Enter your homework goals to see which bots to use!">
- <img onclick="showGoalAddon();" id="star" src="https://docs.google.com/drawings/d/e/2PACX-1vSMs_CSQxhQ91zMNQQyv3HlbUJfUGitOpB3IwzP9j85vMyqnjIYCPviFhAAlA-Sn3h8WwK3OvmqV0tf/pub?w=222&amp;h=302" >
-</a>-->
+
 <a type="button" data-toggle="popover" title="BingoBot" data-content="Make your homework assignment list into a bingo sheet :D">
 <img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
 </a>
@@ -181,7 +265,7 @@ $(document).ready(function(){
 </script>
 
 
-<!--<div id="mydiv" style="display:none;">
+<div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
       <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
 
@@ -190,35 +274,35 @@ $(document).ready(function(){
          <script src="script.js"></script>
          <script src="show.js"></script>
 
-    </div>--->
+    </div>
 
 
 
 
-    <div id="mydiv" style="display:none;">
+    <!--<div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
       <a style="display:none" id="goBckHobQ" onclick="goBackToHOBQ()" ><- Go Back</a>
 
-      <!--<a id="hobLink" href="https://sprz05.github.io/HOBv1.0/index.html" target="_blank">Open in New Tab</a>-->
+      <a id="hobLink" href="https://sprz05.github.io/HOBv1.0/index.html" target="_blank">Open in New Tab</a>
 
-      <a id="savedHobLink" href="https://sprz05.github.io/HOBv1.0/hobSchedule.html" target="_blank">Open in New Tab</a>
+      <a id="savedHobLink" style="display:none" href="https://sprz05.github.io/HOBv1.0/hobSchedule.html" target="_blank">Open in New Tab</a>
 
-<!--<div id="hobShowIframeQ">
+      <div id="hobShowIframeQ">
         <p style="font-size: 20px">If you just made a homework plan with hob:</p>
         <button class="btn btn-danger" onclick="showSavedHOBIframe()">See my most recent homework plan</button>
         <h1></h1>
         <p style="font-size: 20px">If you havent made a homework plan with hob today:</p>
         <button class="btn btn-danger" onclick="showHOBIframe()">Make a new homework plan</button>
-       </div>--->
+       </div>
 
-        <iframe id="savedHOBList" src="https://sprz05.github.io/HOBv1.0/hobSchedule.html" width="400" height="400" id="HOBAddon"></iframe>
+        <iframe id="savedHOBList" src="https://sprz05.github.io/HOBv1.0/hobSchedule.html" style="display:none" width="400" height="400" id="HOBAddon"></iframe>
 
-        <!--<iframe id="makeHobList" style="display:none" src="hob.html" width="400" height="400" id="HOBAddon"></iframe>-->
+        <iframe id="makeHobList" style="display:none" src="hob.html" width="400" height="400" id="HOBAddon"></iframe>
 
 
          <script src="script.js"></script>
          <script src="show.js"></script>
-    </div>
+    </div>--->
 
 
     <script>
@@ -249,7 +333,7 @@ $(document).ready(function(){
 
 
     <div id="mydiv2" style="display:none;">
-            <a href="goalBot.html" target="_blank">Open in New Tab</a>
+            <a href="goalBotMain.html" target="_blank">Open in New Tab</a>
       <div id="mydivheader2">Click here to move <span><button onclick="hideGoalAddOn()">x</button></span></div>
 
   <iframe src="goalBot.html" width="400" height="400" id="HOBAddon"></iframe>
@@ -263,7 +347,7 @@ $(document).ready(function(){
       <a href="bingoBot9.html" target="_blank">Open in New Tab</a>
       <div id="mydivheader3">Click here to move <span><button onclick="hideBingoAddOn()">x</button></span></div>
 
-  <iframe src="bingoBotSaved.html" width="400" height="400" id="HOBAddon"></iframe>
+  <iframe src="bingoBot9.html" width="400" height="400" id="HOBAddon"></iframe>
 
          <script src="script.js"></script>
          <script src="show.js"></script>
@@ -327,6 +411,13 @@ $(document).ready(function(){
         document.getElementById("hobShowIframeQ").style.display = "block";
       }
     </script>
+
+
+
+
+
+
+
 
 
     <script>
@@ -477,8 +568,7 @@ $(document).ready(function(){
     <div id="input12" style="display:none">
       <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
       <input type="text" id="name12" />
-
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input13Function(); " id="button0J" class="button button3">Enter</button>
+      <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input13Function(); " id="button0J" class="button button3">Enter</button>
     </div>
 
     <div id="input13" style="display:none">
@@ -533,9 +623,13 @@ $(document).ready(function(){
     <div id="input20" style="display:none">
       <h1><center>What are you going to work on next (e.g. 2 math problems)?</center></h1>
       <input type="text" id="name20" />
-
-        <button class="btn btn-primary" style="color:white;" onclick="myFunction1(); input21Function();" id="button0R" class="button button3">Enter</button>
+      <button class="btn btn-primary" style="color:white;" onclick="input21Function();" id="button0R" class="button button3">Enter</button>
     </div>
+
+    <div id="stopDIV" style="display:none;">
+  <h1>Woah! You've done a lot of work (almost 20 assignments!) Let's call it a day Or take a long break and come then come back :D</h1>
+  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
+</div>
 
 
     <script>
@@ -748,22 +842,23 @@ function hideNextBtn(){
 }
   </script>
 
+
     <div id="2Div" style="display:none">
     <h1><center id="homeworkBlock">For how long can you concentrate on homework in minutes? <br/><p style="color:white">If you don't know start with 10 minutes and try to work your way up slowly</center></h1>
     <h1><center style="display:none;" id="homeworkTime">Homework Time</center></h1>
-    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
+    <h1><center style ="display:none" id="continueToWorkOnAssignmentTxt">Now continue to work on your assignment!<br/><p style="color: white; margin-left: 50px; margin-right: 50px">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
     <h1><center style ="display:none" id="workOnNextAssignmentTxt">Now work on your next assignment!<br/><p style="color: white;">Choose how long you can concentrate on homework (adjust it if you need to! Move it up if you were able to stay concentrated, move it down if you weren't)<p></center></h1>
     <p><center style="display:none" id="adjustTime">Were you able to stay concetrated? If not readjust the time!</p></center>
 
     <div id="masterTimer" class="container group">
 
-    <button onclick="showHW10Timer(); start10()" class="btn btn-default">10 minutes</button>
-    <button onclick="showHW15Timer(); start15()" class="btn btn-primary">15 minutes</button>
-    <button onclick="showHW20Timer(); start20()" class="btn btn-info">20 minutes</button>
-    <button onclick="showHW25Timer(); start25()" class="btn btn-success">25 minutes</button>
-    <button onclick="showHW30Timer(); start30()" class="btn" style="background-color: #ffef42; color: white;">30 minutes</button>
-    <button onclick="showHW35Timer(); start35()" class="btn btn-warning">35 minutes</button>
-    <button onclick="showHW40Timer(); start40()" class="btn btn-danger">40 minutes</button>
+    <button onclick="showHW10Timer(); start10(); startStopwatch();" class="btn btn-default">10 minutes</button>
+    <button onclick="showHW15Timer(); start15(); startStopwatch();" class="btn btn-primary">15 minutes</button>
+    <button onclick="showHW20Timer(); start20(); startStopwatch();" class="btn btn-info">20 minutes</button>
+    <button onclick="showHW25Timer(); start25(); startStopwatch();" class="btn btn-success">25 minutes</button>
+    <button onclick="showHW30Timer(); start30(); startStopwatch();" class="btn" style="background-color: #ffef42; color: white;">30 minutes</button>
+    <button onclick="showHW35Timer(); start35(); startStopwatch();" class="btn btn-warning">35 minutes</button>
+    <button onclick="showHW40Timer(); start40(); startStopwatch();" class="btn btn-danger">40 minutes</button>
 
     <img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
 
@@ -777,7 +872,7 @@ function hideNextBtn(){
 <center><h1>Time to work on your assignment</h1></center>
     <h1 style="font-size:90px; color:white;"><span id="time10">10:00</span></h1>
     <p> Click next when the timer ends or if you finish your assignment!</p>
-    <center><button id="nextBtn" class="btn btn-primary" onclick="resetTimer(); showDoneDiv();">Next</button></center>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="resetTimer(); showDoneDiv(); stopStopwatch();">Next</button></center>
     </div>
 
 
@@ -785,42 +880,42 @@ function hideNextBtn(){
 <center><h1> Time to work on your assignment</h1></center>
     <h1 style="font-size:90px; color:white;"><span id="time15">15:00</span></h1>
     <p> Click next when the timer ends or if you finish your assignment!</p>
-    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
     <div id=hwTimer20 style="display:none">
 <center><h1> Time to work on your assignment</h1></center>
       <h1 style="font-size:90px; color:white;"><span id="time20">20:00</span></h1>
       <p> Click next when the timer ends or if you finish your assignment!</p>
-      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
     <div id=hwTimer25 style="display:none">
 <center><h1> Time to work on your assignment</h1></center>
       <h1 style="font-size:90px; color:white;"><span id="time25">25:00</span></h1>
       <p> Click next when the timer ends or if you finish your assignment!</p>
-      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+      <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
     <div id=hwTimer30 style="display:none">
 <center><h1> Time to work on your assignment</h1></center>
     <h1 style="font-size:90px; color:white;"><span id="time30">30:00</span></h1>
     <p> Click next when the timer ends or if you finish your assignment!</p>
-    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
     <div id=hwTimer35 style="display:none">
 <center><h1> Time to work on your assignment</h1></center>
     <h1 style="font-size:90px; color:white;"><span id="time35">35:00</span></h1>
     <p> Click next when the timer ends or if you finish your assignment!</p>
-    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
     <div id=hwTimer40 style="display:none">
 <center><h1> Time to work on your assignment</h1></center>
     <h1 style="font-size:90px; color:white;"><span id="time40">40:00</span></h1>
     <p> Click next when the timer ends or if you finish your assignment!</p>
-    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer();">Next</button></center>
+    <center><button id="nextBtn" class="btn btn-primary" onclick="showDoneDiv(); resetTimer(); stopStopwatch();">Next</button></center>
     </div>
 
 
@@ -858,6 +953,8 @@ function showNextBtn(){
 
 
       <script>
+
+
         function showHW10Timer(){
           document.getElementById("2Div").style.display = "none";
           document.getElementById("hwTimer10").style.display = "block";
@@ -1166,19 +1263,24 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
         document.getElementById("showContinue30Timer").style.display = "none";
         document.getElementById("2Div").style.display = "block";
       }
+
+      function skipDiv1First(){
+        document.getElementById("breakTimers").style.display = "none";
+        document.getElementById("2Div").style.display = "block";
+      }
     </script>
 
 <div style="display:none" id="breakTimers">
 
   <h1>🧠</h1>
-  <p>Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
+  <p style="margin-left: 50px; margin-right: 50px">Before you continue working on your assignment, take a break. It's a good idea to take breaks when doing homework. Just 5 minutes can recharge your brain so you can focus better.</p>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue5Timer(); showBrainBreakDiv(); startContinue5Timer();">5 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue10Timer(); showBrainBreakDiv(); startContinue10Break();">10 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue15Timer(); showBrainBreakDiv(); startContinue15Break();">15 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue20Timer(); showBrainBreakDiv(); startContinue20Break();">20 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue25Timer(); showBrainBreakDiv(); startContinue25Break();">25 minute break</button>
    <button class="btn btn-danger" style="color:white;" onclick="showContinue30Timer(); showBrainBreakDiv(); startContinue30Break();">30 minute break</button>
-   <button class="btn btn-primary" style="color:white;" onclick="showDiv2()">Skip</button>
+   <button class="btn btn-primary" style="color:white;" onclick="skipDiv1First()">Skip</button>
 
 
 </div>
@@ -1233,8 +1335,8 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
         <h1>Choose One:</h1>
 
 <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
-<button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt()">I want to work on my next assignment!</button>
-<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10();">I'm done with my homework for today! I want a reward!</button>
+<button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt(); getMin()">I want to work on my next assignment!</button>
+<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10(); getMin();">I'm done with my homework for today! I want a reward!</button>
 <button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
 
   <!-- Modal -->
@@ -1267,7 +1369,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
   <div id="breakTimers2" style="display:none">
   <h1 style="font-size: 200px">🧠</h1>
-  <p>But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
+  <p style="margin-left: 50px; margin-right: 50px">But first, Let's take a brain break. Before you work on your next assignment take a brain break so you can focus better on your homework. On your break make sure not to look at any screens!</p>
     <script>
       function show5BreakTimer(){
         document.getElementById("breakTimers2").style.display = "none";
@@ -1304,37 +1406,112 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
    </script>
 
       <button class="btn btn-danger" style="color:white;" onclick="show5BreakTimer(); start5Timer1(); showBrainBreakDiv();">take a 5 minute break💧</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show10BreakTimer(); start10Break1(); showBrainBreakDiv();">take a 10 minute break☔</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show15BreakTimer(); start15Break1(); showBrainBreakDiv();">take a 15 minute break🌧️</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show20BreakTimer(); start20Break1(); showBrainBreakDiv();">take a 20 minute break⛈️</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show25BreakTimer(); start25Break1(); showBrainBreakDiv();">take a 25 minute break🌊</button>
+      <p></p>
       <button class="btn btn-danger" style="color:white;" onclick="show30BreakTimer(); start30Break1(); showBrainBreakDiv();">take a 30 minute break🏖️</button>
-
+      <p></p>
       <button class="btn btn-primary" style="color:white;"  onclick="skip2Div1();">Skip</button>
   </div>
 
 
-<div id="stop" style="display:none;">
-  <h1>Woah there! You've done a lot of work! Let's call it a day? Or take a long break and come back :D</h1>
-  <button class="btn btn-primary" style="color:white;" class="button button3" onclick="workOn(); showWorkOn10(); hideStop();">Sounds good!</button>
-</div>
+
+
+
+
+
+<!--What students worked on-->
+
+  <div id="workDiv" style="display:none">
+    <h1>
+      Great Job!
+    </h1>
+
+    <p>Don't have something to do now? We can help!</p>
+    <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+    </a>
+<a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
+<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
+
+    <h1 style="font-size:70px;"><strong>
+      What you worked on today:
+    </strong></h1>
+
+
+    <h3><span id="result1"></span><span id="spentTime1" class="spentTime"></span></h3>
+    <h3><span id="result2"></span><span id="spentTime2" class="spentTime"></span></h3>
+    <h3><span id="result3"></span><span id="spentTime3" class="spentTime"></span></h3>
+    <h3><span id="result4"></span><span id="spentTime4" class="spentTime"></span></h3>
+    <h3><span id="result5"></span><span id="spentTime5" class="spentTime"></span></h3>
+    <h3><span id="result6"></span><span id="spentTime6" class="spentTime"></span></h3>
+    <h3><span id="result7"></span><span id="spentTime7" class="spentTime"></span></h3>
+    <h3><span id="result8"></span><span id="spentTime8" class="spentTime"></span></h3>
+    <h3><span id="result9"></span><span id="spentTime9" class="spentTime"></span></h3>
+    <h3><span id="result10"></span><span id="spentTime10" class="spentTime"></span></h3>
+    <h3><span id="result11"></span><span id="spentTime11" class="spentTime"></span></h3>
+    <h3><span id="result12"></span><span id="spentTime12" class="spentTime"></span></h3>
+    <h3><span id="result13"></span><span id="spentTime13" class="spentTime"></span></h3>
+    <h3><span id="result14"></span><span id="spentTime14" class="spentTime"></span></h3>
+    <h3><span id="result15"></span><span id="spentTime15" class="spentTime"></span></h3>
+    <h3><span id="result16"></span><span id="spentTime16" class="spentTime"></span></h3>
+    <h3><span id="result17"></span><span id="spentTime17" class="spentTime"></span></h3>
+    <h3><span id="result18"></span><span id="spentTime18" class="spentTime"></span></h3>
+    <h3><span id="result19"></span><span id="spentTime19" class="spentTime"></span></h3>
+    <h3 style="display:none"><span id="result20"></span></h3>
+
+
+
+<h1></h1>
+<img src="https://i.ibb.co/ZNfdBkY/ITHB-IMAGE-Div1-10.jpg" alt="ITHB-IMAGE-Div1-10" border="0">
+
+  </div>
+
 
   <script>
 function hideStop(){
-  document.getElementById("stop").style.display = "none";
+  document.getElementById("stopDIV").style.display = "none";
 }
-//this shows what they worked on:
+
+/*this shows what they worked on:
     function input2Function() {
       document.getElementById("input1").style.display = "none";
       document.getElementById("input2").style.display = "block";
     }
+*/
 
+
+     function input2Function() {
+      document.getElementById("input1").style.display = "none";
+      document.getElementById("input2").style.display = "block";
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[0].id;
+      console.log(resultOfSpentTimeOnAssignment)
+    }
   </script>
+
+
+
+
+<p id="minutes"></p>
+
+
 
   <script>
     function input3Function() {
       document.getElementById("input2").style.display = "none";
       document.getElementById("input3").style.display = "block";
+
+       resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[1].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1343,6 +1520,9 @@ function hideStop(){
     function input4Function() {
       document.getElementById("input3").style.display = "none";
       document.getElementById("input4").style.display = "block";
+
+       resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[2].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1351,6 +1531,9 @@ function hideStop(){
     function input5Function() {
       document.getElementById("input4").style.display = "none";
       document.getElementById("input5").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[3].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1359,6 +1542,9 @@ function hideStop(){
     function input6Function() {
       document.getElementById("input5").style.display = "none";
       document.getElementById("input6").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[4].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1367,6 +1553,9 @@ function hideStop(){
     function input7Function() {
       document.getElementById("input6").style.display = "none";
       document.getElementById("input7").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[5].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1375,6 +1564,9 @@ function hideStop(){
     function input8Function() {
       document.getElementById("input7").style.display = "none";
       document.getElementById("input8").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[6].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1383,6 +1575,9 @@ function hideStop(){
     function input9Function() {
       document.getElementById("input8").style.display = "none";
       document.getElementById("input9").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[7].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1391,6 +1586,9 @@ function hideStop(){
     function input10Function() {
       document.getElementById("input9").style.display = "none";
       document.getElementById("input10").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[8].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1399,6 +1597,9 @@ function hideStop(){
   function input11Function() {
     document.getElementById("input10").style.display = "none";
     document.getElementById("input11").style.display = "block";
+
+    resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[9].id;
+       console.log(resultOfSpentTimeOnAssignment)
   }
 
   </script>
@@ -1407,6 +1608,9 @@ function hideStop(){
     function input12Function() {
       document.getElementById("input11").style.display = "none";
       document.getElementById("input12").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[10].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1415,6 +1619,9 @@ function hideStop(){
     function input13Function() {
       document.getElementById("input12").style.display = "none";
       document.getElementById("input13").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[11].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1423,6 +1630,9 @@ function hideStop(){
     function input14Function() {
       document.getElementById("input13").style.display = "none";
       document.getElementById("input14").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[12].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1431,6 +1641,9 @@ function hideStop(){
     function input15Function() {
       document.getElementById("input14").style.display = "none";
       document.getElementById("input15").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[13].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1439,6 +1652,9 @@ function hideStop(){
     function input16Function() {
       document.getElementById("input15").style.display = "none";
       document.getElementById("input16").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[14].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1447,6 +1663,9 @@ function hideStop(){
     function input17Function() {
       document.getElementById("input16").style.display = "none";
       document.getElementById("input17").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[15].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1455,6 +1674,9 @@ function hideStop(){
     function input18Function() {
       document.getElementById("input17").style.display = "none";
       document.getElementById("input18").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[16].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1463,6 +1685,8 @@ function hideStop(){
     function input19Function() {
       document.getElementById("input18").style.display = "none";
       document.getElementById("input19").style.display = "block";
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[17].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
@@ -1471,14 +1695,17 @@ function hideStop(){
     function input20Function() {
       document.getElementById("input19").style.display = "none";
       document.getElementById("input20").style.display = "block";
+
+      resultOfSpentTimeOnAssignment = document.getElementsByClassName("spentTime")[18].id;
+       console.log(resultOfSpentTimeOnAssignment)
     }
 
   </script>
 
   <script>
     function input21Function() {
-      document.getElementById("input21").style.display = "none";
-      document.getElementById("stop").style.display = "block";
+      document.getElementById("input20").style.display = "none";
+      document.getElementById("stopDIV").style.display = "block";
     }
 
   </script>
@@ -1560,57 +1787,6 @@ function hideStop(){
   </script>
 
 
-<!--What students worked on-->
-
-  <div id="workDiv" style="display:none">
-    <h1>
-      Great Job!
-    </h1>
-
-    <p>Don't have something to do now? We can help!</p>
-    <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
-              <span class="btn-inner--icon">
-
-              </span>
-              <span class="nav-link-inner--text">Make a Study Bot</span>
-    </a>
-<a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
-<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
-
-    <h1 style="font-size:70px;"><strong>
-      What you worked on today:
-    </strong></h1>
-
-
-    <h3><span id="result1"></span></h3>
-    <h3><span id="result2"></span></h3>
-    <h3><span id="result3"></span></h3>
-    <h3><span id="result4"></span></h3>
-    <h3><span id="result5"></span></h3>
-    <h3><span id="result6"></span></h3>
-    <h3><span id="result7"></span></h3>
-    <h3><span id="result8"></span></h3>
-    <h3><span id="result9"></span></h3>
-    <h3><span id="result10"></span></h3>
-    <h3><span id="result11"></span></h3>
-    <h3><span id="result12"></span></h3>
-    <h3><span id="result13"></span></h3>
-    <h3><span id="result14"></span></h3>
-    <h3><span id="result15"></span></h3>
-    <h3><span id="result16"></span></h3>
-    <h3><span id="result17"></span></h3>
-    <h3><span id="result18"></span></h3>
-    <h3><span id="result19"></span></h3>
-    <h3><span id="result20"></span></h3>
-
-
-
-<h1></h1>
-<img src="https://i.ibb.co/ZNfdBkY/ITHB-IMAGE-Div1-10.jpg" alt="ITHB-IMAGE-Div1-10" border="0">
-
-  </div>
-
-
 
   <script>
     function workOn() {
@@ -1651,6 +1827,7 @@ function hideStop(){
 </html>
 
 
+
 <style>
   .feedback-button {
   height: 40px;
@@ -1677,3 +1854,6 @@ function hideStop(){
 
 <a href="https://forms.gle/iwHa3QSgh5rBps69A" target="_blank"><button id="popup" class="feedback-button">Feedback</button></a>
 <script src="_include/js/feedback.js"></script>
+
+
+
