@@ -178,12 +178,12 @@ function getMin() {
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
       <li>
-          <a class="dropdown-item" href="https://sprz05.github.io/ITHIB_v1.0/">
+          <a class="dropdown-item" href="https://sprz05.github.io/ITHIB_v1.0/ITHB.html">
              English
           </a>
       </li>
       <li>
-          <a class="dropdown-item" href="https://sprz05.github.io/ITHBSpanish/">
+          <a class="dropdown-item" href="https://sprz05.github.io/ITHBSpanish/ITHB.html">
              Spanish
           </a>
       </li>
@@ -229,7 +229,6 @@ function closeNav() {
 <img onclick="showHOBAddon();" id="about" src="https://docs.google.com/drawings/d/e/2PACX-1vQDDNc9wcqw0_FuPfuQ2-_jrETpRajxUJP-JmWoouJzTe38RiAUpK3UUBJWIAvN1DbNfnHK1_FCsvOh/pub?w=192&amp;h=152">
 </a>
 
-
 <a type="button" data-toggle="popover" title="BingoBot" data-content="Make your homework assignment list into a bingo sheet :D">
 <img onclick="showBingoAddon();" id="bingo" src="https://docs.google.com/drawings/d/e/2PACX-1vTqCMoQsqkHv9tUp7q2qtWxmkHjnosIZtKNplrz2ZzriKCtICNa62I08rCk4lkNqi9HgF5ovEU33smA/pub?w=222&amp;h=302">
 </a>
@@ -267,9 +266,9 @@ $(document).ready(function(){
 
 <div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
-      <a href="https://sprz05.github.io/HOBv1.0/" target="_blank">Open in New Tab</a>
+      <a href="newHOB.html" target="_blank">Open in New Tab</a>
 
-  <iframe src="hob.html" width="400" height="400" id="HOBAddon"></iframe>
+  <iframe src="newHOB.html" width="400" height="400" id="HOBAddon"></iframe>
 
          <script src="script.js"></script>
          <script src="show.js"></script>
@@ -1422,6 +1421,7 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 
 
@@ -1443,31 +1443,71 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 <a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
 <a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
 
+<div style="height:20px"></div>
+
+<div id="workedOnTodayPic" style="background-color: #32325d; color: black; border-radius: 10px; margin-right: 30px; margin-right: 30px;">
+
     <h1 style="font-size:70px;"><strong>
       What you worked on today:
     </strong></h1>
 
+    <h3><strong id="DateCurrent"></strong></h3>
+
+    <script>
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = mm + '/' + dd + '/' + yyyy;
+      document.getElementById("DateCurrent").innerHTML = today
+    </script>
+
 
     <h3><span id="result1"></span><span id="spentTime1" class="spentTime"></span></h3>
     <h3><span id="result2"></span><span id="spentTime2" class="spentTime"></span></h3>
-    <h3><span id="result3"></span><span id="spentTime3" class="spentTime"></span></h3>
-    <h3><span id="result4"></span><span id="spentTime4" class="spentTime"></span></h3>
-    <h3><span id="result5"></span><span id="spentTime5" class="spentTime"></span></h3>
-    <h3><span id="result6"></span><span id="spentTime6" class="spentTime"></span></h3>
-    <h3><span id="result7"></span><span id="spentTime7" class="spentTime"></span></h3>
-    <h3><span id="result8"></span><span id="spentTime8" class="spentTime"></span></h3>
-    <h3><span id="result9"></span><span id="spentTime9" class="spentTime"></span></h3>
-    <h3><span id="result10"></span><span id="spentTime10" class="spentTime"></span></h3>
-    <h3><span id="result11"></span><span id="spentTime11" class="spentTime"></span></h3>
-    <h3><span id="result12"></span><span id="spentTime12" class="spentTime"></span></h3>
-    <h3><span id="result13"></span><span id="spentTime13" class="spentTime"></span></h3>
-    <h3><span id="result14"></span><span id="spentTime14" class="spentTime"></span></h3>
-    <h3><span id="result15"></span><span id="spentTime15" class="spentTime"></span></h3>
-    <h3><span id="result16"></span><span id="spentTime16" class="spentTime"></span></h3>
-    <h3><span id="result17"></span><span id="spentTime17" class="spentTime"></span></h3>
-    <h3><span id="result18"></span><span id="spentTime18" class="spentTime"></span></h3>
-    <h3><span id="result19"></span><span id="spentTime19" class="spentTime"></span></h3>
+    <h3 ><span id="result3"></span><span id="spentTime3" class="spentTime"></span></h3>
+    <h3 ><span id="result4"></span><span id="spentTime4" class="spentTime"></span></h3>
+    <h3 ><span id="result5"></span><span id="spentTime5" class="spentTime"></span></h3>
+    <h3 ><span id="result6"></span><span id="spentTime6" class="spentTime"></span></h3>
+    <h3 ><span id="result7"></span><span id="spentTime7" class="spentTime"></span></h3>
+    <h3 ><span id="result8"></span><span id="spentTime8" class="spentTime"></span></h3>
+    <h3 ><span id="result9"></span><span id="spentTime9" class="spentTime"></span></h3>
+    <h3 ><span id="result10"></span><span id="spentTime10" class="spentTime"></span></h3>
+    <h3 ><span id="result11"></span><span id="spentTime11" class="spentTime"></span></h3>
+    <h3 ><span id="result12"></span><span id="spentTime12" class="spentTime"></span></h3>
+    <h3 ><span id="result13"></span><span id="spentTime13" class="spentTime"></span></h3>
+    <h3 ><span id="result14"></span><span id="spentTime14" class="spentTime"></span></h3>
+    <h3 ><span id="result15"></span><span id="spentTime15" class="spentTime"></span></h3>
+    <h3 ><span id="result16"></span><span id="spentTime16" class="spentTime"></span></h3>
+    <h3 ><span id="result17"></span><span id="spentTime17" class="spentTime"></span></h3>
+    <h3 ><span id="result18"></span><span id="spentTime18" class="spentTime"></span></h3>
+    <h3 ><span id="result19"></span><span id="spentTime19" class="spentTime"></span></h3>
     <h3 style="display:none"><span id="result20"></span></h3>
+
+</div>
+
+    <center><button onclick="takeScreenShot()" class="btn btn-primary">Take Snapshot</button></center>
+
+
+
+<script>
+  var takeScreenShot = function() {
+  html2canvas(document.getElementById("workedOnTodayPic"), {
+    onrendered: function(canvas) {
+        var tempcanvas = document.createElement('canvas');
+        tempcanvas.width=465;
+        tempcanvas.height=524;
+        var context=tempcanvas.getContext('2d');
+        context.drawImage(canvas,465,40,465,524,0,0,465,524);
+        var link=document.createElement("a");
+        link.href=canvas.toDataURL('image/jpg');
+        link.download = 'screenshot.jpg';
+        link.click();
+    }
+  });
+}
+</script>
 
 
 
