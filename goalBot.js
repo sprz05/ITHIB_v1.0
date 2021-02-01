@@ -7,6 +7,7 @@ function showGoalList(){
   goal2();
   goal3();
   goal4();
+  goal5();
 }
 
 function goal1() {
@@ -42,6 +43,15 @@ function goal4() {
       showGoal4();
   } else {
       dontShowGoal4();
+  }
+}
+
+function goal5() {
+  var goal5 = document.getElementById('goal5');
+    if (goal5.checked == true){
+      showGoal5();
+  } else {
+      dontShowGoal5();
   }
 }
 
@@ -87,6 +97,17 @@ function showGoal4(){
 
 function dontShowGoal4(){
   document.getElementById('goal4Echo').style.display="none";
+}
+
+
+function showGoal5(){
+  document.getElementById('goal5Ad').style.display="block";
+  document.getElementById('goal5Echo').style.display="block"
+}
+
+function dontShowGoal5(){
+  document.getElementById('goal5Ad').style.display="none";
+  document.getElementById('goal5Echo').style.display="none"
 }
 
 
