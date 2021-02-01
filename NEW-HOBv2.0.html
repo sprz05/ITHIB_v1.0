@@ -35,17 +35,19 @@
 
   <body  style="font-family: 'Roboto', sans-serif; color:gray; background: #ecf0e6; margin: 0;">
 
+
+<center>
 <div id="TDLS">
 <div text-align="center" id=toDoList>
-  <h1 style="font-size: 30px; color:gray">Homework blocks for today:</h1>
-  <p style="font-size: 10px">Cross off assignments as you finish them!</p>
+  <b><h1>Homework blocks for today:</h1></b>
+  <p>Cross off assignments as you finish them!</p>
 
 </div>
-<div class="easy-block" id="easy-block">
-<b><h3 style="font-size: 20px">Easy Block ✌️:</h3></b>
+<div class="easy-block" id="easy-block" style="width: 80%">
+<b><h3 >Easy Block ✌️:</h3></b>
 
 <input type="text" id="myInput" class="inputEasy" placeholder="ELA assignment">
-  <button onclick="newEasyElement()" class="addBtn">Add</button>
+  <button onclick="newEasyElement()" class="addBtn btn btn-success">Add</button>
 
 <br>
 
@@ -57,8 +59,8 @@ All your easy assignments for the day.
 
 
 <ul id="myULEasy">
-  <li>Word of the day</li>
-   <li class="checked">Math worksheet 9-10</li>
+      <li>Click on me to check me off!</li>
+      <li>Click on the x to delete me! ---></li>
 </ul>
 
 <script>
@@ -78,11 +80,11 @@ list.addEventListener('click', function(ev) {
 </div>
 
 
-<div class="medium-block" id="medium-block">
-<h3 style="font-size: 20px">Medium Block 👍:</h3>
+<div class="medium-block" id="medium-block" style="width: 80%">
+<h3 >Medium Block 👍:</h3>
 
 <input type="text" id="myInputMedium" class="inputMedium" placeholder="ELA assignment">
-  <button onclick="newMediumElement()" class="addBtn">Add</button>
+  <button onclick="newMediumElement()" class="addBtn btn btn-primary">Add</button>
 
 <p style="font-size: 15px">
 All your medium assignments for the day.
@@ -90,8 +92,8 @@ All your medium assignments for the day.
 
 
 <ul id="myULMedium">
-  <li>Click on me to check me off!</li>
-  <li>Click on the x to delete me! ---></li>
+    <li>Word of the day</li>
+   <li class="checked">Math worksheet 9-10</li>
 </ul>
 
 <script>
@@ -108,12 +110,12 @@ list.addEventListener('click', function(ev) {
 </script>
 </div>
 
-<div class="hard-block" id="hard-block">
-<h3 style="font-size: 20px">Hard Block 🤟</h3>
+<div class="hard-block" id="hard-block" style="width: 80%">
+<h3 >Hard Block 🤟</h3>
 
 
 <input type="text" id="myInputHard" class="inputHard" placeholder="ELA assignment">
-  <button onclick="newHardElement()" class="addBtn">Add</button>
+  <button onclick="newHardElement()" class="addBtn btn btn-warning">Add</button>
 
 
 <p style="font-size: 15px">
@@ -143,7 +145,35 @@ list.addEventListener('click', function(ev) {
 
 
 
+  <!--form-->
+  <div id="feedback-main">
+  <button  type="button"  data-toggle="modal" data-target="#exampleModal"  id="popup" class="feedback-button" href='https://airtable.com/shrYgVBmTCAaBt0Cp' data-fc-open='iqdbx' target="_blank">Opinion</button>
+  <script src="_include/js/feedback.js"></script>
+  <!--end of form-->
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Which one?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrvMLRU8hMPowp1h?backgroundColor=purpleLight" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!--End of To-do List-->
@@ -214,3 +244,42 @@ for (i = 0; i < close.length; i++) {
   }
 }
 </script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div class="container">
+  
+
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#modal-notification').modal('show');
+    });
+</script>
+
+
+
+<!-- basic modal -->
+<div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+            <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+              <div class="modal-content bg-gradient-danger">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <center>
+         <i class="ni ni-bell-55 ni-3x"></i>
+        <h2 style="color:white">We need your opinion!</h2>
+        <p>Tell us if you like this version of HOB better with the opnion button on the right!</p>
+      </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
