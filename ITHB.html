@@ -191,7 +191,7 @@ function getMin() {
   </ul>
 </div>
 
-   
+  
 
 <br>
 
@@ -266,7 +266,7 @@ $(document).ready(function(){
 
 <div id="mydiv" style="display:none;">
       <div id="mydivheader">Click here to move  <span><button onclick="hideHOBAddOn()">x</button></span></div>
-      <a href="NEW-HOBv2.0.html" target="_blank">Open in New Tab</a>
+      <a href="NEW-HOBv2.0.html.html" target="_blank">Open in New Tab</a>
 
   <iframe src="newHOB.html" width="400" height="400" id="HOBAddon"></iframe>
 
@@ -1335,30 +1335,10 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 
 <button class="btn btn-primary" style="color:white;" onclick="showBreakTimers(); showContinueToWorkOnAssignmentTxt();">I'm not done with this assignment, I need more time!</button>
 <button class="btn btn-info" style="color:white;" onclick="showBreakTimersAnotherAssignment(); showWorkOnNextAssignmentTxt(); getMin()">I want to work on my next assignment!</button>
-<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10(); getMin();">I'm done with my homework for today! I want a reward!</button>
-<button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today & I'd like to tell you how it went!</button>
+<button class="btn btn-success" style="color:white;" onclick="workOn(); showWorkOn10(); getMin(); " type="button" data-toggle="modal" data-target="#myModal">I'm done with my homework for today! I want a reward!</button>
+<button style="display:none" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">I'm done with my homework for today</button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"></h4>
-        </div>
-        <div class="modal-body">
-          <p style="color:black;">Complete the form then click next</p>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_nmTRrv0z2XdjxrTIpjKP43sBhdkiQ8YauiU4JsBWyx8FVA/viewform?embedded=true" width="400" height="200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" onclick="workOn(); showWorkOn10();" >Next</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQD8CGKmqL-PX5amAGCQa8azMkllsGQvxgi4HhVAjq3TrGJ1_Q51gxUFQHWWHeyn1NjUlNtsu8eDC-5/pub?w=416&amp;h=460">
         </div>
@@ -1429,25 +1409,12 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
 <!--What students worked on-->
 
   <div id="workDiv" style="display:none">
-    <h1>
-      Great Job!
-    </h1>
 
-    <p>Don't have something to do now? We can help!</p>
-    <a href="https://sprz05.github.io/Study-BotMaker/" target="_blank" class="btn btn-danger btn-icon">
-              <span class="btn-inner--icon">
 
-              </span>
-              <span class="nav-link-inner--text">Make a Study Bot</span>
-    </a>
-<a class="btn btn-primary" href="https://the-programmingclub.github.io/World-Wide-Clubs/">After School Clubs</a>
-<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
+<center>
+<div id="workedOnTodayPic" style="background-color: #32325d; color: black; border-radius: 10px; width:60%">
 
-<div style="height:20px"></div>
-
-<div id="workedOnTodayPic" style="background-color: #32325d; color: black; border-radius: 10px; margin-right: 30px; margin-right: 30px;">
-
-    <h1 style="font-size:70px;"><strong>
+    <h1 style="font-size:60px;"><strong>
       What you worked on today:
     </strong></h1>
 
@@ -1484,12 +1451,25 @@ document.getElementById("randomSitBB").innerHTML = sittingBrainBreaks[randomSitB
     <h3 ><span id="result18"></span><span id="spentTime18" class="spentTime"></span></h3>
     <h3 ><span id="result19"></span><span id="spentTime19" class="spentTime"></span></h3>
     <h3 style="display:none"><span id="result20"></span></h3>
-
 </div>
+</center>
 
     <center><button onclick="takeScreenShot()" class="btn btn-primary">Take Snapshot</button></center>
 
 
+<div style="height:20px"></div>
+
+
+    <p>Don't have something to do now? We can help!</p>
+    <a href="https://sprz05.github.io/StudyBots/MakeAStudyBotCheck.html" target="_blank" class="btn btn-danger btn-icon">
+              <span class="btn-inner--icon">
+
+              </span>
+              <span class="nav-link-inner--text">Make a Study Bot</span>
+    </a>
+<a class="btn btn-primary" href="https://sprz05.github.io/WorldWideClubs/World-Wide-Clubs-master/index.html">After School Clubs</a>
+<a class="btn btn-success" style="color:white;" href="game.html">Play Games</a>
+<a class="btn btn-secondary" href="https://sprz05.github.io/StudyBots/feedback.html" target="_blank">Give Feedback on the bots I used</a>
 
 <script>
   var takeScreenShot = function() {
@@ -1855,6 +1835,12 @@ function hideStop(){
 
   </script>
 
+  <script>
+    function showMod(){
+      $('#myModal').modal('show');
+    }
+  </script>
+
 
 
 </div >
@@ -1897,3 +1883,23 @@ function hideStop(){
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p style="color:black;">Feedback:</p>
+          <iframe class="airtable-embed" src="https://airtable.com/embed/shrOvQaRIxoTlY6qL?backgroundColor=blue" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>        
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+      
+    </div>
+  </div>
